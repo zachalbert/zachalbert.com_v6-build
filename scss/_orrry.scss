@@ -1,0 +1,147 @@
+body {
+  font-size: 100%;
+  line-height: 1.5;
+  background: $clr-background;
+  color: $clr-text;
+}
+
+h1 {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 4em;
+  font-weight: 100;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 0.1em;
+  margin: 1em 0 0.7em;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+.paused .orbit,
+.paused .satellite {
+  -webkit-animation-play-state: paused !important;
+  animation-play-state: paused !important;
+}
+
+.orrry-description {
+  z-index: 50;
+  position: absolute;
+  top: 46%;
+  right: 5%;
+  color: #fff;
+  font-weight: normal;
+  width: 20%;
+  text-align: right;
+
+  a { color: #fff; }
+}
+
+#star-field {
+  z-index: 1;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+
+  .star {
+    background: #fff;
+    display: block;
+    position: absolute;
+    border-radius: 50%;
+    box-shadow: 0 0 6px 0 #fff;
+  }
+}
+
+.galaxy {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  z-index: 2;
+  overflow: hidden;
+  position: relative;
+  background: $clr-12;
+  background:    -moz-linear-gradient(45deg, $clr-12 0%, lighten($clr-12,7%) 35%, darken($clr-12, 10%) 100%); /* FF3.6+ */
+  background:        -webkit-gradient(linear, left bottom, right top, color-stop(0%,$clr-12), color-stop(35%,lighten($clr-12,7%)), color-stop(100%,darken($clr-12, 10%))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(45deg, $clr-12 0%, lighten($clr-12,7%) 35%,darken($clr-12, 10%) 100%); /* Chrome10+,Safari5.1+ */
+  background:      -o-linear-gradient(45deg, $clr-12 0%, lighten($clr-12,7%) 35%,darken($clr-12, 10%) 100%); /* Opera 11.10+ */
+  background:     -ms-linear-gradient(45deg, $clr-12 0%, lighten($clr-12,7%) 35%,darken($clr-12, 10%) 100%); /* IE10+ */
+  background:         linear-gradient(45deg, $clr-12 0%, lighten($clr-12,7%) 35%,darken($clr-12, 10%) 100%); /* W3C */
+}
+
+.solar-system {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.label {
+  @include transition(opacity, 0.3s, ease-in);
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 0.45em 1.25em;
+  background: rgba($clr-background, 0.65);
+  border-radius: 2px;
+  font-weight: 100;
+  z-index: 999;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  opacity: 0;
+  display: none;
+
+  .symbol {
+    margin-right: 1em;
+  }
+}
+
+.c1 { background: url(image_path("clouds1.svg")) no-repeat 0 0; }
+.c2 { background: url(image_path("clouds2.svg")) no-repeat 0 0; }
+.c3 { background: url(image_path("clouds3.svg")) no-repeat 0 0; }
+
+// Planet sizes
+$mercury-size:  0.383em;
+$venus-size:    0.950em;
+$earth-size:    1em;
+$mars-size:     0.532em;
+$jupiter-size:  10.97em;
+$saturn-size:   9.14em;
+$uranus-size:   3.98em;
+$neptune-size:  3.86em;
+$pluto-size:    0.185em;
+$eris-size:     0.182em;
+
+.sun      { @include buildStar(6.5%, 1.5%, $clr-1); }
+.mercury  { @include playGod(10%,  2%, $clr-2, $mercury-size / 1); }
+.venus    { @include playGod(16%,  3%, $clr-3, $venus-size / 1); }
+.earth    { @include playGod(23%,  4%, $clr-4, $earth-size / 1); }
+.mars     { @include playGod(31%,  5%, $clr-5, $mars-size / 1); }
+.jupiter  { @include playGod(40%,  6%, $clr-6, $jupiter-size / 5); }
+.saturn   { @include playGod(50%,  7%, $clr-7, $saturn-size / 5); }
+.uranus   { @include playGod(61%,  8%, $clr-8, $uranus-size / 5); }
+.neptune  { @include playGod(73%,  9%, $clr-9, $neptune-size / 5); }
+.pluto    { @include playGod(86%, 10%, $clr-10, $pluto-size / 0.5); }
+.eris     { @include playGod(100%, 11%, $clr-11, $eris-size / 0.5); }
+
+.satellite {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  position: absolute;
+  left: -50%;
+  top: -50%;
+
+  &:before {
+    content: '';
+    width: 0.75em;
+    height: 0.75em;
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+    left: -2em;
+    top: 0;
+    box-sizing: border-box;
+  }
+}

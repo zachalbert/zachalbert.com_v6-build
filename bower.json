@@ -1,0 +1,10 @@
+{
+  "name": "zachalbert.com_v6",
+  "description": "The personal website of Zac Halbert",
+  "version": "6.0.0",
+  "homepage": "https://github.com/zachalbert/zachalbert.com_v6",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+  }
+}

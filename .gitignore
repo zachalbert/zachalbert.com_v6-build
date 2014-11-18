@@ -1,0 +1,7 @@
+!.gitkeep
+node_modules/
+tmp
+.idea
+.DS_Store
+bower_components/
+npm-debug.log
