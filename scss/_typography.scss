@@ -1,0 +1,53 @@
+////// Type Scale //////
+
+$scale: 1.618; // golden ratio
+$font-size: 18px;
+$base: strip-unit($font-size);
+$line-height: $font-size * $scale;
+
+// 1em, 1.618em, 2.618em, 4.236em
+$font-size-1: $font-size;
+$font-size-2: $font-size * $scale;
+$font-size-3: $font-size * $scale * $scale;
+$font-size-4: $font-size * $scale * $scale * $scale;
+
+// Strips of lead
+$lead-single:   $line-height;
+// .lead-single: { margin-bottom: $lead-single + 'em'; }
+
+$lead-double:   emCalc($line-height * 2);
+// .lead-double: { margin-bottom: $lead-double; }
+
+$lead-triple:   emCalc($line-height * 3);
+// .lead-triple: { margin-bottom: $lead-triple; }
+
+////// Typography //////
+
+$headline-stack: "abril-titling-condensed", Georgia, serif;
+$body-stack:     "abril-text", Georgia, serif;
+$weight-normal:  400;
+$weight-bold:    700;
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: $headline-stack;
+  font-weight: $weight-bold;
+  font-style: italic;
+}
+
+body {
+  font-size: $font-size;
+  line-height: $line-height;
+  font-family: $body-stack;
+  font-weight: $weight-normal;
+  font-style: normal;
+}
+
+em     { font-style: italic; }
+strong { font-weight: $weight-bold; }
+
+h1 { font-size: $font-size-3; margin-bottom: $lead-single; }
+h2 { font-size: $font-size-2; }
+h3 { font-size: $font-size-1; }

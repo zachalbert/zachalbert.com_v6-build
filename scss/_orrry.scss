@@ -1,43 +1,119 @@
-body {
-  font-size: 100%;
-  line-height: 1.5;
-  background: $clr-background;
-  color: $clr-text;
-}
+/*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^
+*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^* ORRRY MIXINS
+^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*/
 
-h1 {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 4em;
-  font-weight: 100;
-  text-transform: uppercase;
-  text-align: center;
-  letter-spacing: 0.1em;
-  margin: 1em 0 0.7em;
-}
+@mixin playGod($orbitSize, $order, $color, $planetSize) {
+  $planetSize: $planetSize * 3;
+  $opacity: 0.55 - ($order/100%)*2;
 
-html, body {
-  width: 100%;
-  height: 100%;
-}
-
-.paused .orbit,
-.paused .satellite {
-  -webkit-animation-play-state: paused !important;
-  animation-play-state: paused !important;
-}
-
-.orrry-description {
-  z-index: 50;
+  /* …and God said, let there be orbits and planets. Yea, verily! */
+  width: $orbitSize;
+  height: $orbitSize;
   position: absolute;
-  top: 46%;
-  right: 5%;
-  color: #fff;
-  font-weight: normal;
-  width: 20%;
-  text-align: right;
+  left: $order + 26%;
+  top: ($order * 3) + 48%;
 
-  a { color: #fff; }
+  .orbit {
+    width: 100%;
+    padding-top: 100%;
+    border-radius: 50%;
+    position: relative;
+    left: -50%;
+    top: -50%;
+    z-index: 10;
+    background-color: rgba($color, $opacity);
+    -webkit-animation-play-state: running;
+    animation-play-state: running;
+    border: 4px solid transparent;
+    -webkit-transform: rotate(50deg);
+            transform: rotate(50deg);
+
+    &:hover {
+      -webkit-animation-play-state: paused;
+      animation-play-state: paused;
+      border: 4px solid lighten($color, 1%);
+      cursor: pointer;
+
+      .planet:before {
+        border: 4px solid lighten($color, 5%);
+      }
+    }
+  }
+
+  .planet {
+    display: block;
+    width: $planetSize;
+    height: $planetSize;
+    position: absolute;
+    left: -3px;
+    top: 50%;
+    z-index: 20;
+    box-sizing: border-box;
+
+    &:before {
+      content: '';
+      display: block;
+      width: $planetSize;
+      height: $planetSize;
+      background-color: lighten($color, 1%);
+      border-radius: 50%;
+      position: absolute;
+      border: 4px solid transparent;
+      top: -50%;
+      left: -50%;
+      box-sizing: border-box;
+    }
+  }
+
 }
+
+@mixin buildStar($size, $order, $color) {
+  width: $size;
+  height: $size;
+  position: absolute;
+  left: $order + 26%;
+  top: ($order * 3) + 48%;
+
+  .orbit {
+    width: 100%;
+    padding-top: 100%;
+    position: relative;
+    left: -50%;
+    top: -50%;
+  }
+
+  .planet {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    z-index: 20;
+
+    &:before {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 100%;
+      background-color: $color;
+      border-radius: 10em;
+      position: absolute;
+      top: -50%;
+      left: 0;
+      box-shadow: 0 0 70px 30px rgba(244, 231, 153, 0.77);
+
+      &:hover {
+        border: 5px solid lighten($color, 1%);
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+/*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^
+*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^* ORRRY STYLES
+^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*/
 
 #star-field {
   z-index: 1;
@@ -63,43 +139,19 @@ html, body {
   z-index: 2;
   overflow: hidden;
   position: relative;
-  background: $clr-12;
-  background:    -moz-linear-gradient(45deg, $clr-12 0%, lighten($clr-12,7%) 35%, darken($clr-12, 10%) 100%); /* FF3.6+ */
-  background:        -webkit-gradient(linear, left bottom, right top, color-stop(0%,$clr-12), color-stop(35%,lighten($clr-12,7%)), color-stop(100%,darken($clr-12, 10%))); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(45deg, $clr-12 0%, lighten($clr-12,7%) 35%,darken($clr-12, 10%) 100%); /* Chrome10+,Safari5.1+ */
-  background:      -o-linear-gradient(45deg, $clr-12 0%, lighten($clr-12,7%) 35%,darken($clr-12, 10%) 100%); /* Opera 11.10+ */
-  background:     -ms-linear-gradient(45deg, $clr-12 0%, lighten($clr-12,7%) 35%,darken($clr-12, 10%) 100%); /* IE10+ */
-  background:         linear-gradient(45deg, $clr-12 0%, lighten($clr-12,7%) 35%,darken($clr-12, 10%) 100%); /* W3C */
+  background: $color-12;
+  background:    -moz-linear-gradient(45deg, $color-12 0%, lighten($color-12,7%) 35%, darken($color-12, 10%) 100%); /* FF3.6+ */
+  background:        -webkit-gradient(linear, left bottom, right top, color-stop(0%,$color-12), color-stop(35%,lighten($color-12,7%)), color-stop(100%,darken($color-12, 10%))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(45deg, $color-12 0%, lighten($color-12,7%) 35%,darken($color-12, 10%) 100%); /* Chrome10+,Safari5.1+ */
+  background:      -o-linear-gradient(45deg, $color-12 0%, lighten($color-12,7%) 35%,darken($color-12, 10%) 100%); /* Opera 11.10+ */
+  background:     -ms-linear-gradient(45deg, $color-12 0%, lighten($color-12,7%) 35%,darken($color-12, 10%) 100%); /* IE10+ */
+  background:         linear-gradient(45deg, $color-12 0%, lighten($color-12,7%) 35%,darken($color-12, 10%) 100%); /* W3C */
 }
 
 .solar-system {
   width: 100%;
   margin: 0 auto;
 }
-
-.label {
-  @include transition(opacity, 0.3s, ease-in);
-  position: fixed;
-  top: 0;
-  left: 0;
-  padding: 0.45em 1.25em;
-  background: rgba($clr-background, 0.65);
-  border-radius: 2px;
-  font-weight: 100;
-  z-index: 999;
-  letter-spacing: 0.25em;
-  text-transform: uppercase;
-  opacity: 0;
-  display: none;
-
-  .symbol {
-    margin-right: 1em;
-  }
-}
-
-.c1 { background: url(image_path("clouds1.svg")) no-repeat 0 0; }
-.c2 { background: url(image_path("clouds2.svg")) no-repeat 0 0; }
-.c3 { background: url(image_path("clouds3.svg")) no-repeat 0 0; }
 
 // Planet sizes
 $mercury-size:  0.383em;
@@ -113,18 +165,20 @@ $neptune-size:  3.86em;
 $pluto-size:    0.185em;
 $eris-size:     0.182em;
 
-.sun      { @include buildStar(6.5%, 1.5%, $clr-1); }
-.mercury  { @include playGod(10%,  2%, $clr-2, $mercury-size / 1); }
-.venus    { @include playGod(16%,  3%, $clr-3, $venus-size / 1); }
-.earth    { @include playGod(23%,  4%, $clr-4, $earth-size / 1); }
-.mars     { @include playGod(31%,  5%, $clr-5, $mars-size / 1); }
-.jupiter  { @include playGod(40%,  6%, $clr-6, $jupiter-size / 5); }
-.saturn   { @include playGod(50%,  7%, $clr-7, $saturn-size / 5); }
-.uranus   { @include playGod(61%,  8%, $clr-8, $uranus-size / 5); }
-.neptune  { @include playGod(73%,  9%, $clr-9, $neptune-size / 5); }
-.pluto    { @include playGod(86%, 10%, $clr-10, $pluto-size / 0.5); }
-.eris     { @include playGod(100%, 11%, $clr-11, $eris-size / 0.5); }
+// Build the sun and planets
+.sun      { @include buildStar(6.5%, 1.5%, $color-1); }
+.mercury  { @include playGod(10%,  2%, $color-2, $mercury-size / 1); }
+.venus    { @include playGod(16%,  3%, $color-3, $venus-size / 1); }
+.earth    { @include playGod(23%,  4%, $color-4, $earth-size / 1); }
+.mars     { @include playGod(31%,  5%, $color-5, $mars-size / 1); }
+.jupiter  { @include playGod(40%,  6%, $color-6, $jupiter-size / 5); }
+.saturn   { @include playGod(50%,  7%, $color-7, $saturn-size / 5); }
+.uranus   { @include playGod(61%,  8%, $color-8, $uranus-size / 5); }
+.neptune  { @include playGod(73%,  9%, $color-9, $neptune-size / 5); }
+.pluto    { @include playGod(86%, 10%, $color-10, $pluto-size / 0.5); }
+.eris     { @include playGod(100%, 11%, $color-11, $eris-size / 0.5); }
 
+// Moon styles
 .satellite {
   width: 100%;
   height: 100%;
@@ -144,4 +198,222 @@ $eris-size:     0.182em;
     top: 0;
     box-sizing: border-box;
   }
+}
+
+/*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^
+*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^* ORRRY ANIMATION
+^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*/
+
+// CW
+@-webkit-keyframes year {
+  from {
+    -webkit-transform: rotate3d(0, 0, 1, 160deg);
+            transform: rotate3d(0, 0, 1, 160deg);
+  }
+  to {
+    -webkit-transform: rotate3d(0, 0, 1, -200deg);
+            transform: rotate3d(0, 0, 1, -200deg);
+  }
+}
+
+// CCW
+@-webkit-keyframes neg-year {
+  from {
+    -webkit-transform: rotate3d(0, 0, 1, 160deg);
+            transform: rotate3d(0, 0, 1, 160deg);
+  }
+  to {
+    -webkit-transform: rotate3d(0, 0, 1, 200deg);
+            transform: rotate3d(0, 0, 1, 200deg);
+  }
+}
+
+// Planet and moon governor values
+$speed: 14;
+$e-moon-molasses: $speed * 1;
+$m-moon-molasses: $speed * 0.02;
+$j-moon-molasses: $speed * 0.06;
+$s-moon-molasses: $speed * .0001;
+$u-moon-molasses: $speed * .0001;
+$n-moon-molasses: $speed * .0001;
+$p-moon-molasses: $speed * .0001;
+$er-moon-molasses: $speed * .0001;
+
+// Planetary governors
+$mercury-deg:   87.97 / $speed;
+$venus-deg:     224.63 / $speed;
+$earth-deg:     365.26 / $speed;
+$mars-deg:      687.05 / $speed;
+$jupiter-deg:   4331.94 / $speed;
+$saturn-deg:    10760.45 / $speed;
+$uranus-deg:    30685.19 / $speed;
+$neptune-deg:   60194.25 / $speed;
+$pluto-deg:     90620.10 / $speed;
+$eris-deg:      203447.79 / $speed;
+
+// Moon governors
+
+// Luna
+$e1-deg:        27.322 / $e-moon-molasses;
+// Phobos, Deimos
+$m1-deg:        0.319 / $m-moon-molasses;
+$m2-deg:        1.263 / $m-moon-molasses;
+// Io, Ganymede, Europa
+$j1-deg:        1.769 / $j-moon-molasses;
+$j2-deg:        3.551 / $j-moon-molasses;
+$j3-deg:        7.155 / $j-moon-molasses;
+// Pan, Daphnis, Atlas
+$s1-deg:        0.575 / $s-moon-molasses;
+$s2-deg:        0.594 / $s-moon-molasses;
+$s3-deg:        0.602 / $s-moon-molasses;
+// Cordelia, Ophelia, Bianca
+$u1-deg:        0.335 / $u-moon-molasses;
+$u2-deg:        0.3764 / $u-moon-molasses;
+$u3-deg:        0.433 / $u-moon-molasses;
+// Naiad, Thalassa, Galatea
+$n1-deg:        0.3 / $n-moon-molasses;
+$n2-deg:        0.31 / $n-moon-molasses;
+$n3-deg:        0.33 / $n-moon-molasses;
+// Charon, Nix, Hydra
+$p1-deg:        6.387 / $p-moon-molasses;
+$p2-deg:        24.856 / $p-moon-molasses;
+$p3-deg:        38.206 / $p-moon-molasses;
+// Dysnomia
+$er1-deg:       14 / $er-moon-molasses;
+
+// Convert planetary orbital periods to animation timing in seconds
+$mercury:       #{$mercury-deg}s;
+$venus:         #{$venus-deg}s;
+$earth:         #{$earth-deg}s;
+$mars:          #{$mars-deg}s;
+$jupiter:       #{$jupiter-deg}s;
+$saturn:        #{$saturn-deg}s;
+$uranus:        #{$uranus-deg}s;
+$neptune:       #{$neptune-deg}s;
+$pluto:         #{$pluto-deg}s;
+$eris:          #{$eris-deg}s;
+
+// Convert moon orbital periods to animation timing in seconds
+$e1:            #{$e1-deg}s;
+$m1:            #{$m1-deg}s;
+$m2:            #{$m2-deg}s;
+$j1:            #{$j1-deg}s;
+$j2:            #{$j2-deg}s;
+$j3:            #{$j3-deg}s;
+$s1:            #{$s1-deg}s;
+$s2:            #{$s2-deg}s;
+$s3:            #{$s3-deg}s;
+$u1:            #{$u1-deg}s;
+$u2:            #{$u2-deg}s;
+$u3:            #{$u3-deg}s;
+$n1:            #{$n1-deg}s;
+$n2:            #{$n2-deg}s;
+$n3:            #{$n3-deg}s;
+$p1:            #{$p1-deg}s;
+$p2:            #{$p2-deg}s;
+$p3:            #{$p3-deg}s;
+$er1:           #{$er1-deg}s;
+
+// Animate planetary orbits
+.mercury .orbit    { -webkit-animation: year #{$mercury} linear infinite;
+                             animation: year #{$mercury} linear infinite; }
+.venus .orbit      { -webkit-animation: year #{$venus} linear infinite;
+                             animation: year #{$venus} linear infinite; }
+.earth .orbit      { -webkit-animation: year #{$earth} linear infinite;
+                             animation: year #{$earth} linear infinite; }
+.mars .orbit       { -webkit-animation: year #{$mars} linear infinite;
+                             animation: year #{$mars} linear infinite; }
+.jupiter .orbit    { -webkit-animation: year #{$jupiter} linear infinite;
+                             animation: year #{$jupiter} linear infinite; }
+.saturn .orbit     { -webkit-animation: year #{$saturn} linear infinite;
+                             animation: year #{$saturn} linear infinite; }
+.uranus .orbit     { -webkit-animation: year #{$uranus} linear infinite;
+                             animation: year #{$uranus} linear infinite; }
+.neptune .orbit    { -webkit-animation: year #{$neptune} linear infinite;
+                             animation: year #{$neptune} linear infinite; }
+.pluto .orbit      { -webkit-animation: year #{$pluto} linear infinite;
+                             animation: year #{$pluto} linear infinite; }
+.eris .orbit       { -webkit-animation: year #{$eris} linear infinite;
+                             animation: year #{$eris} linear infinite; }
+
+// Offset moons and animate their orbits
+.earth {
+  .s_1             { -webkit-animation: year #{$e1} linear infinite;
+          &:before { left: -16px;
+                      background-color: lighten($color-4, 5%); } }
+}
+
+.mars {
+  .s_1             { -webkit-animation: year #{$m1} linear infinite;
+          &:before { left: -16px; 
+                     background-color: lighten($color-5, 5%); } }
+  .s_2             { -webkit-animation: year #{$m2} linear infinite;
+          &:before { left: -32px;
+                     background-color: lighten($color-5, 5%); } }
+}
+
+.jupiter {
+  .s_1             { -webkit-animation: year #{$j1} linear infinite;
+          &:before { left: 0; 
+                     background-color: lighten($color-6, 5%); } }
+  .s_2             { -webkit-animation: year #{$j2} linear infinite;
+          &:before { left: -22px; 
+                     background-color: lighten($color-6, 5%); } }
+  .s_3             { -webkit-animation: year #{$j3} linear infinite;
+          &:before { left: -44px; 
+                     background-color: lighten($color-6, 5%); } }
+}
+
+.saturn {
+  .s_1             { -webkit-animation: year #{$j1} linear infinite;
+          &:before { left: -5px; 
+                     background-color: lighten($color-7, 5%); } }
+  .s_2             { -webkit-animation: year #{$j2} linear infinite;
+          &:before { left: -30px; 
+                     background-color: lighten($color-7, 5%); } }
+  .s_3             { -webkit-animation: year #{$j3} linear infinite;
+          &:before { left: -55px; 
+                     background-color: lighten($color-7, 5%); } }
+}
+
+.uranus {
+  .s_1             { -webkit-animation: year #{$j1} linear infinite;
+          &:before { left: -5px; 
+                     background-color: lighten($color-8, 5%); } }
+  .s_2             { -webkit-animation: year #{$j2} linear infinite;
+          &:before { left: -30px; 
+                     background-color: lighten($color-8, 5%); } }
+  .s_3             { -webkit-animation: year #{$j3} linear infinite;
+          &:before { left: -55px; 
+                     background-color: lighten($color-8, 5%); } }
+}
+
+.neptune {
+  .s_1             { -webkit-animation: year #{$j1} linear infinite;
+          &:before { left: -5px; 
+                     background-color: lighten($color-9, 5%); } }
+  .s_2             { -webkit-animation: year #{$j2} linear infinite;
+          &:before { left: -30px; 
+                     background-color: lighten($color-9, 5%); } }
+  .s_3             { -webkit-animation: year #{$j3} linear infinite;
+          &:before { left: -55px; 
+                     background-color: lighten($color-9, 5%); } }
+}
+
+.pluto {
+  .s_1             { -webkit-animation: year #{$j1} linear infinite;
+          &:before { left: -5px; 
+                     background-color: lighten($color-1, 5%)0; } }
+  .s_2             { -webkit-animation: year #{$j2} linear infinite;
+          &:before { left: -30px; 
+                     background-color: lighten($color-1, 5%)0; } }
+  .s_3             { -webkit-animation: year #{$j3} linear infinite;
+          &:before { left: -55px; 
+                     background-color: lighten($color-1, 5%)0; } }
+}
+
+.eris {
+  .s_1             { -webkit-animation: year #{$j1} linear infinite;
+          &:before { left: -5px; 
+                     background-color: lighten($color-1, 5%)1; } }
 }
