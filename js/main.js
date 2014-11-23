@@ -58,6 +58,15 @@ $(document).ready(function() {
   // Pause the animation when clicking the pause button
   $('.pause-animation').click(function(e) {
     e.preventDefault();
+
+    /**
+     * Set a variable & cookie for whether the pause button was hit
+     * https://developer.mozilla.org/en-US/docs/Web/API/document.cookie
+    **/
+    // docCookies.setItem(solar_system_pause, value[, end[, path[, domain[, secure]]]]);
+
+
+    
     $('body').toggleClass('paused');
   });
 

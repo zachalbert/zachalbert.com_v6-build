@@ -1,0 +1,38 @@
+body {
+  min-width: $screen-min-width;
+}
+
+@media #{$min-480} {
+  
+}
+
+@media #{$min-640} {
+  
+  body {
+  }
+
+  section {
+    width: 80%;
+  }
+
+}
+
+@media #{$min-768} {
+  
+  section {
+    width: 75%;
+  }
+}
+
+@media #{$min-1024} {
+  
+  section {
+    width: 70%;
+  }
+}
+
+@media #{$min-1200} {
+  section {
+    width: 65%;
+  }
+}

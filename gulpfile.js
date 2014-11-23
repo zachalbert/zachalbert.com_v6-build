@@ -7,6 +7,7 @@ var concat = require('gulp-concat');
 var connect = require('gulp-connect');
 var mainBowerFiles = require('main-bower-files');
 var minifyCSS = require('gulp-minify-css');
+var notify = require('gulp-notify');
 var plumber = require('gulp-plumber');
 var rename = require('gulp-rename');
 var sass = require('gulp-sass');
@@ -14,6 +15,11 @@ var uglify = require('gulp-uglify');
 
 var onError = function(e){
   console.log(e);
+  // console.log(notify.through(function () {
+  //     this.emit(
+  //       "error", 
+  //       new Error("Something happened: DOOOOOOooomM!")
+  //     )}));
 };
 
 
@@ -46,6 +52,7 @@ gulp.task('scripts', function() {
 
 // Run a local webserver and watch for changes
 gulp.task('default', function() {
+  gulp.start(['styles', 'scripts']);
   gulp.start('default');
   connect.server({
     port: 8000
@@ -54,5 +61,6 @@ gulp.task('default', function() {
   gulp.watch('js/*.js', ['scripts']);
 });
 
-// Default Task
+
+// Build
 gulp.task('build', ['styles', 'scripts']);

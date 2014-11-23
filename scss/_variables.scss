@@ -1,3 +1,8 @@
+// 42em > 42
+@function strip-unit($value) {
+  @return $value / ($value * 0 + 1);
+}
+
 ////// Color Palette //////
 $color-1:  #E7E0B7;
 $color-2:  #c4b16f;
@@ -12,6 +17,47 @@ $color-10: #85454c;
 $color-11: #723948;
 $color-12: #5e3043;
 
-$color-background:  #fff;
-$color-text:        #4D2636;
+$color-background:        #fff;
+$color-text:              #4D2636;
+$color-text-light:        #8BB7BE;
+$color-footer:            $color-12;
+$color-footer-text:       $color-7;
+$color-footer-link:       $color-3;
+$color-footer-link-hover: $color-1;
 
+////// Grid //////
+
+$half-gutter-width:   20px;
+$gutter-compensation: -20px;
+$outer-margin:        40px;
+
+$grids:               12;
+$column-width:        100 / $grids * 1%;
+
+// Changing a 2/3 column to a 1/3 column
+$left-inset: $column-width * (100 / $grids);
+
+////// Type Scale //////
+
+$scale: 1.618; // golden ratio
+$font-size: 17px;
+$base: strip-unit($font-size);
+$line-height: round($font-size * $scale);
+
+// 1em, 1.618em, 2.618em, 4.236em
+$font-size-1: $font-size;
+$font-size-2: 1.618em;
+$font-size-3: 2.618em;
+$font-size-4: 4.236em;
+
+$font-size-small-1: $font-size / $scale;
+
+// Strips of lead
+$lead-single:   $line-height;
+.lead-single  { margin-bottom: $line-height; }
+
+$lead-double:   $line-height * 2;
+.lead-double  { margin-bottom: $line-height * 2; }
+
+$lead-triple:   $line-height * 3;
+.lead-triple  { margin-bottom: $line-height * 3; }

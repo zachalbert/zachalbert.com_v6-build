@@ -1,26 +1,3 @@
-////// Type Scale //////
-
-$scale: 1.618; // golden ratio
-$font-size: 18px;
-$base: strip-unit($font-size);
-$line-height: $font-size * $scale;
-
-// 1em, 1.618em, 2.618em, 4.236em
-$font-size-1: $font-size;
-$font-size-2: $font-size * $scale;
-$font-size-3: $font-size * $scale * $scale;
-$font-size-4: $font-size * $scale * $scale * $scale;
-
-// Strips of lead
-$lead-single:   $line-height;
-// .lead-single: { margin-bottom: $lead-single + 'em'; }
-
-$lead-double:   emCalc($line-height * 2);
-// .lead-double: { margin-bottom: $lead-double; }
-
-$lead-triple:   emCalc($line-height * 3);
-// .lead-triple: { margin-bottom: $lead-triple; }
-
 ////// Typography //////
 
 $headline-stack: "abril-titling-condensed", Georgia, serif;
@@ -35,6 +12,8 @@ h4 {
   font-family: $headline-stack;
   font-weight: $weight-bold;
   font-style: italic;
+  line-height: $line-height;
+  margin: 0;
 }
 
 body {
@@ -48,6 +27,26 @@ body {
 em     { font-style: italic; }
 strong { font-weight: $weight-bold; }
 
-h1 { font-size: $font-size-3; margin-bottom: $lead-single; }
-h2 { font-size: $font-size-2; }
+h1 {
+  font-size: $font-size-3; 
+  margin-bottom: $lead-single;
+  line-height: $line-height * 2;
+  position: relative;
+  top: 4px;
+}
+
+h2 { font-size: $font-size-1; }
 h3 { font-size: $font-size-1; }
+
+p {
+  margin: 0 0 $line-height;
+}
+
+.meta-text {
+  text-align: right;
+  text-transform: uppercase;
+  color: $color-text-light;
+  font-size: $font-size-small-1;
+  letter-spacing: $font-size / ($scale * 3);
+  line-height: $line-height;
+}

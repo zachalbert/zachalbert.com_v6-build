@@ -18,9 +18,55 @@ html, body {
   animation-play-state: paused !important;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 /*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^
 *^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^* LAYOUT
 ^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*/
+
+section {
+  width: 90%;
+  margin: 0 auto;
+  margin-bottom: $lead-double;
+}
+
+.site-main {
+  padding: $lead-triple 0;
+}
+
+.side-column {
+  text-align: right;
+  position: relative;
+}
+
+.main-column {
+  padding-top: $lead-single;
+  position: relative;
+
+  .meta-text:first-child {
+    margin: -$line-height 0 0;
+  }
+}
+
+.pull-column {
+  position: absolute;
+  left: -$column-width * 8.58;
+  width: $column-width * 8.58;
+  text-align: right;
+  padding: 0 $half-gutter-width 0;
+  box-sizing: border-box;
+}
+
+.stretch-container {
+  margin-left: -$half-gutter-width;
+  margin-right: -$half-gutter-width;
+  width: 188%;
+  position: relative;
+  left: -78.5%;
+}
 
 /*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^
 *^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^* MODULES
@@ -56,5 +102,18 @@ html, body {
 
   .symbol {
     margin-right: 1em;
+  }
+}
+
+.site-footer {
+  background: $color-footer;
+  color: $color-footer-text;
+
+  a {
+    color: $color-footer-link;
+
+    &:hover {
+      color: $color-footer-link-hover;
+    }
   }
 }
