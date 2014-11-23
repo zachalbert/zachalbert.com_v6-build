@@ -11,7 +11,7 @@ body {
   body {
   }
 
-  section {
+  .row {
     width: 80%;
   }
 
@@ -19,20 +19,20 @@ body {
 
 @media #{$min-768} {
   
-  section {
+  .row {
     width: 75%;
   }
 }
 
 @media #{$min-1024} {
   
-  section {
+  .row {
     width: 70%;
   }
 }
 
 @media #{$min-1200} {
-  section {
+  .row {
     width: 65%;
   }
 }

@@ -78,8 +78,12 @@ $(function() {
   }
 
   // Scroll to the sun on load
-  var sun_pos = $('#sun').offset().top + 20;
-  window.scrollTo(0, Math.round(sun_pos));
+  var sun_pos = Math.round($('#sun > .orbit').offset().top - 10);
+  var sun_offset = $(window).height() - sun_pos - 61;
+  var top_of_page = $(window).height() - 180;
+  
+  window.scrollTo(0, top_of_page);
+  $('.orrry-description').css('bottom', sun_offset);
 
 });
 

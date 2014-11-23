@@ -19,7 +19,13 @@ $color-12: #5e3043;
 
 $color-background:        #fff;
 $color-text:              #4D2636;
+$color-text-medium:       #5D929B;
 $color-text-light:        #8BB7BE;
+$color-link:              $color-text-light;
+$color-link-hover:        $color-text-medium;
+
+$color-border:            $color-text;
+
 $color-footer:            $color-12;
 $color-footer-text:       $color-7;
 $color-footer-link:       $color-3;
@@ -61,3 +67,6 @@ $lead-double:   $line-height * 2;
 
 $lead-triple:   $line-height * 3;
 .lead-triple  { margin-bottom: $line-height * 3; }
+
+$transition-out: all 0.1s ease-in-out;
+$transition-in:  all 0.1s ease-in-out;
