@@ -60,8 +60,21 @@ section {
   margin: 0 auto;
 }
 
+.site-nav {
+  position: absolute;
+  height: $nav-height;
+  top: 0;
+  width: 100%;
+  background: $color-1;
+
+  &.__fixed {
+    position: fixed;
+    top: 0;
+  }
+}
+
 .site-main {
-  padding: $lead-triple 0 0;
+  padding: ($lead-triple * 2) 0 0;
   position: relative;
 
   section:first-child {

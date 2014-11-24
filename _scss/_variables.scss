@@ -3,7 +3,10 @@
   @return $value / ($value * 0 + 1);
 }
 
+
+
 ////// Color Palette //////
+
 $color-1:  #E7E0B7;
 $color-2:  #c4b16f;
 $color-3:  #bca46a;
@@ -31,6 +34,8 @@ $color-footer-text:       $color-7;
 $color-footer-link:       $color-3;
 $color-footer-link-hover: $color-1;
 
+
+
 ////// Grid //////
 
 $half-gutter-width:   20px;
@@ -42,6 +47,8 @@ $column-width:        100 / $grids * 1%;
 
 // Changing a 2/3 column to a 1/3 column
 $left-inset: $column-width * (100 / $grids);
+
+
 
 ////// Type Scale //////
 
@@ -68,5 +75,11 @@ $lead-double:   $line-height * 2;
 $lead-triple:   $line-height * 3;
 .lead-triple  { margin-bottom: $line-height * 3; }
 
+
+
+////// Site //////
+
 $transition-out: all 0.1s ease-in-out;
 $transition-in:  all 0.1s ease-in-out;
+
+$nav-height: $lead-triple;

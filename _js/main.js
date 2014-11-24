@@ -21,7 +21,6 @@ $(function() {
   
   window.scrollTo(0, top_of_page);
   $('.orrry-description').css('bottom', sun_offset);
-
 });
 
 // Smooth scroll
@@ -73,6 +72,43 @@ $(document).ready(function() {
     
     $('body').toggleClass('paused');
   });
+
+
+/*
+// this isn't firing....
+console.log('yay')
+
+// Scroll stuff
+var mainHeader = $('.site-nav')
+  , header = mainHeader.clone().addClass('__fixed').appendTo('body')
+  , top_limit = header.outerHeight()
+;
+
+bindEvents();
+
+function bindEvents() {
+    $(window).scroll( scrollEvent );
+}
+
+function scrollEvent() {
+    var top = $(window).scrollTop();
+    console.log(top)
+    // avoid any logic if nothing must be done
+    if ( top < top_limit && !header.is(':visible')
+        || top > top_limit && header.is(':visible')
+    ) return;
+    // unbind the scroll event to avoid its execution
+    // until slide animation is complete
+    $(window).unbind( 'scroll' );
+    // show/hide the header
+    if ( top > top_limit ) {
+        header.slideDown( 400, bindEvents );
+    } else {
+        header.slideUp( 400, bindEvents );
+    }
+};
+*/
+
 
 });
 
