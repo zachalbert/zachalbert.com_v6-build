@@ -93,6 +93,7 @@ gulp.task('default', ['browser-sync', 'watch']);
 gulp.task('deploy', ['jekyll-build'], function() {
   return gulp.src('./_site/**/*')
     .pipe(deploy({
-      branch: 'master'
+      remoteUrl: "git@github.com:zachalbert/zachalbert.github.io.git",
+      branch: "master"
     }));
 });
