@@ -32,7 +32,11 @@ h1 {
   margin-bottom: $lead-single;
   line-height: $line-height * 2;
   position: relative;
-  top: 3px;
+  top: 4px;
+
+  a {
+    text-decoration: none;
+  }
 }
 
 h2 { font-size: $font-size-1; }
