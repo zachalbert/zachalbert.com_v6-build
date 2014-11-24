@@ -112,7 +112,7 @@ $(document).ready(function() {
         'display': 'block',
         'opacity': '1',
         'left': e.pageX+10,
-        'top': e.pageY-40
+        'top': e.pageY-175
       });
     });
   }, function() {

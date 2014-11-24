@@ -207,24 +207,24 @@ $eris-size:     0.182em;
 // CW
 @-webkit-keyframes year {
   from {
-    -webkit-transform: rotate3d(0, 0, 1, 160deg);
-            transform: rotate3d(0, 0, 1, 160deg);
+    -webkit-transform: rotate3d(0, 0, 1, 180deg);
+            transform: rotate3d(0, 0, 1, 180deg);
   }
   to {
-    -webkit-transform: rotate3d(0, 0, 1, -200deg);
-            transform: rotate3d(0, 0, 1, -200deg);
+    -webkit-transform: rotate3d(0, 0, 1, -180deg);
+            transform: rotate3d(0, 0, 1, -180deg);
   }
 }
 
 // CCW
 @-webkit-keyframes neg-year {
   from {
-    -webkit-transform: rotate3d(0, 0, 1, 160deg);
-            transform: rotate3d(0, 0, 1, 160deg);
+    -webkit-transform: rotate3d(0, 0, 1, 180deg);
+            transform: rotate3d(0, 0, 1, 180deg);
   }
   to {
-    -webkit-transform: rotate3d(0, 0, 1, 200deg);
-            transform: rotate3d(0, 0, 1, 200deg);
+    -webkit-transform: rotate3d(0, 0, 1, 180deg);
+            transform: rotate3d(0, 0, 1, 180deg);
   }
 }
 

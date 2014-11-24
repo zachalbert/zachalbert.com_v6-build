@@ -42,11 +42,16 @@ p {
   margin: 0 0 $line-height;
 }
 
-.meta-text {
-  text-align: right;
+small,
+.small-text {
   text-transform: uppercase;
-  color: $color-text-light;
   font-size: $font-size-small-1;
   letter-spacing: $font-size / ($scale * 3);
+}
+
+.meta-text {
+  @extend .small-text;
+  text-align: right;
+  color: $color-text-light;
   line-height: $line-height;
 }

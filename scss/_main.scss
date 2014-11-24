@@ -150,6 +150,8 @@ section {
 
 .label {
   @include transition(opacity, 0.3s, ease-in);
+  @extend .meta-text;
+  color: $color-text;
   position: fixed;
   top: 0;
   left: 0;
@@ -218,6 +220,10 @@ section {
   }
 }
 
+.social {
+  padding-top: $lead-single;
+}
+
 [class*="icon-"] {
 
   &.button {
@@ -230,8 +236,8 @@ section {
 
 .link-to-top.button {
   position: absolute;
-  top: $lead-single;
-  right: $lead-single;
+  top: $font-size;
+  right: $font-size;
   margin: 0;
 }
 
