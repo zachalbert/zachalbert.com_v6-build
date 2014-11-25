@@ -98,8 +98,12 @@ $(function() {
 
     if( lastPosition > navPos ) {
       siteNav.addClass('__fixed');
+      // TODO: Write / read from a cookie based on the pause button
+      $('body').addClass('paused');
     } else {
       siteNav.removeClass('__fixed');
+      // TODO: Write / read from a cookie based on the pause button
+      $('body').removeClass('paused');
     }
 
     scroll(loop);

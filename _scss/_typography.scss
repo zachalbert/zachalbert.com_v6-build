@@ -33,6 +33,7 @@ h1 {
   line-height: $line-height * 2;
   position: relative;
   top: 4px;
+  @include hyphenate;
 
   a {
     text-decoration: none;

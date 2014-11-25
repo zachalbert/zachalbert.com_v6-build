@@ -8,6 +8,12 @@
   @return $pxWidth / $base * 1em;
 }
 
+@mixin hyphenate() {
+  -webkit-hyphens: auto;
+     -moz-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
+}
 
 ////// Breakpoint measurements //////
 $screen-min-width: emCalc(320);   // 17.777777778; col-xs-#
