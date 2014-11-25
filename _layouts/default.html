@@ -21,118 +21,16 @@
   </head>
 
   <body class="paused">
-
-    <header class="site-header galaxy" role="banner" id="top">
-        
-      <div id="star-field"></div>
-
-      <div class="orrry-description">
-        <h2>Orrery</h2>
-        <p>
-          A <em>reasonably</em> accurate model of our solar system.
-        </p>
-        <a href="#" class="icon-pause button pause-animation"></a><a href="#" class="icon-github button"></a><a href="#" class="icon-information button"></a>
-      </div>
-
-      <div class="solar-system">
-        
-        <div class="eris" id="eris">
-          <div class="label"><span class="symbol">E</span>Eris</div>
-          <div class="orbit">
-            <div class="planet"></div>
-          </div>
-        </div>
-
-        <div class="pluto" id="pluto">
-          <div class="label"><span class="symbol">♇</span>Pluto</div>
-          <div class="orbit">
-            <div class="planet"></div>
-          </div>
-        </div>
-        
-        <div class="neptune" id="neptune">
-          <div class="label"><span class="symbol">♅</span>Neptune</div>
-          <div class="orbit">
-            <div class="planet"></div>
-          </div>
-        </div>
-
-        <div class="uranus" id="uranus">
-          <div class="label"><span class="symbol">♃</span>Uranus</div>
-          <div class="orbit">
-            <div class="planet"></div>
-          </div>
-        </div>
-        
-        <div class="saturn" id="saturn">
-          <div class="label"><span class="symbol">♄</span>Saturn</div>
-          <div class="orbit">
-            <div class="planet"></div>
-          </div>
-        </div>
-
-        <div class="jupiter" id="jupiter">
-          <div class="label"><span class="symbol">♃</span>Jupiter</div>
-          <div class="orbit">
-            <div class="planet">
-              <div class="satellite s_1"></div>
-              <div class="satellite s_2"></div>
-              <div class="satellite s_3"></div>
-            </div>
-          </div>
-        </div>
-
-        <div class="mars" id="mars">
-          <div class="label"><span class="symbol">♂</span>Mars</div>
-          <div class="orbit">
-            <div class="planet">
-              <div class="satellite s_1"></div>
-              <div class="satellite s_2"></div>
-            </div>
-          </div>
-        </div>
-
-        <div class="earth" id="earth">
-          <div class="label"><span class="symbol">♁</span>Earth</div>
-          <div class="orbit">
-            <div class="planet">
-              <div class="satellite s_1"></div>
-            </div>
-          </div>
-        </div>
-
-        <div class="venus" id="venus">
-          <div class="label"><span class="symbol">♀</span>Venus</div>
-          <div class="orbit">
-            <div class="planet"></div>
-          </div>
-        </div>
-
-        <div class="mercury" id="mercury">
-          <div class="label"><span class="symbol">☿</span>Mercury</div>
-          <div class="orbit">
-            <div class="planet"></div>
-          </div>
-        </div>
-
-        <div class="sun" id="sun">
-          <div class="label"><span class="symbol">☉</span>Sun</div>
-          <div class="orbit">
-            <div class="planet"></div>
-          </div>
-        </div>
-
-      </div>
-
-    </header>
+    
+    {% include orrry.html %}
 
     <div class="site-main">
       <nav class="site-nav" role="navigation">
         <div class="row">
           <a href="{{ site.url }}" class="logo">Logo</a>
         </div>
+        <a href="#top" class="link-to-top icon-arrow-up button"></a>
       </nav>
-      <a href="#top" class="link-to-top icon-arrow-up button"></a>
       <div class="content">
         {{ content }}
       </div>

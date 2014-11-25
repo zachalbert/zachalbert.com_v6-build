@@ -1,5 +1,4 @@
 $(function() {
-
   // Scatter the stars about the heavens
   var num_stars = 500;
   var min_size = 1;
@@ -47,8 +46,8 @@ $(document).ready(function() {
       $(this).prev().css({
         'display': 'block',
         'opacity': '1',
-        'left': e.pageX+10,
-        'top': e.pageY-175
+        'left': e.clientX+10,
+        'top': e.clientY+10
       });
     });
   }, function() {
@@ -67,49 +66,46 @@ $(document).ready(function() {
      * https://developer.mozilla.org/en-US/docs/Web/API/document.cookie
     **/
     // docCookies.setItem(solar_system_pause, value[, end[, path[, domain[, secure]]]]);
-
-
     
     $('body').toggleClass('paused');
   });
 
+});
 
-/*
-// this isn't firing....
-console.log('yay')
 
-// Scroll stuff
-var mainHeader = $('.site-nav')
-  , header = mainHeader.clone().addClass('__fixed').appendTo('body')
-  , top_limit = header.outerHeight()
-;
+/**
+ * Scroll events
+ * https://gist.github.com/Warry/4254579
+ */
+$(function() {
 
-bindEvents();
+  // Detect request animation frame
+  var scroll = window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.msRequestAnimationFrame || window.oRequestAnimationFrame || function(callback){ window.setTimeout(callback, 1000/60) }
+    , lastPosition = -1
+    , wHeight      = window.innerHeight
+    , siteNav      = $('.site-nav')
+    , navPos       = siteNav.offset().top
 
-function bindEvents() {
-    $(window).scroll( scrollEvent );
-}
-
-function scrollEvent() {
-    var top = $(window).scrollTop();
-    console.log(top)
-    // avoid any logic if nothing must be done
-    if ( top < top_limit && !header.is(':visible')
-        || top > top_limit && header.is(':visible')
-    ) return;
-    // unbind the scroll event to avoid its execution
-    // until slide animation is complete
-    $(window).unbind( 'scroll' );
-    // show/hide the header
-    if ( top > top_limit ) {
-        header.slideDown( 400, bindEvents );
+  // If page has scrolled, add or remove fixed class
+  function loop() {
+    // Only fire if the page has scrolled
+    if( lastPosition == window.pageYOffset ) {
+      scroll(loop);
+      return false;
     } else {
-        header.slideUp( 400, bindEvents );
+      lastPosition = window.pageYOffset;
     }
-};
-*/
 
+    if( lastPosition > navPos ) {
+      siteNav.addClass('__fixed');
+    } else {
+      siteNav.removeClass('__fixed');
+    }
 
+    scroll(loop);
+  }
+
+  loop();
 });
 
 // Google Analytics

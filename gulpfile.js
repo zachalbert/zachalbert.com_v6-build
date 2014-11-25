@@ -5,7 +5,6 @@ var browserSync     = require('browser-sync');
 var autoprefixer    = require('gulp-autoprefixer');
 var concat          = require('gulp-concat');
 var connect         = require('gulp-connect');
-var mainBowerFiles  = require('main-bower-files');
 var minifyCSS       = require('gulp-minify-css');
 var notify          = require('gulp-notify');
 var plumber         = require('gulp-plumber');
@@ -62,14 +61,8 @@ gulp.task('styles', function() {
 
 // Concatenate & Minify JS
 gulp.task('scripts', function() {
-  var bowerPaths = {
-    bowerDirectory: 'bower_components',
-    bowerrc: '.bowerrc',
-    bowerJson: 'bower.json'
-  };
-  return gulp.src(mainBowerFiles(bowerPaths).concat('_js/*.js'))
-    .pipe(concat('site.js'))
-    .pipe(gulp.dest('_site/js'))
+  return gulp.src('_js/*.js')
+    .pipe(concat('_js/site.js'))
     .pipe(rename('site.min.js'))
     .pipe(uglify())
     .pipe(browserSync.reload({stream: true}))
@@ -80,7 +73,7 @@ gulp.task('scripts', function() {
 // Watch task
 gulp.task('watch', function() {
   gulp.watch('_scss/*.scss', ['styles']);
-  gulp.watch('_js/*.js', ['scripts']);
+  gulp.watch('_js/*.js', ['scripts', 'jekyll-rebuild']);
   gulp.watch(['index.html', '_layouts/*.html', '_posts/*'], ['jekyll-rebuild']);
 });
 

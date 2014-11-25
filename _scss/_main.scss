@@ -65,7 +65,9 @@ section {
   height: $nav-height;
   top: 0;
   width: 100%;
-  background: $color-1;
+  background: #fff;
+  border-bottom: 1px solid lighten($color-text-light, 25%);
+  z-index: 10;
 
   &.__fixed {
     position: fixed;
@@ -121,13 +123,14 @@ section {
 ^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*/
 
 .orrry-description {
-  z-index: 50;
+  z-index: 10;
   position: absolute;
   right: (1/12) * 100%;
   width: (5/12) * 100%;
   color: #fff;
   font-weight: normal;
   text-align: right;
+  opacity: 0;
 
   a {
     color: #fff;
@@ -172,7 +175,7 @@ section {
   background: rgba($color-background, 0.65);
   border-radius: 2px;
   font-weight: 100;
-  z-index: 999;
+  z-index: 100;
   letter-spacing: 0.25em;
   text-transform: uppercase;
   opacity: 0;
