@@ -27,11 +27,40 @@
     <div class="site-main">
       
       <div class="nav-wrapper">
-        <div class="logo-block nav-mask">
+
+        <a href="{{ site.url }}" class="logo" title="{{ site.name }}">
+          <img src="images/zachalbert-logo.svg" width="192" height="198">
+        </a>
+
+        <div class="mask">
+          <div class="mask-inner">
+            
+            <nav class="site-nav" role="navigation">
+
+              <div class="row middle-xs">
+                <div class="col-xs-12 col-sm-5 col-md-4 side-column">
+                  <div class="logo-bg">
+                    <img src="images/zachalbert-logo-bg.svg" width="192" height="198">
+                  </div>
+                </div>
+                <div class="col-xs-12 col-sm-7 col-md-8">
+                  <div class="link-bank">
+                    <a href="#" class="test">Test</a><a href="#" class="test">Test</a><a href="#" class="test">Test</a>
+                  </div>
+                </div>
+              </div>
+
+            </nav>
+
+          </div>
+        </div>
+        
+<!--    <div class="logo-block nav-mask">
           <a href="{{ site.url }}" class="inner-nav-mask">
             <img src="images/zachalbert-logo-bg.svg" width="192" height="198" class="logo-bg">
           </a>
         </div>
+        
         <nav class="site-nav" role="navigation">
           <div class="inner-nav">
             <div class="row">
@@ -44,7 +73,8 @@
               </div>
             </div>
           </div>
-        </nav>
+        </nav> -->
+      
       </div>
 
       <div class="content">

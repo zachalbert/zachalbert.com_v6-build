@@ -66,14 +66,20 @@ $font-size-4: 4.236em;
 $font-size-small-1: $font-size / $scale;
 
 // Strips of lead
-$lead-single:   $line-height;
-.lead-single  { margin-bottom: $line-height; }
+$lead-single:      $line-height;
+.lead-single     { margin-bottom: $line-height; }
 
-$lead-double:   $line-height * 2;
-.lead-double  { margin-bottom: $line-height * 2; }
+$lead-double:      $line-height * 2;
+.lead-double     { margin-bottom: $line-height * 2; }
 
-$lead-triple:   $line-height * 3;
-.lead-triple  { margin-bottom: $line-height * 3; }
+$lead-triple:      $line-height * 3;
+.lead-triple     { margin-bottom: $line-height * 3; }
+
+$lead-quadruple:   $line-height * 4;
+.lead-quadruple  { margin-bottom: $line-height * 4; }
+
+$lead-quintuple:   $line-height * 5;
+.lead-quintuple  { margin-bottom: $line-height * 5; }
 
 
 

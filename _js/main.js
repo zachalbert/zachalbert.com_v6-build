@@ -83,9 +83,8 @@ $(function() {
   var scroll = window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.msRequestAnimationFrame || window.oRequestAnimationFrame || function(callback){ window.setTimeout(callback, 1000/60) }
     , lastPosition = -1
     , wHeight      = window.innerHeight
-    , siteNav      = $('.site-nav')
     , siteNavWrap  = $('.nav-wrapper')
-    , navPos       = siteNav.offset().top
+    , switchPos    = $('.site-main').offset().top
 
   // If page has scrolled, add or remove fixed class
   function loop() {
@@ -97,7 +96,7 @@ $(function() {
       lastPosition = window.pageYOffset;
     }
 
-    if( lastPosition > navPos ) {
+    if( lastPosition > switchPos ) {
       siteNavWrap.addClass('__fixed');
       // TODO: Write / read from a cookie based on the pause button
       $('body').addClass('paused');

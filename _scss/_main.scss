@@ -65,77 +65,148 @@ section {
 }
 
 .__fixed {
-  .site-nav,
-  .nav-mask {
+  // .site-nav,
+  // .nav-mask {
+  //   position: fixed;
+  //   top: 0;
+  // }
+  .mask {
     position: fixed;
-    top: 0;
   }
 }
 
-.site-nav {
+.mask {
   position: absolute;
   height: $nav-height;
-  top: 0;
   width: 100%;
-  background: #fff;
-  border-bottom: 1px solid lighten($color-text-light, 25%);
+  top: 0;
+  left: 0;
+  overflow: hidden;
   z-index: 10;
-
-  &.__fixed {
-    position: fixed;
-    top: 0;
-  }
-
-  a {
-    display: inline-block;
-  }
 }
 
-.inner-nav {
+.mask-inner {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
+  height: $nav-height;
+}
+
+.site-nav {
+  background: #fff;
+  width: 100%;
+  height: $nav-height;
+  border-bottom: 1px solid lighten($color-text-light, 25%);
+  box-sizing: border-box;
+
+  & > div {
+    height: 100%;
+  }
 }
 
 .logo {
-  position: fixed;
+  z-index: 11;
+
+  &:active {
+    & + .mask .logo-bg {
+      transform: scale(0.95);
+      transition: $transition-in;
+    }
+  }
 }
 
 .logo-bg {
-  position: absolute;
+  transition: $transition-out;
 }
 
 .logo,
 .logo-bg {
-  left: 16px;
-  top: 16px;
-  width: 50px;
-}
-
-.logo-block {
-  outline: none;
-}
-
-.nav-mask {
-  position: absolute;
-  height: $nav-height;
-  width: $nav-height;
-  top: 0;
-  overflow: hidden;
-  z-index: 11;
-}
-
-.inner-nav-mask {
   position: fixed;
   height: $nav-height;
   width: $nav-height;
   top: 0;
   left: 0;
+  padding: 1em;
+  box-sizing: border-box;
 }
 
+
+
+
+.test {
+  display: inline-block;
+  background: #000;
+  color: #ccc;
+  padding: 10px;
+}
+
+
+
+// .site-nav {
+//   position: absolute;
+//   height: $nav-height;
+//   top: 0;
+//   width: 100%;
+//   background: #fff;
+//   border-bottom: 1px solid lighten($color-text-light, 25%);
+//   z-index: 10;
+
+//   &.__fixed {
+//     position: fixed;
+//     top: 0;
+//   }
+
+//   a {
+//     display: inline-block;
+//   }
+// }
+
+// .inner-nav {
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   width: 100%;
+// }
+
+// .logo {
+//   position: fixed;
+// }
+
+// .logo-bg {
+//   position: absolute;
+// }
+
+// .logo,
+// .logo-bg {
+//   left: 16px;
+//   top: 16px;
+//   width: 50px;
+// }
+
+// .logo-block {
+//   outline: none;
+// }
+
+// .nav-mask {
+//   position: absolute;
+//   height: $nav-height;
+//   width: $nav-height;
+//   top: 0;
+//   overflow: hidden;
+//   z-index: 11;
+// }
+
+// .inner-nav-mask {
+//   position: fixed;
+//   height: $nav-height;
+//   width: $nav-height;
+//   top: 0;
+//   left: 0;
+// }
+
 .site-main {
-  padding: ($lead-triple * 2) 0 0;
+  padding: $lead-quadruple 0 0;
   position: relative;
 
   section:first-child {
