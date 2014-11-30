@@ -102,11 +102,11 @@ $(function() {
     if( lastPosition > switchPos ) {
       siteNavWrap.addClass('__fixed');
       // TODO: Write / read from a cookie based on the pause button
-      // $('body').addClass('__paused');
+      $('body').addClass('__paused');
     } else {
       siteNavWrap.removeClass('__fixed');
       // TODO: Write / read from a cookie based on the pause button
-      // $('body').removeClass('__paused');
+      $('body').removeClass('__paused');
     }
 
     if( lastPosition >= top_of_page ) {

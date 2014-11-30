@@ -229,7 +229,6 @@ section {
 ^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*/
 
 .orrry-description {
-  z-index: 20;
   color: #fff;
   text-align: right;
   height: 100%;
@@ -273,6 +272,8 @@ section {
 
 .description-holder {
   opacity: 0;
+  padding-bottom: 1px;
+  z-index: 12;
 }
 
 .label {
