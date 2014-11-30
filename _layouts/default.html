@@ -25,15 +25,32 @@
     {% include orrry.html %}
 
     <div class="site-main">
-      <nav class="site-nav" role="navigation">
-        <div class="row">
-          <a href="{{ site.url }}" class="logo">Zac Halbert</a>
+      
+      <div class="nav-wrapper">
+        <div class="logo-block nav-mask">
+          <a href="{{ site.url }}" class="inner-nav-mask">
+            <img src="images/zachalbert-logo-bg.svg" width="192" height="198" class="logo-bg">
+          </a>
         </div>
-        <a href="#top" class="link-to-top icon-arrow-up button"></a>
-      </nav>
+        <nav class="site-nav" role="navigation">
+          <div class="inner-nav">
+            <div class="row">
+              <div class="col-xs-12 col-sm-5 col-md-4 side-column">
+                <img src="images/zachalbert-logo.svg" width="192" height="198" class="logo">
+              </div>
+              <div class="col-xs-12 col-sm-7 col-md-8 main-column">
+                <a href="#">Link</a>
+                <a href="#top" class="link-to-top icon-arrow-up button"></a>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+
       <div class="content">
         {{ content }}
       </div>
+
     </div>
 
     <footer class="site-footer" role="contentinfo">

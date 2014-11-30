@@ -42,6 +42,10 @@ a:active {
   display: inline-block;
 }
 
+a[href^="#"] {
+  outline: 0;
+}
+
 /*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^
 *^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^* LAYOUT
 ^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*/
@@ -60,6 +64,14 @@ section {
   margin: 0 auto;
 }
 
+.__fixed {
+  .site-nav,
+  .nav-mask {
+    position: fixed;
+    top: 0;
+  }
+}
+
 .site-nav {
   position: absolute;
   height: $nav-height;
@@ -73,6 +85,53 @@ section {
     position: fixed;
     top: 0;
   }
+
+  a {
+    display: inline-block;
+  }
+}
+
+.inner-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.logo {
+  position: fixed;
+}
+
+.logo-bg {
+  position: absolute;
+}
+
+.logo,
+.logo-bg {
+  left: 16px;
+  top: 16px;
+  width: 50px;
+}
+
+.logo-block {
+  outline: none;
+}
+
+.nav-mask {
+  position: absolute;
+  height: $nav-height;
+  width: $nav-height;
+  top: 0;
+  overflow: hidden;
+  z-index: 11;
+}
+
+.inner-nav-mask {
+  position: fixed;
+  height: $nav-height;
+  width: $nav-height;
+  top: 0;
+  left: 0;
 }
 
 .site-main {
@@ -87,17 +146,19 @@ section {
   }
 }
 
-.side-column {
-  text-align: right;
-  position: relative;
-}
+.content {
+  .side-column {
+    text-align: right;
+    position: relative;
+  }
 
-.main-column {
-  padding-top: $lead-single;
-  position: relative;
+  .main-column {
+    padding-top: $lead-single;
+    position: relative;
 
-  .meta-text:first-child {
-    margin: -$line-height 0 0;
+    .meta-text:first-child {
+      margin: -$line-height 0 0;
+    }
   }
 }
 

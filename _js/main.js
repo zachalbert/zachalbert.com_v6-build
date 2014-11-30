@@ -84,6 +84,7 @@ $(function() {
     , lastPosition = -1
     , wHeight      = window.innerHeight
     , siteNav      = $('.site-nav')
+    , siteNavWrap  = $('.nav-wrapper')
     , navPos       = siteNav.offset().top
 
   // If page has scrolled, add or remove fixed class
@@ -97,11 +98,11 @@ $(function() {
     }
 
     if( lastPosition > navPos ) {
-      siteNav.addClass('__fixed');
+      siteNavWrap.addClass('__fixed');
       // TODO: Write / read from a cookie based on the pause button
       $('body').addClass('paused');
     } else {
-      siteNav.removeClass('__fixed');
+      siteNavWrap.removeClass('__fixed');
       // TODO: Write / read from a cookie based on the pause button
       $('body').removeClass('paused');
     }

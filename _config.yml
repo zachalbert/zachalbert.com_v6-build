@@ -1,4 +1,5 @@
 name: ZacHalbert.com_v6
+url: "/"
 markdown: redcarpet
 highlighter: pygments # or rouge or null
 exclude: ["node_modules", "bower_components", "gulpfile.js", "package.json", "bower.json", "README.md"]
