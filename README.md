@@ -4,13 +4,18 @@ My personal site.
 
 ## To-do
 
-* Nav —— Figure out why js isn't compiling correctly — changes aren't making it into the minified version
-* Project template [https://divshot.com/blog/web-development/advanced-jekyll-features/]
-* Portfolio page
+* Site footer
+* Portfolio list page
+* Portfolio detail view
+* Figure out image sizing
+* Responsive tuning on the nav & header
+* Responsive tuning on the main column view
 
 ## The Orrery
 
-At the top of my website is an [orrery](http://en.wikipedia.org/wiki/Orrery), a long-held fascination of mine.
+At the top of my website is an [orrery](http://en.wikipedia.org/wiki/Orrery), a long-held fascination of mine. I built it using data from nasa so that the orbital periods for the planets are correct relative to each other. I included some moons (but not all, for performance reasons). The moons are orbiting correctly relative to each other, but are on a different time scale than planetary orbits. If I used the same time scale, most moons would spin so fast they wouldn't be visible or would melt your computer.
+
+***include link to spreadsheet data***
 
 ## Development
 
