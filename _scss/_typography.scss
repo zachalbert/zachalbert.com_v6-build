@@ -32,7 +32,7 @@ h1 {
   margin-bottom: $lead-single;
   line-height: $line-height * 2;
   position: relative;
-  top: 4px;
+  top: -2px;
   @include hyphenate;
 
   a {
@@ -58,5 +58,5 @@ small,
   @extend .small-text;
   text-align: right;
   color: $color-text-light;
-  line-height: $line-height;
+  line-height: 2;
 }

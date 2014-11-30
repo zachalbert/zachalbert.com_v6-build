@@ -46,6 +46,14 @@ a[href^="#"] {
   outline: 0;
 }
 
+.anchor-offset {
+  position: relative;
+  top: -$nav-height;
+  left: 0;
+  width: 0;
+  height: 0;
+}
+
 /*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^
 *^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^* LAYOUT
 ^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*/
@@ -65,13 +73,32 @@ section {
 }
 
 .__fixed {
-  // .site-nav,
-  // .nav-mask {
-  //   position: fixed;
-  //   top: 0;
-  // }
   .mask {
     position: fixed;
+  }
+}
+
+.__top {
+  .link-bank a {
+    color: $color-link;
+  }
+  
+  .link-to-top.button {
+    color: $color-link;
+    border-color: $color-link;
+    transform: rotate(0deg);
+    transition: all 0.35s ease-in-out;
+
+    &:hover {
+      transform: rotate(0deg) scale(0.95);
+      color: #fff;
+      transition: all 0.35s ease-in-out;
+    }
+
+    &:active {
+      transform: rotate(0deg) scale(0.85);
+      transition: all 0.35s ease-in-out;
+    }
   }
 }
 
@@ -94,22 +121,31 @@ section {
 }
 
 .site-nav {
-  background: #fff;
-  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
   height: $nav-height;
-  border-bottom: 1px solid lighten($color-text-light, 25%);
-  box-sizing: border-box;
+  width: 100%;
+  z-index: 11;
 
   & > div {
     height: 100%;
   }
 }
 
+.site-nav-bg {
+  background: #fff;
+  width: 100%;
+  height: $nav-height;
+  border-bottom: 1px solid lighten($color-text-light, 25%);
+  box-sizing: border-box;
+}
+
 .logo {
-  z-index: 11;
+  z-index: 12;
 
   &:active {
-    & + .mask .logo-bg {
+    & ~ .mask .logo-bg {
       transform: scale(0.95);
       transition: $transition-in;
     }
@@ -131,79 +167,17 @@ section {
   box-sizing: border-box;
 }
 
+.link-bank {
+  a {
+    padding: $line-height;
+    color: #fff;
+    transition: all 0.35s ease-in-out;
 
-
-
-.test {
-  display: inline-block;
-  background: #000;
-  color: #ccc;
-  padding: 10px;
+    &:first-child {
+      margin-left: -$line-height;
+    }
+  }
 }
-
-
-
-// .site-nav {
-//   position: absolute;
-//   height: $nav-height;
-//   top: 0;
-//   width: 100%;
-//   background: #fff;
-//   border-bottom: 1px solid lighten($color-text-light, 25%);
-//   z-index: 10;
-
-//   &.__fixed {
-//     position: fixed;
-//     top: 0;
-//   }
-
-//   a {
-//     display: inline-block;
-//   }
-// }
-
-// .inner-nav {
-//   position: fixed;
-//   top: 0;
-//   left: 0;
-//   width: 100%;
-// }
-
-// .logo {
-//   position: fixed;
-// }
-
-// .logo-bg {
-//   position: absolute;
-// }
-
-// .logo,
-// .logo-bg {
-//   left: 16px;
-//   top: 16px;
-//   width: 50px;
-// }
-
-// .logo-block {
-//   outline: none;
-// }
-
-// .nav-mask {
-//   position: absolute;
-//   height: $nav-height;
-//   width: $nav-height;
-//   top: 0;
-//   overflow: hidden;
-//   z-index: 11;
-// }
-
-// .inner-nav-mask {
-//   position: fixed;
-//   height: $nav-height;
-//   width: $nav-height;
-//   top: 0;
-//   left: 0;
-// }
 
 .site-main {
   padding: $lead-quadruple 0 0;
@@ -255,14 +229,15 @@ section {
 ^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*/
 
 .orrry-description {
-  z-index: 10;
-  position: absolute;
-  right: (1/12) * 100%;
-  width: (5/12) * 100%;
+  z-index: 20;
   color: #fff;
-  font-weight: normal;
   text-align: right;
-  opacity: 0;
+  height: 100%;
+  position: relative;
+  
+  & > div {
+    height: 100%;
+  }
 
   a {
     color: #fff;
@@ -294,6 +269,10 @@ section {
       }
     }
   }
+}
+
+.description-holder {
+  opacity: 0;
 }
 
 .label {
@@ -351,7 +330,7 @@ section {
 
   &:hover {
     color: #fff;
-    transform: scale(0.9);
+    transform: scale(0.95);
     transition: $transition-in;
     border-color: $color-link-hover;
 
@@ -364,7 +343,7 @@ section {
   }
 
   &:active {
-    transform: scale(0.8);
+    transform: scale(0.85);
   }
 }
 
@@ -373,7 +352,6 @@ section {
 }
 
 [class*="icon-"] {
-
   &.button {
     padding: ($font-size-small-1 + 1px) $font-size-small-1 ($font-size-small-1 - 1px);
     width: $line-height;
@@ -387,6 +365,20 @@ section {
   top: $font-size;
   right: $font-size;
   margin: 0;
+  transform: rotate(-180deg);
+  transition: all 0.35s ease-in-out;
+  color: #fff;
+  border-color: #fff;
+
+  &:hover {
+    transform: rotate(-180deg) scale(0.95);
+    transition: all 0.35s ease-in-out;
+  }
+
+  &:active {
+    transform: rotate(-180deg) scale(0.85);
+    transition: all 0.35s ease-in-out;
+  }
 }
 
 .site-footer {

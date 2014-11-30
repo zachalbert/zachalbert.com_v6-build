@@ -1,3 +1,5 @@
+var top_of_page = $('.site-main').offset().top - 84;
+
 $(function() {
   // Scatter the stars about the heavens
   var num_stars = 500;
@@ -13,13 +15,12 @@ $(function() {
     $('#star-field').append('<span class="star" style="left: '+xPos+'%; top: '+yPos+'%; width: '+size+'px; height: '+size+'px; opacity: '+opacity+';"></span>');
   }
 
-  // Scroll to the sun on load
-  var sun_pos = Math.round($('#sun > .orbit').offset().top - 10);
-  var sun_offset = $(window).height() - sun_pos - 61;
-  var top_of_page = $(window).height() - 180;
-  
+  // var sun_pos = Math.round($('#sun > .orbit').offset().top - 10);
+  // var sun_offset = $(window).height() - sun_pos - 61;
+  // $('.orrry-description').css('bottom', sun_offset);
+
+  // Scroll to show just the edge of the project
   window.scrollTo(0, top_of_page);
-  $('.orrry-description').css('bottom', sun_offset);
 });
 
 // Smooth scroll
@@ -80,11 +81,13 @@ $(document).ready(function() {
 $(function() {
 
   // Detect request animation frame
-  var scroll = window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.msRequestAnimationFrame || window.oRequestAnimationFrame || function(callback){ window.setTimeout(callback, 1000/60) }
-    , lastPosition = -1
-    , wHeight      = window.innerHeight
-    , siteNavWrap  = $('.nav-wrapper')
-    , switchPos    = $('.site-main').offset().top
+  var scroll = window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.msRequestAnimationFrame || window.oRequestAnimationFrame || function(callback){ window.setTimeout(callback, 1000/60) },
+      lastPosition = -1,
+      wHeight      = window.innerHeight,
+      siteNavWrap  = $('.nav-wrapper'),
+      switchPos    = $('.site-main').offset().top,
+      topLink      = $('.link-to-top'),
+      orrryBlock   = $('.orrry-description .description-holder');
 
   // If page has scrolled, add or remove fixed class
   function loop() {
@@ -99,11 +102,25 @@ $(function() {
     if( lastPosition > switchPos ) {
       siteNavWrap.addClass('__fixed');
       // TODO: Write / read from a cookie based on the pause button
-      $('body').addClass('paused');
+      // $('body').addClass('__paused');
     } else {
       siteNavWrap.removeClass('__fixed');
       // TODO: Write / read from a cookie based on the pause button
-      $('body').removeClass('paused');
+      // $('body').removeClass('__paused');
+    }
+
+    if( lastPosition >= top_of_page ) {
+      $('body').addClass('__top');
+      $('.link-to-top').attr("href", "#top");
+    } else {
+      $('body').removeClass('__top');
+      $('.link-to-top').attr("href", "#page");
+    }
+
+    if( lastPosition < switchPos/2 ) {
+      orrryBlock.addClass('fadeInUp').removeClass('fadeOutDown');
+    } else {
+      orrryBlock.addClass('fadeOutDown').removeClass('fadeInUp');
     }
 
     scroll(loop);
