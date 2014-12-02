@@ -84,8 +84,6 @@ section {
   }
   
   .link-to-top.button {
-    color: $color-link;
-    border-color: $color-link;
     transform: rotate(0deg);
     transition: all 0.35s ease-in-out;
 
@@ -170,12 +168,22 @@ section {
 .link-bank {
   a {
     padding: $line-height;
-    color: #fff;
     transition: all 0.35s ease-in-out;
 
     &:first-child {
       margin-left: -$line-height;
     }
+  }
+}
+
+.__nav-link {
+  .link-bank a {
+    color: #fff;
+  }
+  
+  .link-to-top.button {
+    color: #fff;
+    border-color: #fff;
   }
 }
 
@@ -368,8 +376,8 @@ section {
   margin: 0;
   transform: rotate(-180deg);
   transition: all 0.35s ease-in-out;
-  color: #fff;
-  border-color: #fff;
+  color: $color-link;
+  border-color: $color-link;
 
   &:hover {
     transform: rotate(-180deg) scale(0.95);

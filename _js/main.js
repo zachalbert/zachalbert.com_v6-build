@@ -1,4 +1,4 @@
-var top_of_page = $('.site-main').offset().top - 84;
+var topOfPage = $('.site-main').offset().top - 84;
 
 $(function() {
   // Scatter the stars about the heavens
@@ -20,7 +20,7 @@ $(function() {
   // $('.orrry-description').css('bottom', sun_offset);
 
   // Scroll to show just the edge of the project
-  window.scrollTo(0, top_of_page);
+  window.scrollTo(0, topOfPage);
 });
 
 // Smooth scroll
@@ -82,12 +82,13 @@ $(function() {
 
   // Detect request animation frame
   var scroll = window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.msRequestAnimationFrame || window.oRequestAnimationFrame || function(callback){ window.setTimeout(callback, 1000/60) },
-      lastPosition = -1,
-      wHeight      = window.innerHeight,
-      siteNavWrap  = $('.nav-wrapper'),
-      switchPos    = $('.site-main').offset().top,
-      topLink      = $('.link-to-top'),
-      orrryBlock   = $('.orrry-description .description-holder');
+      lastPosition  = -1,
+      wHeight       = window.innerHeight,
+      siteNavWrap   = $('.nav-wrapper'),
+      siteMain      = $('.site-main').offset().top,
+      topLink       = $('.link-to-top'),
+      orrryBlock    = $('.orrry-description .description-holder'),
+      navLinkSwitch = topOfPage + 34;
 
   // If page has scrolled, add or remove fixed class
   function loop() {
@@ -99,17 +100,15 @@ $(function() {
       lastPosition = window.pageYOffset;
     }
 
-    if( lastPosition > switchPos ) {
-      siteNavWrap.addClass('__fixed');
-      // TODO: Write / read from a cookie based on the pause button
-      $('body').addClass('__paused');
+    // Orrry description fade point
+    if( lastPosition < siteMain/2 ) {
+      orrryBlock.addClass('fadeInUp').removeClass('fadeOutDown');
     } else {
-      siteNavWrap.removeClass('__fixed');
-      // TODO: Write / read from a cookie based on the pause button
-      $('body').removeClass('__paused');
+      orrryBlock.addClass('fadeOutDown').removeClass('fadeInUp');
     }
 
-    if( lastPosition >= top_of_page ) {
+    // Starting position
+    if( lastPosition >= topOfPage ) {
       $('body').addClass('__top');
       $('.link-to-top').attr("href", "#top");
     } else {
@@ -117,10 +116,22 @@ $(function() {
       $('.link-to-top').attr("href", "#page");
     }
 
-    if( lastPosition < switchPos/2 ) {
-      orrryBlock.addClass('fadeInUp').removeClass('fadeOutDown');
+    // Link text hits white
+    if( lastPosition <= navLinkSwitch ) {
+      $('body').addClass('__nav-link');
     } else {
-      orrryBlock.addClass('fadeOutDown').removeClass('fadeInUp');
+      $('body').removeClass('__nav-link');
+    }    
+
+    // Nav is fully on top of window edge
+    if( lastPosition > siteMain ) {
+      siteNavWrap.addClass('__fixed');
+      // TODO: Write / read from a cookie based on the pause button
+      $('body').addClass('__paused');
+    } else {
+      siteNavWrap.removeClass('__fixed');
+      // TODO: Write / read from a cookie based on the pause button
+      $('body').removeClass('__paused');
     }
 
     scroll(loop);
