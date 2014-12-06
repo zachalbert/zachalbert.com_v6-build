@@ -4,6 +4,9 @@ My personal site.
 
 ## To-do
 
+* Investigate the foundation flexbox grid
+* For the grid, think about this:
+** Perhaps, elements like side nav, p elements, etc should all get grid sizes in the stylesheet, rather than in the markup. This will allow full width things like images.
 * Site footer
 * Portfolio list page
 * Portfolio detail view

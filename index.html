@@ -11,12 +11,12 @@ title: Zac Halbert
       <h2>{{ post.subtitle }}</h2>
     </div>
     <div class="col-xs-12 col-sm-7 col-md-8 main-column">
-      <time datetime="2014-11" class="meta-text">{{ post.date | date_to_string }}</time>
+      <time datetime="2014-11" class="meta-text">{{ post.date | date: "%B %Y" }}</time>
       
       {{ post.content }}
 
-      <div class="social">
-        <a href="#" class="icon-twitter button"></a><a href="#" class="icon-facebook button"></a><a href="#" class="icon-linkedin button"></a><a href="#" class="icon-google-plus button"></a>
+      <div class="post-social">
+        <a href="#" class="icon-google-plus button"></a><a href="#" class="icon-facebook button"></a><a href="#" class="icon-linkedin button"></a><a href="#" class="icon-twitter button"></a>
       </div>
 
     </div>

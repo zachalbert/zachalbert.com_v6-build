@@ -187,6 +187,20 @@ section {
   }
 }
 
+.social-bank {
+  top: $nav-height;
+  position: fixed;
+  text-align: center;
+  margin-left: $lead-single;
+  padding-top: $font-size;
+
+  a.button {
+    margin: 0 0 $lead-single 0;
+    display: block;
+    float: none;
+  }
+}
+
 .site-main {
   padding: $lead-quadruple 0 0;
   position: relative;
@@ -356,8 +370,16 @@ section {
   }
 }
 
-.social {
+.post-social {
   padding-top: $lead-single;
+
+  a {
+    float: right;
+
+    &:first-child {
+      margin-right: 0;
+    }
+  }
 }
 
 [class*="icon-"] {
@@ -365,7 +387,17 @@ section {
     padding: ($font-size-small-1 + 1px) $font-size-small-1 ($font-size-small-1 - 1px);
     width: $line-height;
     display: inline-block;
-    margin-right: $lead-single;
+    margin-right: 5%;
+  }
+
+  &.icon-small.button {
+    padding: ($font-size-small-1 + 1px) $font-size-small-1 ($font-size-small-1 - 1px);
+    width: $line-height / 2;
+    line-height: 1;
+
+    &:before {
+      font-size: 0.8em;
+    }
   }
 }
 
