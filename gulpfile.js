@@ -13,6 +13,7 @@ var sass            = require('gulp-sass');
 var uglify          = require('gulp-uglify');
 var cp              = require('child_process');
 var deploy          = require('gulp-gh-pages');
+var mainBowerFiles  = require('main-bower-files');
 
 var messages = {
   jekyllBuild: '<span style="color: grey">Running:</span> $ jekyll build'
@@ -61,8 +62,13 @@ gulp.task('styles', function() {
 
 // Concatenate & Minify JS
 gulp.task('scripts', function() {
-  return gulp.src('_js/*.js')
-    .pipe(concat('_js/site.js'))
+  var bowerPaths = {
+    bowerDirectory: 'bower_components',
+    bowerrc: '.bowerrc',
+    bowerJson: 'bower.json'
+  };
+  return gulp.src(mainBowerFiles(bowerPaths).concat('_js/*.js'))
+    .pipe(concat('site.js'))
     .pipe(rename('site.min.js'))
     .pipe(uglify())
     .pipe(browserSync.reload({stream: true}))

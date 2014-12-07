@@ -19,7 +19,7 @@
     "gulp-rename": "^1.2.0",
     "gulp-sass": "^0.7.3",
     "gulp-uglify": "^1.0.0",
-    "main-bower-files": "^2.0.0"
+    "main-bower-files": "^2.4.1"
   },
   "scripts": {
     "postinstall": "bower install",

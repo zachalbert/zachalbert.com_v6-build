@@ -62,6 +62,13 @@ small,
   line-height: $line-height;
 }
 
+.sub {
+  @extend .meta-text;
+  font-weight: normal;
+  font-style: normal;
+  position: relative;
+}
+
 blockquote {
   @extend .small-text;
   font-size: $font-size-2;

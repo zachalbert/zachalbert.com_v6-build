@@ -3,7 +3,9 @@ body {
 }
 
 @media #{$min-480} {
-  
+  .social-bank {
+    margin-left: 0;
+  }
 }
 
 @media #{$min-640} {
@@ -15,20 +17,27 @@ body {
     width: 90%;
   }
 
-  .post-aside {
-    margin-bottom: 0;
-
-    .meta-text {
-      position: absolute;
-      text-align: right;
-    }
-  }
-
   .post-aside .inner,
   figcaption {
     position: absolute;
     text-align: right;
     width: 100%;
+  }
+
+  .post-aside {
+    margin-bottom: 0;
+  
+    .inner {
+      .sub {
+        text-align: right;
+      }
+
+      h1,
+      h2,
+      .sub {
+        padding-right: $half-gutter-width;
+      }
+    }
   }
 
   blockquote {

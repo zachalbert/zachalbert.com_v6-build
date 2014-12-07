@@ -31,13 +31,6 @@
         <a href="{{ site.url }}" class="logo" title="{{ site.name }}">
           <img src="images/zachalbert-logo.svg" width="192" height="198" alt="ZacHalbert.com">
         </a>
-        <div class="social-bank">
-          <a href="#" class="icon-twitter icon-small button"></a>
-          <a href="#" class="icon-dribbble icon-small button"></a>
-          <a href="#" class="icon-linkedin icon-small button"></a>
-          <a href="#" class="icon-github icon-small button"></a>
-          <a href="#" class="icon-mail icon-small button"></a>
-        </div>
         <nav class="site-nav" role="navigation">
           <div class="row middle-xs">
             <div class="col-xs-12 col-sm-5 col-md-4">
@@ -45,7 +38,7 @@
             </div>
             <div class="col-xs-12 col-sm-7 col-md-8">
               <div class="link-bank">
-                <a href="#">Portfolio</a><a href="#">About</a><a href="#">Contact me</a>
+                <a href="#">Portfolio</a><a href="#">About</a><a href="#contact">Contact me</a>
               </div>
             </div>
           </div>
@@ -71,19 +64,33 @@
 
     </div>
 
-    <footer class="site-footer" role="contentinfo">
+    <footer class="site-footer" role="contentinfo" id="contact">
       <div class="row">
-        <div class="small-8 small-centered medium-5 large-4 medium-centered columns">
+
+        <div class="col-xs-2 col-sm-offset-3 col-sm-2 col-md-offset-2 col-md-2">
+          <div class="social-bank">
+            <a href="#" class="icon-twitter button"></a>
+            <a href="#" class="icon-dribbble button"></a>
+            <a href="#" class="icon-linkedin button"></a>
+            <a href="#" class="icon-github button"></a>
+            <a href="#" class="icon-mail-filled button"></a>
+          </div>
+        </div>
+
+        <div class="col-xs-10 col-sm-7 col-md-8">
           <section>
-            <a href="http://www.zachalbert.com/" class="footer-logo"></a>
-            <div class="social">
-              <a href="http://www.twitter.com/ZacHalbert" class="social-icon twitter" title="Follow me on Twitter"></a><a href="https://github.com/zachalbert/ios-camera-app-redesign" class="social-icon github" title="View the repository for this website"></a><a href="http://www.dribbble.com/zachalbert" class="social-icon dribbble" title="View my Dribbble profile"></a>
-            </div>
+            <h1>Hire me</h1>
+            <p>This is some text about contacting / hiring me</p>
+            <form method="post" action="//forms.brace.io/zachalbert@gmail.com">
+              <input type="text" placeholder="Your name" name="name">
+              <input type="email" placeholder="Your email" name="_replyto">
+              <textarea placeholder="Your message" name="message"></textarea>
+              <input type="hidden" name="_subject" value="New contact" />
+              <input type="hidden" name="_next" value="{{  site.url }}/thanks.html" />
+              <input type="submit" value="Send">
+          </form>
           </section>
           <section class="license">
-            <p>
-              Thanks to all the people.
-            </p>
             <p>
               Made by <a href="http://www.zachalbert.com/">Zac Halbert</a> in 2014, 
               project and <a href="https://github.com/zachalbert/ios-camera-app-redesign">code</a> 
@@ -91,6 +98,7 @@
             </p>
           </section>
         </div>
+
       </div>
     </footer>
 

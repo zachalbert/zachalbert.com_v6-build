@@ -188,11 +188,9 @@ section {
 }
 
 .social-bank {
-  top: $nav-height;
-  position: fixed;
-  text-align: center;
-  margin-left: $lead-single;
-  padding-top: $font-size;
+  margin-left: -$font-size;
+  text-align: right;
+  padding-top: 0.6em;
 
   a.button {
     margin: 0 0 $lead-single 0;
@@ -314,6 +312,42 @@ figure {
 /*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^
 *^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^* MODULES
 ^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*/
+
+input,
+textarea {
+  width: 100%;
+  margin: 0 0 $lead-single;
+  padding: $font-size-1;
+  border: none;
+  border-radius: 2px;
+  background: #fff;
+  color: $color-text;
+}
+
+.float-label {
+  @extend .meta-text;
+  position: relative;
+  top: -1em;
+  display: block;
+}
+
+// input {
+//   &:focus {
+//     &::-webkit-input-placeholder {
+//       @extend .float-label;
+//     }
+//     &::-moz-placeholder { /* Firefox 19+ */
+//       @extend .float-label;
+//     }
+//     &:-ms-input-placeholder {
+//       @extend .float-label;
+//     }
+//     &:-moz-placeholder { /* Firefox 18- */
+//       @extend .float-label;
+//     }
+//   }
+// }
+
 
 .orrry-description {
   color: #fff;
@@ -489,12 +523,33 @@ figure {
 .site-footer {
   background: $color-footer;
   color: $color-footer-text;
+  height: 100%;
+  padding-top: $nav-height * 2;
+  box-sizing: border-box;
 
   a {
     color: $color-footer-link;
+    border-color: $color-footer-link;
 
     &:hover {
       color: $color-footer-link-hover;
+      border-color: $color-footer-link-hover;
+
+      &:after {
+        color: $color-footer-link-hover;
+        border-color: $color-footer-link-hover;
+      }
+    }
+  }
+
+  .button {
+    &:hover {
+      color: $color-footer;
+
+      &:after {
+        background: $color-footer-link-hover;
+        border-color: $color-footer-link-hover;
+      }
     }
   }
 }
