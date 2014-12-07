@@ -22,10 +22,8 @@ $color-12: #5e3043;
 
 $color-background:        #fff;
 $color-text:              #4D2636;
-$color-text-medium:       #5D929B;
-$color-text-light:        #8BB7BE;
-$color-link:              $color-text-light;
-$color-link-hover:        $color-text-medium;
+$color-link:              #8BB7BE;
+$color-link-hover:        #5D929B;
 
 $color-border:            $color-text;
 
@@ -66,6 +64,9 @@ $font-size-4: 4.236em;
 $font-size-small-1: $font-size / $scale;
 
 // Strips of lead
+$lead-half:        $line-height / 2;
+.lead-half       { margin-bottom: $line-height / 2; }
+
 $lead-single:      $line-height;
 .lead-single     { margin-bottom: $line-height; }
 

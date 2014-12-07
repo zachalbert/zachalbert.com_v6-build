@@ -12,22 +12,55 @@ body {
   }
 
   .row {
-    width: 80%;
+    width: 90%;
   }
 
+  .post-aside {
+    margin-bottom: 0;
+
+    .meta-text {
+      position: absolute;
+      text-align: right;
+    }
+  }
+
+  .post-aside .inner,
+  figcaption {
+    position: absolute;
+    text-align: right;
+    width: 100%;
+  }
+
+  blockquote {
+    figcaption {
+      margin-top: $lead-half;
+      position: relative;
+    }
+  }
+
+  figure {
+    img {
+      margin-bottom: $lead-double;
+    }
+  }
+  
+  .post-date {
+    text-align: right;
+    margin-top: -$lead-single;
+  }
 }
 
 @media #{$min-768} {
   
   .row {
-    width: 75%;
+    width: 80%;
   }
 }
 
 @media #{$min-1024} {
   
   .row {
-    width: 70%;
+    width: 75%;
   }
 }
 

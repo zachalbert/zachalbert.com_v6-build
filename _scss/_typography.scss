@@ -32,7 +32,7 @@ h1 {
   margin-bottom: $lead-single;
   line-height: $line-height * 2;
   position: relative;
-  top: -2px;
+  top: 5px;
   @include hyphenate;
 
   a {
@@ -43,7 +43,8 @@ h1 {
 h2 { font-size: $font-size-1; }
 h3 { font-size: $font-size-1; }
 
-p {
+p,
+blockquote {
   margin: 0 0 $line-height;
 }
 
@@ -57,6 +58,13 @@ small,
 .meta-text {
   @extend .small-text;
   text-align: right;
-  color: $color-text-light;
-  line-height: 2;
+  color: $color-link;
+  line-height: $line-height;
+}
+
+blockquote {
+  @extend .small-text;
+  font-size: $font-size-2;
+  line-height: $line-height * 1.5;
+  font-style: italic;
 }
