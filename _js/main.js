@@ -41,6 +41,8 @@ $(function() {
 
 $(document).ready(function() {
 
+  $('.float-label').floatlabel({slideInput: false});
+
   // Set hover states
   $('.solar-system > div > .orbit').hover(function() {
     $(this).mousemove(function(e) {

@@ -7,8 +7,8 @@
   "private": true,
   "dependencies": {},
   "devDependencies": {
-    "JVFloat": "~1.1.0",
     "jquery": "~2.1.1",
-    "velocity": "~1.1.0"
+    "velocity": "~1.1.0",
+    "floatlabel.js": "*"
   }
 }

@@ -1,19 +1,20 @@
 "use strict";
 
-var gulp            = require('gulp');
-var browserSync     = require('browser-sync');
-var autoprefixer    = require('gulp-autoprefixer');
-var concat          = require('gulp-concat');
-var connect         = require('gulp-connect');
-var minifyCSS       = require('gulp-minify-css');
-var notify          = require('gulp-notify');
-var plumber         = require('gulp-plumber');
-var rename          = require('gulp-rename');
-var sass            = require('gulp-sass');
-var uglify          = require('gulp-uglify');
-var cp              = require('child_process');
-var deploy          = require('gulp-gh-pages');
-var mainBowerFiles  = require('main-bower-files');
+var gulp            = require('gulp'),
+    browserSync     = require('browser-sync'),
+    autoprefixer    = require('gulp-autoprefixer'),
+    concat          = require('gulp-concat'),
+    connect         = require('gulp-connect'),
+    minifyCSS       = require('gulp-minify-css'),
+    notify          = require('gulp-notify'),
+    plumber         = require('gulp-plumber'),
+    rename          = require('gulp-rename'),
+    sass            = require('gulp-sass'),
+    uglify          = require('gulp-uglify'),
+    cp              = require('child_process'),
+    deploy          = require('gulp-gh-pages'),
+    filter          = require('gulp-filter'),
+    mainBowerFiles  = require('main-bower-files');
 
 var messages = {
   jekyllBuild: '<span style="color: grey">Running:</span> $ jekyll build'
@@ -62,24 +63,28 @@ gulp.task('styles', function() {
 
 // Concatenate & Minify JS
 gulp.task('scripts', function() {
-  var bowerPaths = {
-    bowerDirectory: 'bower_components',
-    bowerrc: '.bowerrc',
-    bowerJson: 'bower.json'
-  };
-  return gulp.src(mainBowerFiles(bowerPaths).concat('_js/*.js'))
+  var bowerPath = 'bower_components';
+
+  var jsPaths = [
+    bowerPath + '/velocity/velocity.js',
+    bowerPath + '/jquery/dist/*.min.js',
+    bowerPath + '/floatlabel.js/floatlabels.js',
+    '_js/**/*.js'
+  ];
+  
+  return gulp.src(jsPaths)
     .pipe(concat('site.js'))
     .pipe(rename('site.min.js'))
     .pipe(uglify())
-    .pipe(browserSync.reload({stream: true}))
-    .pipe(gulp.dest('js'));
+    .pipe(gulp.dest('js'))
+    .pipe(browserSync.reload({stream: true}));
 });
 
 
 // Watch task
 gulp.task('watch', function() {
   gulp.watch('_scss/*.scss', ['styles']);
-  gulp.watch('_js/*.js', ['scripts', 'jekyll-rebuild']);
+  gulp.watch(['_js/*.js', 'bower_components/**/*.js'], ['scripts', 'jekyll-rebuild']);
   gulp.watch(['index.html', '_includes/*.html', '_layouts/*.html', '_posts/*'], ['jekyll-rebuild']);
 });
 

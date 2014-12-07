@@ -22,7 +22,8 @@ At the top of my website is an [orrery](http://en.wikipedia.org/wiki/Orrery), a 
 
 ## Development
 
-To start the server and start gulp watching stuff, run `npm start`
+* To start the server and start gulp watching stuff, run `npm start`
+* Every 3 months or 3,000 miles, run `npm update`
 
 ## Deploy
 

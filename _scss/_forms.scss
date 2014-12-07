@@ -1,0 +1,61 @@
+.label-floatlabel {
+  color: red;
+}
+
+input,
+textarea {
+  width: 100%;
+  margin: 0 0 $lead-single;
+  padding: 0.7em $font-size-1;
+  border: none;
+  border-radius: 2px;
+  background: #fff;
+  color: $color-text;
+  box-sizing: border-box;
+}
+
+input.button {
+  padding: 1em;
+}
+
+.orrry-description {
+  color: #fff;
+  text-align: right;
+  height: 100%;
+  position: relative;
+  
+  & > div {
+    height: 100%;
+  }
+
+  a {
+    color: #fff;
+    border-color: #fff;
+
+    &:after {
+      background: rgba(#fff, 0);
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:hover {
+      border-color: #fff;
+      color: $color-12;
+
+      &:after {
+        background: rgba(#fff, 1);
+        border-color: rgba(#fff, 1);
+      }
+
+      &.icon-pause:before {
+        content: 'f';
+      }
+
+      &.icon-information:before {
+        content: 'k';
+      }
+    }
+  }
+}
