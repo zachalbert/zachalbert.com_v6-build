@@ -274,6 +274,7 @@ figcaption {
 figcaption {
   @extend .meta-text;
   padding-left: 0;
+  font-style: normal;
 }
 
 figure {
@@ -317,11 +318,16 @@ input,
 textarea {
   width: 100%;
   margin: 0 0 $lead-single;
-  padding: $font-size-1;
+  padding: 0.7em $font-size-1;
   border: none;
   border-radius: 2px;
   background: #fff;
   color: $color-text;
+  box-sizing: border-box;
+}
+
+input.button {
+  padding: 1em;
 }
 
 .float-label {
@@ -330,24 +336,6 @@ textarea {
   top: -1em;
   display: block;
 }
-
-// input {
-//   &:focus {
-//     &::-webkit-input-placeholder {
-//       @extend .float-label;
-//     }
-//     &::-moz-placeholder { /* Firefox 19+ */
-//       @extend .float-label;
-//     }
-//     &:-ms-input-placeholder {
-//       @extend .float-label;
-//     }
-//     &:-moz-placeholder { /* Firefox 18- */
-//       @extend .float-label;
-//     }
-//   }
-// }
-
 
 .orrry-description {
   color: #fff;
@@ -421,7 +409,7 @@ textarea {
 
 .button {
   padding: $font-size-small-1;
-  border-radius: 50%;
+  border-radius: $lead-single * 2;
   border: 1px solid $color-link;
   background: transparent;
   text-decoration: none;
@@ -466,6 +454,18 @@ textarea {
 
   &:active {
     transform: scale(0.85);
+  }
+
+  &.button-primary {
+    color: #fff;
+    border-color: $color-link;
+    background: $color-link;
+
+    &:hover {
+      color: #fff;
+      background: $color-link-hover;
+      border-color: $color-link-hover;
+    }
   }
 }
 
@@ -520,6 +520,10 @@ textarea {
   }
 }
 
+form {
+  margin-bottom: $lead-single;
+}
+
 .site-footer {
   background: $color-footer;
   color: $color-footer-text;
@@ -527,6 +531,7 @@ textarea {
   padding-top: $nav-height * 2;
   box-sizing: border-box;
 
+  [class*="icon"],
   a {
     color: $color-footer-link;
     border-color: $color-footer-link;
@@ -542,7 +547,7 @@ textarea {
     }
   }
 
-  .button {
+  [class*="icon"] {
     &:hover {
       color: $color-footer;
 
