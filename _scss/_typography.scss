@@ -43,8 +43,17 @@ h1 {
 h2 { font-size: $font-size-1; }
 h3 { font-size: $font-size-1; }
 
+ul,
+ol {
+  li {
+    margin-left: $lead-single;
+  }
+}
+
 p,
-blockquote {
+blockquote,
+ul,
+ol {
   margin: 0 0 $line-height;
 }
 

@@ -54,6 +54,10 @@ a[href^="#"] {
   height: 0;
 }
 
+.col-no-padding {
+  padding: 0;
+}
+
 /*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^
 *^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^* LAYOUT
 ^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*/
@@ -195,7 +199,7 @@ section {
   a.button {
     margin: 0 0 $lead-single 0;
     display: block;
-    float: none;
+    float: right;
   }
 }
 
@@ -214,6 +218,20 @@ section {
 // Side:    col-xs-12 col-sm-5 col-md-4 side-column
 // Main:    col-xs-12 col-sm-7 col-md-8 main-column
 
+.col-side {
+  @extend .col-xs-12;
+  @extend .col-sm-5;
+  @extend .col-md-4;
+}
+
+.col-main {
+  @extend .col-xs-12;
+  @extend .col-sm-offset-5;
+  @extend .col-sm-7;
+  @extend .col-md-offset-4;
+  @extend .col-md-8;
+}
+
 .post {
   @extend .row;
   position: relative;
@@ -225,27 +243,23 @@ section {
   // Main
   h3,
   p,
-  .post-social {
-    @extend .col-xs-12;
-    @extend .col-sm-offset-5;
-    @extend .col-sm-7;
-    @extend .col-md-offset-4;
-    @extend .col-md-8;
+  .post-social,
+  ul,
+  ol {
+    @extend .col-main;
   }
 }
 
 // Side
-.post-aside,
+.aside,
 figcaption {
-  @extend .col-xs-12;
-  @extend .col-sm-5;
-  @extend .col-md-4;
+  @extend .col-side;
   text-align: left;
   position: relative;
   margin-bottom: $lead-single;
 }
 
-.post-aside {
+.aside {
   .meta-text {
     text-align: left;
   }
@@ -295,8 +309,8 @@ figure {
   text-align: left
 }
 
-.side {
-  position: relative;
+.panel {
+  min-height: $lead-single * 7;
 }
 
 .main-column {
@@ -306,13 +320,22 @@ figure {
   .meta-text:first-child {
     margin: -$line-height 0 0;
   }
-
-
 }
 
 /*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^
 *^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^* MODULES
 ^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*/
+
+#about + section {
+  background: url('../images/big-banner-01.jpg');
+  background-size: cover;
+  margin-bottom: 0;
+
+  .row {
+    border-top: none;
+    padding: $lead-triple 0;
+  }
+}
 
 .description-holder {
   opacity: 0;
@@ -375,7 +398,7 @@ figure {
 
   &:hover {
     color: #fff;
-    transform: scale(0.95);
+    transform: scale(0.98);
     transition: $transition-in;
     border-color: $color-link-hover;
 
@@ -388,7 +411,7 @@ figure {
   }
 
   &:active {
-    transform: scale(0.85);
+    transform: scale(0.96);
   }
 
   &.button-primary {
@@ -421,6 +444,14 @@ figure {
     width: $line-height;
     display: inline-block;
     margin-right: 4%;
+
+    &:hover {
+      transform: scale(0.95);
+    }
+
+    &:active {
+      transform: scale(0.85);
+    }
   }
 
   &.icon-small.button {
@@ -452,6 +483,16 @@ figure {
   &:active {
     transform: rotate(-180deg) scale(0.85);
     transition: all 0.35s ease-in-out;
+  }
+}
+
+.link-list {
+  li {
+    list-style: none;
+  }
+
+  a {
+    display: block;
   }
 }
 

@@ -16,15 +16,15 @@ body {
   .row {
     width: 90%;
   }
-
-  .post-aside .inner,
+  
+  .aside .inner,
   figcaption {
     position: absolute;
     text-align: right;
     width: 100%;
   }
 
-  .post-aside {
+  .aside {
     margin-bottom: 0;
   
     .inner {
@@ -34,7 +34,10 @@ body {
 
       h1,
       h2,
-      .sub {
+      .sub,
+      p,
+      ul,
+      ol {
         padding-right: $half-gutter-width;
       }
     }
@@ -56,6 +59,10 @@ body {
   .post-date {
     text-align: right;
     margin-top: -$lead-single;
+  }
+
+  .social-bank a.button {
+    margin-right: $half-gutter-width;
   }
 }
 
