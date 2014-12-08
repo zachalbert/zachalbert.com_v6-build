@@ -58,6 +58,21 @@ a[href^="#"] {
   padding: 0;
 }
 
+::-moz-selection {
+  background: $color-selection-bg;
+  color: $color-selection;
+}
+
+::-webkit-selection {
+  background: $color-selection-bg;
+  color: $color-selection;
+}
+
+::selection {
+  background: $color-selection-bg;
+  color: $color-selection;
+}
+
 /*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^
 *^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^* LAYOUT
 ^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*/
@@ -292,8 +307,6 @@ figcaption {
 }
 
 figure {
-  padding: 0 $half-gutter-width 0;
-
   img {
     margin: 0 0 $lead-single;
   }
@@ -335,6 +348,10 @@ figure {
     border-top: none;
     padding: $lead-triple 0;
   }
+}
+
+#about-nav a {
+  color: #fff;
 }
 
 .description-holder {
@@ -428,14 +445,16 @@ figure {
 }
 
 .post-social {
-  padding-top: $lead-single;
-
   a {
     float: left;
 
     &:first-child {
     }
   }
+}
+
+p + .post-social {
+  padding-top: $lead-single;
 }
 
 [class*="icon-"] {
@@ -493,6 +512,19 @@ figure {
 
   a {
     display: block;
+    position: relative;
+
+    &.active {
+      &:after {
+        content: '\2022';
+        color: #fff;
+        display: block;
+        position: absolute;
+        text-decoration: none;
+        right: -1em;
+        top: 0;
+      }
+    }
   }
 }
 

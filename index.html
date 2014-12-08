@@ -3,25 +3,47 @@ layout: default
 title: Zac Halbert
 ---
 
-{% for post in site.posts %}
-<section>
-  <div class="post">
-    <header class="aside">
-      <div class="inner">
-        <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
-        <h2>{{ post.subtitle }}</h2>
-      </div>
-    </header>
+        {% for post in site.posts %}
+        <section>
+          <div class="post">
+            <header class="aside">
+              <div class="inner">
+                <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
+                <h2>{{ post.subtitle }}</h2>
+              </div>
+            </header>
 
-    <time datetime="2014-11" class="post-date">{{ post.date | date: "%B %Y" }}</time>
-    {{ post.content }}
+            <time datetime="2014-11" class="post-date">{{ post.date | date: "%B %Y" }}</time>
+            {{ post.content }}
 
-    <div class="post-social">
-      <div class="inner">
-        <a href="#" class="icon-twitter button"></a><a href="#" class="icon-linkedin button"></a><a href="#" class="icon-facebook button"></a><a href="#" class="icon-google-plus button"></a>
-      </div>
-    </div>
+            <div class="post-social">
+              <div class="inner">
+                <a href="#" class="icon-twitter button"></a><a href="#" class="icon-linkedin button"></a><a href="#" class="icon-facebook button"></a><a href="#" class="icon-google-plus button"></a>
+              </div>
+            </div>
 
-  </div>
-</section>
-{% endfor %}
+          </div>
+        </section>
+        {% endfor %}
+
+        <a href="#" id="about" class="anchor-offset"></a>
+        <section>
+          <div class="row">
+            <div class="aside">
+              <div class="inner">
+                <p>Un photo</p>
+                <ul class="link-list" id="about-nav">
+                  <li><a href="#" class="active">About me</a></li>
+                  <li><a href="#">The way I work</a></li>
+                  <li><a href="#">Who I work with</a></li>
+                  <li><a href="#contact">Get in touch</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-main">
+              <div class="panel">
+                One or two items about me
+              </div>
+            </div>
+          </div>
+        </section>

@@ -73,6 +73,14 @@ $(document).ready(function() {
     $('body').toggleClass('paused');
   });
 
+  var navLinks = $('#about-nav > li > a');
+
+  $(navLinks).click(function(e) {
+    e.preventDefault();
+    navLinks.removeClass('active');
+    $(this).addClass('active');
+  });
+
 });
 
 

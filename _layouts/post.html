@@ -1,21 +1,24 @@
 ---
 layout: default
 ---
-<section>
-  <div class="row">
-    <div class="col-xs-12 col-sm-5 side-column">
-      <h1>{{ page.title }}</h1>
-      <h2>{{ page.subtitle }}</h2>
-    </div>
-    <div class="col-xs-12 col-sm-7 main-column">
-      <time datetime="2014-11" class="meta-text">{{ page.date | date_to_string }}</time>
-      
-      {{ content }}
 
-      <div class="social">
-        <a href="#" class="icon-twitter button"></a><a href="#" class="icon-facebook button"></a><a href="#" class="icon-linkedin button"></a><a href="#" class="icon-google-plus button"></a>
-      </div>
+        <section>
+          <div class="post">
+            <header class="aside">
+              <div class="inner">
+                <h1>{{ page.title }}</h1>
+                <h2>{{ page.subtitle }}</h2>
+              </div>
+            </header>
 
-    </div>
-  </div>
-</section>
+            <time datetime="2014-11" class="post-date">{{ page.date | date: "%B %Y" }}</time>
+            {{ content }}
+
+            <div class="post-social">
+              <div class="inner">
+                <a href="#" class="icon-twitter button"></a><a href="#" class="icon-linkedin button"></a><a href="#" class="icon-facebook button"></a><a href="#" class="icon-google-plus button"></a>
+              </div>
+            </div>
+
+          </div>
+        </section>

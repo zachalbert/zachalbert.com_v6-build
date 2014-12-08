@@ -80,7 +80,8 @@ small,
 
 blockquote {
   @extend .small-text;
-  font-size: $font-size-2;
+  font-size: $font-size-1;
   line-height: $line-height * 1.5;
   font-style: italic;
+  text-align: justify;
 }

@@ -13,6 +13,8 @@ My personal site.
 * Figure out image sizing
 * Responsive tuning on the nav & header
 * Responsive tuning on the main column view
+* Get better icons on the orrry
+* Write a better thanks page
 
 ## The Orrery
 
