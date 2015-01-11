@@ -1,5 +1,5 @@
 name: "Zac Halbert"
-url: "http://localhost:3001"
+url: "http://localhost:3000"
 markdown: redcarpet
 highlighter: pygments # or rouge or null
 exclude: ["node_modules", "bower_components", "gulpfile.js", "package.json", "bower.json", "README.md"]

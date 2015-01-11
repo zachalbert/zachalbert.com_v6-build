@@ -61,7 +61,7 @@ small,
 .small-text {
   text-transform: uppercase;
   font-size: $font-size-small-1;
-  letter-spacing: $font-size / ($scale * 4);
+  letter-spacing: 2px;
 }
 
 .meta-text {

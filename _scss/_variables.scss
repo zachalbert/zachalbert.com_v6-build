@@ -93,3 +93,6 @@ $transition-out: all 0.1s ease-in-out;
 $transition-in:  all 0.1s ease-in-out;
 
 $nav-height: $lead-triple;
+
+$site-border: 4px double $color-link;
+.site-border { border-top: $site-border; }

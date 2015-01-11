@@ -15,6 +15,7 @@ My personal site.
 * Responsive tuning on the main column view
 * Get better icons on the orrry
 * Write a better thanks page
+* Change the orrry to more of a general experiment / project showcase area, easily swappable
 
 ## The Orrery
 
