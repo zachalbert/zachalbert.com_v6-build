@@ -9,6 +9,28 @@
   <meta name="description" content="The personal site of product designer Zac Halbert. UX, design, and code.">
   <meta name="author" content="Zac Halbert">
 
+  {% capture header %}
+  <meta property="og:locale" content="en_US">
+  {% if page.title %}
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="{{ page.title }}">
+  {% else %}
+  <meta property="og:type" content="Zac Halbert">
+  {% endif %}
+  {% if site.title %}
+  <meta property="og:site_name" content="{{ site.title }}">
+  {% endif %}
+  {% if page.url %}
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+  {% endif %}
+  {% if page.date %}
+  <meta property="article:published_time" content="{{page.date | date_to_xmlschema}}">
+  {% endif %}
+  {% if site.owner_link %}
+  <meta property="article:author" content="{{ site.owner_link }}">
+  {% endif %}
+  {% endcapture %}{{ header | strip_newlines }}
+
   <script src="//use.typekit.net/lsi2hge.js"></script>
   <script>try{Typekit.load();}catch(e){}</script>
   
