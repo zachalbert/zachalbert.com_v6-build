@@ -166,7 +166,7 @@ $pluto-size:    0.185em;
 $eris-size:     0.182em;
 
 // Build the sun and planets
-.sun      { @include buildStar(6.5%, 1.5%, $color-1); }
+.sun      { @include buildStar(7%, 1.5%, $color-1); }
 .mercury  { @include playGod(10%,  2%, $color-2, $mercury-size / 1); }
 .venus    { @include playGod(16%,  3%, $color-3, $venus-size / 1); }
 .earth    { @include playGod(23%,  4%, $color-4, $earth-size / 1); }

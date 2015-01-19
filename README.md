@@ -18,6 +18,7 @@ My personal site.
 * Change the orrry to more of a general experiment / project showcase area, easily swappable
 * Make the pause button toggle to a play button
 * Get excerpts to stop ignoring line breaks (currently only pulls 1st paragraph)
+* Complete metadata tag (implemention)[http://moz.com/blog/meta-data-templates-123]
 
 ## The Orrery
 
