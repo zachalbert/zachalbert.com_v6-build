@@ -32,7 +32,8 @@ h1 {
   margin-bottom: $lead-single;
   line-height: $line-height * 2;
   position: relative;
-  top: 5px;
+  top: 4px;
+  word-break: normal;
   @include hyphenate;
 
   a {
@@ -50,6 +51,7 @@ ol {
   }
 }
 
+h3,
 p,
 blockquote,
 ul,

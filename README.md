@@ -16,6 +16,8 @@ My personal site.
 * Get better icons on the orrry
 * Write a better thanks page
 * Change the orrry to more of a general experiment / project showcase area, easily swappable
+* Make the pause button toggle to a play button
+* Get excerpts to stop ignoring line breaks (currently only pulls 1st paragraph)
 
 ## The Orrery
 

@@ -28,7 +28,6 @@ a:visited {
   color: $color-link;
   text-decoration: underline;
   transition: $transition-out;
-  display: inline-block;
 }
 
 a:hover,
@@ -70,6 +69,21 @@ hr {
   padding: 0;
 }
 
+.align-left {
+  float: left;
+  margin: $lead-half $lead-single $lead-single 0;
+}
+
+.align-right {
+  float: right;
+  margin: $lead-half 0 $lead-single $lead-single;
+}
+
+.bare {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
 ::-moz-selection {
   background: $color-selection-bg;
   color: $color-selection;
@@ -92,7 +106,7 @@ hr {
 section {
   margin-bottom: $lead-triple;
 
-  .row {
+  & > .row {
     border-top: $site-border;
     padding-top: $lead-triple;
   }
@@ -101,6 +115,11 @@ section {
 .row {
   width: 90%;
   margin: 0 auto;
+
+  &.full {
+    width: 100%;
+    height: 100%;
+  }
 }
 
 .__fixed {
@@ -245,7 +264,8 @@ section {
 // Side:    col-xs-12 col-sm-5 col-md-4 side-column
 // Main:    col-xs-12 col-sm-7 col-md-8 main-column
 
-.col-side {
+.col-side,
+.post_side {
   @extend .col-xs-12;
   @extend .col-sm-5;
   @extend .col-md-4;
@@ -259,6 +279,16 @@ section {
   @extend .col-md-8;
 }
 
+.post_main {
+  @extend .col-xs-12;
+  @extend .col-sm-7;
+  @extend .col-md-8;
+}
+
+.post_side {
+  text-align: right;
+}
+
 .post {
   @extend .row;
   position: relative;
@@ -267,12 +297,51 @@ section {
     word-break: break-word;
   }
 
-  // Main
-  h3,
-  p,
-  ul,
-  ol {
-    @extend .col-main;
+  &.post-single {
+    h3,
+    p,
+    ul,
+    ol,
+    figure {
+      @extend .col-main;
+      display: block;
+    }
+  }
+}
+
+.grid_main,
+.grid_meta {
+  @extend .col-xs-12;
+}
+
+.post_main-meta {
+  height: $lead-triple;
+
+  .post-date {
+    margin: 0;
+    padding: 0;
+    text-align: right;
+  }
+}
+
+.separator {
+  line-height: $line-height;
+  text-align: center;
+  position: relative;
+
+  &.left {
+    margin: 0 $lead-half 0 $lead-single;
+  }
+
+  &:after {
+    content: '';
+    width: $lead-half;
+    height: $lead-half + 1px;
+    border: 1px solid $color-link;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    border-radius: 50%;
   }
 }
 
@@ -313,6 +382,7 @@ figcaption {
 
 figcaption {
   @extend .meta-text;
+  color: $color-text-light;
   padding-left: 0;
   font-style: normal;
 }
@@ -423,7 +493,7 @@ figure {
     position: absolute;
     left: -1px;
     top: -1px;
-    border-radius: 50%;
+    border-radius: $lead-single * 2;
     transform: scale(0.4);
     transition: $transition-out;
   }
@@ -460,6 +530,20 @@ figure {
       color: #fff;
       background: $color-link-hover;
       border-color: $color-link-hover;
+    }
+  }
+
+  &.text-button {
+    padding-left: $lead-single;
+    padding-right: $lead-single;
+
+    &:hover,
+    &:active {
+      color: #fff;
+
+      &:after {
+        z-index: -1;
+      }
     }
   }
 }
@@ -546,6 +630,10 @@ p + .post-social {
       }
     }
   }
+}
+
+.excerpt-action {
+  text-align: right;
 }
 
 form {

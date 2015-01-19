@@ -4,7 +4,7 @@ author: zac
 layout: post
 permalink: /what-i-learned-while-rapid-prototyping-in-a-refugee-camp/
 categories:
-  - Content
+  - News
 ---
 A couple years ago, I participated in the Global Hack for Good for [REFUNITE][1], and got the opportunity to further develop the winning idea in a refugee camp in Kakuma, Kenya last month.
 

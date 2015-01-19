@@ -6,19 +6,46 @@ title: Zac Halbert
         {% for post in site.posts %}
         <section>
           <div class="post">
-            <header class="aside">
+
+            <!-- <header class="aside">
               <div class="inner">
-                <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
+                <h1><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title | truncate: 65 }}</a></h1>
                 <h2>{{ post.subtitle }}</h2>
               </div>
             </header>
-EXCERPTIFICATION......
-            <time datetime="2014-11" class="post-date">{{ post.date | date: "%B %Y" }}</time>
-            {{ post.content }}
 
-            <div class="post-social col-main">
+            <time datetime="2014-11" class="post-date">{{ post.date | date: "%B %Y" }}</time>
+            
+            <p>{{ post.excerpt | truncatewords: 150 }}</p>
+
+            <div class="excerpt-action col-main">
               <div class="inner">
-                <a href="#" class="icon-twitter button"></a><a href="#" class="icon-linkedin button"></a><a href="#" class="icon-facebook button"></a><a href="#" class="icon-google-plus button"></a>
+                <!-- Read on&hellip; <a href="{{ post.url }}" class="icon-arrow-right button"></a>
+                <a href="{{ post.url }}" class="button meta-text text-button">read more&hellip;</a>
+              </div>
+            </div> -->
+            
+            <div class="post_side">
+              <header>
+                <div class="inner">
+                  <h1><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h1>
+                </div>
+              </header>
+            </div>
+
+            <div class="post_main">
+              <div class="post_main-content">
+                <p>{{ post.excerpt }}</p>
+              </div>
+              <div class="post_main-meta">
+                <div class="row middle-xs full">
+                  <div class="col-xs-6">
+                    <time datetime="2014-11" class="post-date">{{ post.date | date: "%B %Y" }}<span class="separator left">&bull;</span></time>
+                  </div>
+                  <div class="col-xs-6 bare">
+                    <a href="{{ post.url }}" class="button meta-text text-button">read more&hellip;</a>
+                  </div>
+                </div>
               </div>
             </div>
 

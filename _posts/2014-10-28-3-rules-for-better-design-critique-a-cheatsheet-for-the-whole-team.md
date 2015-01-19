@@ -3,14 +3,17 @@ title: '3 Rules for Better Design Critique: A Cheatsheet for the Whole Team'
 author: zac
 layout: post
 permalink: /3-rules-for-better-design-critique-a-cheatsheet-for-the-whole-team/
+comments: true
 categories:
-  - Content
+  - UX
 ---
 <a href="https://medium.com/@ZacHalbert/3-rules-for-better-design-critique-a-cheatsheet-for-the-whole-team-f1d8e0e8dbe2" target="_blank">This was originally published on Medium.</a>
 
 As the sole product designer for a tiny startup called Samahope, I often require design critique from my non-design teammates. Getting formal critique is important to iteratively improve the product, but we’ve had to improvise without an in-house design team.
 
 By providing a bit of structure with 3 simple rules, I’ve found my team to be awesome critique partners. The critique sessions look a little bit different than getting a bunch of designers together (fewer turtlenecks, for instance), but the outcome is just as good.
+
+<!-- more -->
 
 ### Rule 1 — Understand the project goals
 

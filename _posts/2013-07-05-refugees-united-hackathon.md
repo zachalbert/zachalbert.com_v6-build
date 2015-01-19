@@ -3,10 +3,14 @@ title: 'Refugees United Global #HackForGood'
 author: zac
 layout: post
 permalink: /refugees-united-hackathon/
+comments: true
 categories:
-  - Content
+  - News
+  - UX
 ---
-A few weeks ago, I participated in my first hackathon for [Refugees United][1] (supported by Ericsson). This organization “&#8230;aims to directly help families reconnect with missing loved ones through a safe, secure search tool that allows for full anonymity and is free of charge.”
+A few weeks ago, I participated in my first hackathon for <a href="https://refunite.org/">Refugees United</a> (supported by Ericsson). This organization “&#8230;aims to directly help families reconnect with missing loved ones through a safe, secure search tool that allows for full anonymity and is free of charge.”
+
+<!-- more -->
 
 Refugees United is doing awesome work and has already reconnected more refugee families this year than the entire Red Cross averages over a full year. I love seeing the use of technology to solve very real problems that shouldn&#8217;t exist, but do. Not that the next big Twitter or Facebook isn&#8217;t fun to think about, but siblings, children, and parents are being separated from each other in war-torn areas of our world—never to be reunited in many cases. [Read the story][2] that led brothers David and Christopher Mikkelsen to try to change all that.
 
@@ -18,7 +22,7 @@ The Refugees United team has figured out that nearly every person on the planet 
 
 The problem with this protocol is that it has a three-minute timeout, and it can be difficult for refugees (some of whom are illiterate) to send a message to another potential family member with enough content to be useful—all in under three minutes.
 
-### ****Our Solution
+### Our Solution
 
 My team (Ivy Wang and Anari Sengbe, with some generous help from Kasper Cristjansen) developed a concept for a message wizard system. The wizard prompted users for answers in order to fill out an information rich message template, all while keeping the connection alive. Our team&#8217;s hypothesis is that by improving the user experience of the messaging system and standardizing the format,  more refugee connections can be made (and fewer missed).
 

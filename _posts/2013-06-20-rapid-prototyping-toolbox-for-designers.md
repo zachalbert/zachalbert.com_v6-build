@@ -1,4 +1,5 @@
 ---
+published: false
 title: A Rapid Prototyping Toolbox for Designers with Jekyll and Foundation 4
 author: zac
 layout: post
@@ -7,11 +8,15 @@ categories:
   - Code
   - Content
 ---
-## Learn how to rapidly prototype marketing websites or blogs with a simple set of tools&#8211;Jekyll and Foundation 4. This isn&#8217;t necessarily the **fastest** way to build a prototype, but this is the most extensible way I&#8217;ve found that allows you to move seamlessly from prototype to production. I built [WelcomeMat.co][1] in order to test these tools in a somewhat-real-world environment.<figure class="card wp-caption aligncenterid="attachment\_522" aria-labelledby="figcaption\_attachment_522">
+Learn how to rapidly prototype marketing websites or blogs with a simple set of tools&#8211;Jekyll and Foundation 4. This isn&#8217;t necessarily the **fastest** way to build a prototype, but this is the most extensible way I&#8217;ve found that allows you to move seamlessly from prototype to production. I built [WelcomeMat.co][1] in order to test these tools in a somewhat-real-world environment.
 
-<div class="mask" id="mask">
-  <a href="/images/foundation-zurb-3.jpg"><img class="size-full wp-image-522 " alt="A Rapid Prototyping Toolbox with Jekyll + Foundation 4" src="/images/foundation-zurb-3.jpg" width="1600" height="832" /></a>
-</div><figcaption id="figcaption-attachment_522" class="wp-caption-text">Jekyll + Foundation 4</figcaption></figure> 
+**EDIT:** This post is a bit out of date. I now recommend checking out my new post for <a href="/website-redesign-2015/">rapid prototyping static websites using gulp and jekyll</a>.
+
+<!-- more -->
+
+<figure>
+  <img class="size-full wp-image-522 " alt="A Rapid Prototyping Toolbox with Jekyll + Foundation 4" src="/images/foundation-zurb-3.jpg" width="1600" height="832" />
+</figure>
 
 [Check out the site][1] (and make sure to resize the browser to notice how responsivey it is). Although it houses dynamic content which changes on a fairly regular basis, it&#8217;s a straight, static .HTML document. This is the key to Jekyll. It gives you the ability to build a site with a powerful templated structure similar to WordPress or other Blogging/CMS systems, but it compiles to good ol&#8217; HTML. No pesky databases or giant bloated systems to worry about.
 
@@ -23,20 +28,33 @@ Foundation is a frontend framework that gives you baked-in support for responsiv
 
 Before diving into Jekyll and Foundation 4, you should have a reasonable grasp on HTML and CSS. You don&#8217;t need to be an expert, though you should know how to Google markup structures you&#8217;re unfamiliar with. Though Javascript or dynamic scripting experience helps, it&#8217;s not **required**. It will simply make it easier to work with Foundation&#8217;s included Javascript components. And now, disclaimer time—in the style of [@ProbablyMonty][2].
 
-  1. **Is this a step-by-step tutorial?  
-    **This isn&#8217;t a step-by-step tutorial as much as a general guide for how I used the tools to make something.
-  2. **But, there are many steps to a prototype before you get to code!  
-    **You&#8217;re right. I&#8217;m not going to talk about the process from idea to sketch to finished comp. This is, after all, a prototyping toolbox *for designers*, so I assume you already have a process that works for you. Many designers I know might be able to wade into the code a bit, but don&#8217;t really have a solid way of turning their design comps into working code.
-  3. **You talk about a prototype than can handle production traffic, but what do you know about production traffic?  
-    **Very little, thanks for asking. I&#8217;m a designer, and have merely observed coworkers dealing with real production traffic. WelcomeMat.co got 7,000 unique visits in its first week of life. It might be close to nothing, but it&#8217;s not nothing. Now I&#8217;m not talking about developer or ops replacement here—for any real app or business you hope to launch, you&#8217;re gonna have to talk to someone who knows what they&#8217;re doing.
-  4. **So why isn&#8217;t this a tutorial on how to use Jekyll and Foundation 4?  
-    **Well, mostly because that seems like it would be a lot of work. If you&#8217;d like to see a real tutorial, [tweet me][3] with how many donuts you plan on bribing me with to write it.
-  5. **…but but but, Bootstrap is better!  
-    **You are, of course, referring to [Twitter Bootstrap][4], another equally amazing frontend framework. And you may be right, too. However, hold your horses&#8211;I&#8217;ll get to why I picked Foundation later. The TL;DR here is that the tool that you know better is the one you should be using.
-  6. **…but but but, LESS is better for designers than SASS/Compass!  
-    **See point #4.
-  7. **Whoaaaa there, hold up. I have to use the terminal?  
-    **First, suck it up. The terminal is not nearly as complex as Photoshop. Second, [read this][5].
+**Is this a step-by-step tutorial?**
+
+This isn&#8217;t a step-by-step tutorial as much as a general guide for how I used the tools to make something.
+
+**But, there are many steps to a prototype before you get to code!**
+
+You&#8217;re right. I&#8217;m not going to talk about the process from idea to sketch to finished comp. This is, after all, a prototyping toolbox *for designers*, so I assume you already have a process that works for you. Many designers I know might be able to wade into the code a bit, but don&#8217;t really have a solid way of turning their design comps into working code.
+
+**You talk about a prototype than can handle production traffic, but what do you know about production traffic?**
+
+Very little, thanks for asking. I&#8217;m a designer, and have merely observed coworkers dealing with real production traffic. WelcomeMat.co got only 7,000 unique visits in its first week of life. Now I&#8217;m not talking about developer or ops replacement here—for any real app or business you hope to launch, you&#8217;re gonna have to talk to someone who knows what they&#8217;re doing.
+
+**So why isn&#8217;t this a tutorial on how to use Jekyll and Foundation 4?**
+
+Well, mostly because that seems like it would be a lot of work. If you&#8217;d like to see a real tutorial, [tweet me][3] with how many donuts you plan on bribing me with to write it.
+
+**…but but but, Bootstrap is better!**
+
+You are, of course, referring to [Twitter Bootstrap][4], another equally amazing frontend framework. And you may be right, too. However, hold your horses&#8211;I&#8217;ll get to why I picked Foundation later. The TL;DR here is that the tool that you know better is the one you should be using.
+
+**…but but but, LESS is better for designers than SASS/Compass!**
+
+See point #4.
+
+**Whoaaaa there, hold up. I have to use the terminal?**
+
+First, suck it up. The terminal is not nearly as complex as Photoshop. Second, [read this][5].
   8. **I&#8217;m a real developer, and you&#8217;ve offended me with this post!  
     **That&#8217;s very likely. I&#8217;m a designer primarily, so I&#8217;m going to get some things wrong. I am a lover of learning, however, so [let me know][3] what computer science atrocities I&#8217;ve committed and I&#8217;ll be happy to correct them. I *do* credit a real developer for inspiring me to pick up Jekyll, however—[@gesa][6] (who elects presidents and makes grid-systems dance before her very eyes). However, I am solely responsible for taking her pure, honest instruction and perverting it to the form you see here.
 
@@ -142,3 +160,4 @@ Do you have a rapid prototyping toolbox? What does it look like?
  [28]: https://typekit.com/fonts
  [29]: http://aws.amazon.com/s3/
  [30]: #success-criteria
+ [31]: http://www.zachalbert.com/website-redesign-2015/

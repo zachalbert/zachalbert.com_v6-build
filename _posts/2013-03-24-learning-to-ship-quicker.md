@@ -1,11 +1,10 @@
 ---
+published: false
 title: Learning to Ship Quicker
 author: zac
 layout: post
 permalink: /learning-to-ship-quicker/
 comments: true
-categories:
-  - Content
 ---
 ## The redesign of this site has been a really long time coming. What I mean by that is I&#8217;ve been stalling for *over a year*. I&#8217;ve been learning to ship quicker however, and I&#8217;m going to share a bit about what inspired me.
 
