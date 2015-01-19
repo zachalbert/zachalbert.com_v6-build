@@ -5,5 +5,7 @@ highlighter: pygments # or rouge or null
 exclude: ["node_modules", "bower_components", "gulpfile.js", "package.json", "bower.json", "README.md"]
 excerpt_separator: "<!-- more -->"
 permalink: /:title
+paginate: 5
+paginate_path: "/p:num"
 gems:
   - jekyll-sitemap

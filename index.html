@@ -3,28 +3,10 @@ layout: default
 title: Zac Halbert
 ---
 
-        {% for post in site.posts %}
+        {% for post in paginator.posts %}
         <section>
           <div class="post">
 
-            <!-- <header class="aside">
-              <div class="inner">
-                <h1><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title | truncate: 65 }}</a></h1>
-                <h2>{{ post.subtitle }}</h2>
-              </div>
-            </header>
-
-            <time datetime="2014-11" class="post-date">{{ post.date | date: "%B %Y" }}</time>
-            
-            <p>{{ post.excerpt | truncatewords: 150 }}</p>
-
-            <div class="excerpt-action col-main">
-              <div class="inner">
-                <!-- Read on&hellip; <a href="{{ post.url }}" class="icon-arrow-right button"></a>
-                <a href="{{ post.url }}" class="button meta-text text-button">read more&hellip;</a>
-              </div>
-            </div> -->
-            
             <div class="post_side">
               <header>
                 <div class="inner">
@@ -52,6 +34,34 @@ title: Zac Halbert
           </div>
         </section>
         {% endfor %}
+        
+        <section>
+          <div class="row middle-xs between">
+            <div class="col-xs-3 bare">
+              {% if paginator.previous_page %}
+                {% if paginator.previous_page == 1 %}
+                    <a href="/" class="button meta-text text-button"><span class="icon-arrow-left"></span>Previous</a>
+                  {% else %}
+                    <a href="/p{{ paginator.previous_page }}" class="button meta-text text-button"><span class="icon-arrow-left"></span>Previous</a>
+                  {% endif %}
+              {% else %}
+                <span class="button meta-text text-button disabled"><span class="icon-arrow-left"></span>Previous</span>
+              {% endif %}
+            </div>
+
+            <div class="col-xs-6">
+              <span class="page-number" title="Page {{ paginator.page }} of {{ paginator.total_pages }}"><span class="color-text">{{ paginator.page }}</span><span class="page-separator">/</span>{{ paginator.total_pages }}</span>
+            </div>
+
+            <div class="col-xs-3 bare">
+              {% if paginator.next_page %}
+                <a href="/p{{ paginator.next_page }}" class="button meta-text text-button">Next<span class="icon-arrow-right"></span></a>
+              {% else %}
+                <span class="button meta-text text-button disabled">Next<span class="icon-arrow-right"></span></span>
+              {% endif %}
+            </div>
+          </div>
+        </section>
 
         <a href="#" id="about" class="anchor-offset"></a>
         <section>
