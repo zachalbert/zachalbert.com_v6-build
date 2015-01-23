@@ -225,11 +225,17 @@ section {
 
 .link-bank {
   a {
-    padding: $line-height;
+    padding: $line-height + 2px;
     transition: all 0.35s ease-in-out;
 
     &:first-child {
       margin-left: -$line-height;
+    }
+
+    &.active {
+      background: $color-link;
+      color: #fff;
+      text-decoration: none;
     }
   }
 }
@@ -429,7 +435,8 @@ figure {
 ^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*/
 
 #about + section {
-  background: url('../images/big-banner-01.jpg');
+  background: $color-text;
+  color: $color-1;
   background-size: cover;
   margin-bottom: 0;
 

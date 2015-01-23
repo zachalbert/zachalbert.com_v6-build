@@ -240,6 +240,7 @@ $p-moon-molasses: $speed * .0001;
 $er-moon-molasses: $speed * .0001;
 
 // Planetary governors
+// http://nssdc.gsfc.nasa.gov/planetary/factsheet/
 $mercury-deg:   87.97 / $speed;
 $venus-deg:     224.63 / $speed;
 $earth-deg:     365.26 / $speed;

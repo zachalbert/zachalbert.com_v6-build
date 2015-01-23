@@ -1,5 +1,5 @@
 ---
-title: What I learned while rapid prototyping in a refugee camp
+title: What I learned while rapid proto-typing in a refugee camp
 author: zac
 layout: post
 permalink: /what-i-learned-while-rapid-prototyping-in-a-refugee-camp/

@@ -98,7 +98,9 @@ $(function() {
       siteMain      = $('.site-main').offset().top,
       topLink       = $('.link-to-top'),
       orrryBlock    = $('.orrry-description .description-holder'),
-      navLinkSwitch = topOfPage + 34;
+      navLinkSwitch = topOfPage + 34,
+      sec1          = $("#about-trigger").offset().top,
+      sec2          = $("#contact").offset().top;
 
   // If page has scrolled, add or remove fixed class
   function loop() {
@@ -131,7 +133,20 @@ $(function() {
       $('body').addClass('__nav-link');
     } else {
       $('body').removeClass('__nav-link');
-    }    
+    }
+
+    // Give about and contact links an active class when visible
+    if( lastPosition >= sec2 ) {
+      $('.about').removeClass('active');
+      $('.contact').addClass('active');
+      console.log(lastPosition + ' : ' + sec2);
+    } else if( lastPosition >= sec1 ) {
+      $('.contact').removeClass('active');
+      $('.about').addClass('active');
+      console.log(lastPosition + ' : ' + sec1); // 3588
+    } else {
+      $('.site-nav a').removeClass('active');
+    }
 
     // Nav is fully on top of window edge
     if( lastPosition > siteMain ) {
