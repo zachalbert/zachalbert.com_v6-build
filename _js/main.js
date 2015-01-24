@@ -15,10 +15,6 @@ $(function() {
     $('#star-field').append('<span class="star" style="left: '+xPos+'%; top: '+yPos+'%; width: '+size+'px; height: '+size+'px; opacity: '+opacity+';"></span>');
   }
 
-  // var sun_pos = Math.round($('#sun > .orbit').offset().top - 10);
-  // var sun_offset = $(window).height() - sun_pos - 61;
-  // $('.orrry-description').css('bottom', sun_offset);
-
   // Scroll to show just the edge of the project
   window.scrollTo(0, topOfPage);
 });
@@ -135,18 +131,19 @@ $(function() {
       $('body').removeClass('__nav-link');
     }
 
-    // Give about and contact links an active class when visible
-    if( lastPosition >= sec2 ) {
-      $('.about').removeClass('active');
-      $('.contact').addClass('active');
-      console.log(lastPosition + ' : ' + sec2);
-    } else if( lastPosition >= sec1 ) {
-      $('.contact').removeClass('active');
-      $('.about').addClass('active');
-      console.log(lastPosition + ' : ' + sec1); // 3588
-    } else {
-      $('.site-nav a').removeClass('active');
-    }
+    // Give nav links an active class when the section is visible
+    var scrollPos = $(document).scrollTop();
+    $('.internal-link').each(function() {
+      if( $("#about").offset().top <= scrollPos && ($("#about").offset().top + $("#about+section").height() - 1) > scrollPos ) {
+        $('.about').addClass('active');
+        $('.contact').removeClass('active');
+      } else if( $("#contact").offset().top <= scrollPos ) {
+        $('.contact').addClass('active');
+        $('.about').removeClass('active');
+      } else {
+        $(this).removeClass('active');
+      }
+    });
 
     // Nav is fully on top of window edge
     if( lastPosition > siteMain ) {
