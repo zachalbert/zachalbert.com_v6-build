@@ -94,9 +94,7 @@ $(function() {
       siteMain      = $('.site-main').offset().top,
       topLink       = $('.link-to-top'),
       orrryBlock    = $('.orrry-description .description-holder'),
-      navLinkSwitch = topOfPage + 34,
-      sec1          = $("#about-trigger").offset().top,
-      sec2          = $("#contact").offset().top;
+      navLinkSwitch = topOfPage + 34;
 
   // If page has scrolled, add or remove fixed class
   function loop() {
