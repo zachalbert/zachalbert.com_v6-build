@@ -75,7 +75,7 @@ gulp.task('scripts', function() {
   return gulp.src(jsPaths)
     .pipe(concat('site.js'))
     .pipe(rename('site.min.js'))
-    .pipe(uglify())
+    // .pipe(uglify())
     .pipe(gulp.dest('js'))
     .pipe(browserSync.reload({stream: true}));
 });

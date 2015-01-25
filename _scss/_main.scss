@@ -12,10 +12,18 @@ html, body {
   height: 100%;
 }
 
-.paused .orbit,
-.paused .satellite {
-  -webkit-animation-play-state: paused !important;
-  animation-play-state: paused !important;
+.paused { 
+  .orbit,
+  .satellite {
+    -webkit-animation-play-state: paused !important;
+    animation-play-state: paused !important;
+  }
+  
+  .orrry-description .icon-pause-filled {
+    border-color: #fff;
+    background: #fff;
+    color: #5e3043;
+  }
 }
 
 img {
@@ -301,15 +309,12 @@ section {
 
 .post_side {
   text-align: right;
+  padding-left: 0;
 }
 
 .post {
   @extend .row;
   position: relative;
-
-  header {
-    word-break: break-word;
-  }
 
   &.post-single {
     h3,
@@ -462,6 +467,48 @@ figure {
 
   p a:hover {
     color: #fff;
+  }
+}
+
+.orrry-description {
+  color: #fff;
+  text-align: right;
+  height: 100%;
+  position: relative;
+  
+  & > div {
+    height: 100%;
+  }
+
+  a {
+    color: #fff;
+    border-color: #fff;
+
+    &:after {
+      background: rgba(#fff, 0);
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:hover {
+      border-color: #fff;
+      color: $color-12;
+
+      &:after {
+        background: rgba(#fff, 1);
+        border-color: rgba(#fff, 1);
+      }
+
+      &.icon-pause:before {
+        content: 'f';
+      }
+
+      &.icon-information:before {
+        content: 'k';
+      }
+    }
   }
 }
 

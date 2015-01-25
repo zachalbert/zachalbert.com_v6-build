@@ -56,26 +56,43 @@ $(document).ready(function() {
     });
   });
 
-  // Pause the animation when clicking the pause button
+  // Pause the animation when clicking the pause button & store the value
+
+  var isPaused;
+  if( window.localStorage ) {
+    isPaused = localStorage.getItem("orrry_pause");
+    
+    if( isPaused == 'true' ) {
+      $('body').addClass('paused');
+    } else {
+      $('body').removeClass('paused');
+    }
+  }
+
   $('.pause-animation').click(function(e) {
     e.preventDefault();
+    isPaused = localStorage.getItem("orrry_pause");
 
-    /**
-     * Set a variable & cookie for whether the pause button was hit
-     * https://developer.mozilla.org/en-US/docs/Web/API/document.cookie
-    **/
-    // docCookies.setItem(solar_system_pause, value[, end[, path[, domain[, secure]]]]);
-    
-    $('body').toggleClass('paused');
+    if( window.localStorage ) {
+      if( isPaused === 'true' ) {
+        $('body').removeClass('paused');
+        localStorage.clear();
+        localStorage.setItem("orrry_pause", "false");
+        isPaused = false;
+        console.log('false')
+      } else {
+        $('body').addClass('paused');
+        localStorage.clear();
+        localStorage.setItem("orrry_pause", "true");
+        isPaused = true;
+        console.log('true')
+      }
+    }
+
   });
 
-  var navLinks = $('#about-nav > li > a');
-
-  $(navLinks).click(function(e) {
-    e.preventDefault();
-    navLinks.removeClass('active');
-    $(this).addClass('active');
-  });
+  // Hyphenate side titles
+  $('.post-title, .post-title a, .hyphenate').hyphenate('en-us');
 
 });
 

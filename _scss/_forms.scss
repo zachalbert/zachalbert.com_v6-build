@@ -1,7 +1,3 @@
-.label-floatlabel {
-  color: red;
-}
-
 input,
 textarea {
   width: 100%;
@@ -17,46 +13,4 @@ textarea {
 input[type="submit"] {
   padding: 1em;
   border: 1px solid darken($color-footer, 20%);
-}
-
-.orrry-description {
-  color: #fff;
-  text-align: right;
-  height: 100%;
-  position: relative;
-  
-  & > div {
-    height: 100%;
-  }
-
-  a {
-    color: #fff;
-    border-color: #fff;
-
-    &:after {
-      background: rgba(#fff, 0);
-    }
-
-    &:last-child {
-      margin-right: 0;
-    }
-
-    &:hover {
-      border-color: #fff;
-      color: $color-12;
-
-      &:after {
-        background: rgba(#fff, 1);
-        border-color: rgba(#fff, 1);
-      }
-
-      &.icon-pause:before {
-        content: 'f';
-      }
-
-      &.icon-information:before {
-        content: 'k';
-      }
-    }
-  }
 }
