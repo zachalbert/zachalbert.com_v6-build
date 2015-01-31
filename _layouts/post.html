@@ -12,15 +12,20 @@ layout: default
             </header>
 
             <time datetime="2014-11" class="post-date">{{ page.date | date: "%B %Y" }}</time>
-            {{ content }}
+            <div class="body">
+              {{ content }}
             
-            {% if page.social != false %}
-            <div class="post-social col-main">
-              <div class="inner">
-                <a href="#" class="icon-twitter button"></a><a href="#" class="icon-linkedin button"></a><a href="#" class="icon-facebook button"></a><a href="#" class="icon-google-plus button"></a>
+              {% if page.social != false %}
+              <div class="post-social col-main">
+                <div class="inner">
+                  <a href="#" class="icon-twitter button"></a><a href="#" class="icon-linkedin button"></a><a href="#" class="icon-facebook button"></a><a href="#" class="icon-google-plus button"></a>
+                </div>
               </div>
+              {% endif %}
+            
             </div>
-            {% endif %}
+            <hr>
+            {% include subscribe.html %}
 
             {% if page.comments %}
             <hr>

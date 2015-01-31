@@ -79,13 +79,10 @@ body {
 
 @media #{$min-1024} {
   
-  .row {
-    width: 75%;
-  }
 }
 
 @media #{$min-1200} {
   .row {
-    width: 65%;
+    width: 75%;
   }
 }

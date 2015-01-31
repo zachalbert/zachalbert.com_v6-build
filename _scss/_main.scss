@@ -31,6 +31,10 @@ img {
   height: auto;
 }
 
+iframe {
+  max-width: 100%;
+}
+
 a,
 a:visited {
   color: $color-link;
@@ -87,8 +91,36 @@ hr {
   margin: $lead-half 0 $lead-single $lead-single;
 }
 
+.pull-left {
+  float: left;
+}
+
+.pull-right {
+  float: right;
+}
+
 .text-center {
   text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-hide {
+  text-indent: -99999px;
+}
+
+.block {
+  display: block;
+}
+
+.inline-block {
+  display: inline-block;
 }
 
 .bare {
@@ -320,10 +352,18 @@ section {
     h3,
     p,
     ul,
-    ol,
-    figure {
+    ol {
       @extend .col-main;
       display: block;
+    }
+
+    .body h2 {
+      @extend .col-side;
+      display: block;
+      text-align: right;
+      position: relative;
+      margin-top: -$lead-double;
+      top: $lead-double;
     }
   }
 }
@@ -399,6 +439,15 @@ figcaption {
   }
 }
 
+.subtitle {
+  @extend .col-side;
+  display: block;
+  text-align: right;
+  position: relative;
+  margin-top: -$lead-double;
+  top: $lead-double;
+}
+
 figcaption {
   @extend .meta-text;
   color: $color-text-light;
@@ -407,7 +456,8 @@ figcaption {
 }
 
 figure {
-  img {
+  img,
+  iframe {
     margin: 0 0 $lead-single;
   }
 }
@@ -420,6 +470,10 @@ figure {
   position: relative;
   margin: 0 0 $lead-single;
   text-align: left
+}
+
+p.top {
+  padding-top: $lead-single;
 }
 
 .panel {
@@ -734,12 +788,20 @@ p + .post-social {
   }
 }
 
-.excerpt-action {
-  text-align: right;
+.bio-pic {
+  background: url('/images/photo-zac-halbert.jpg');
+  background-size: 100%;
+  background-position-y: -5px;
+  border-radius: 50%;
+  width: 60%;
+  height: 0;
+  padding: 60% 0 0;
+  position: relative;
+  right: -40%;
 }
 
-form {
-  margin-bottom: $lead-single;
+.excerpt-action {
+  text-align: right;
 }
 
 .site-footer {

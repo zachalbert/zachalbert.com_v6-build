@@ -56,10 +56,10 @@
       <a href="#" id="about" class="anchor-offset"></a>
       <section>
         <div class="row">
-          <div class="col-side">
-            <img alt="Zac Halbert">
+          <div class="post_side">
+            <div class="bio-pic" title="Zac Halbert"></div>
           </div>
-          <div class="col-main">
+          <div class="post_main">
             <p>I'm a dude who does some stuff, and here's a few great folks i've worked with.</p>
             <p>recurly, samagroup, nomnommer, broadly, sharefund, archively</p>
             <p>Interested in working together?<a href="#contact" class="button meta-text text-button">Contact Me</a></p>
@@ -72,35 +72,37 @@
 
     <a href="#" id="contact" class="anchor-offset"></a>
     <footer class="site-footer" role="contentinfo">
-      <div class="row">
+        
+        <div class="row">
+          <div class="col-xs-12">
+            <h3>Hire me, <em>please</em>.</h3>
+            <p>This is some text about contacting / hiring me</p>
+            <form method="post" action="//formspree.io/hi@scouthawk.io" id="contact-form">
+              <input class="float-label" type="text" placeholder="Your name" name="name">
+              <input class="float-label" type="email" placeholder="Your email" name="email">
 
-        <div class="col-xs-2 col-sm-offset-4 col-sm-1 col-md-offset-3 col-md-1 col-no-padding">
-          <div class="social-bank">
-            <a href="#" class="icon-twitter button"></a>
-            <a href="#" class="icon-dribbble button"></a>
-            <a href="#" class="icon-linkedin button"></a>
-            <a href="#" class="icon-github button"></a>
-            <a href="#" class="icon-instagram button"></a>
+              <textarea class="float-label" placeholder="Your message" name="message" rows="3"></textarea>
+              <input type="hidden" name="_subject" value="New contact" />
+              <input type="hidden" name="_next" value="{{  site.url }}/thanks" />
+              <input type="text" name="_gotcha" style="display:none" />
+              <input type="submit" class="button button-primary" value="Send">
+            </form>
           </div>
         </div>
 
-        <div class="col-xs-10 col-sm-7 col-md-8">
-          <h3>Hire me, <em>please</em>.</h3>
-          <p>This is some text about contacting / hiring me</p>
-          <form method="post" action="//forms.brace.io/zachalbert@gmail.com" id="contact-form">
-            <input class="float-label" type="text" placeholder="Your name" name="name">
-            <input class="float-label" type="email" placeholder="Your email" name="_replyto">
-            <input type="checkbox" name="job">This is a work inquiry
-            <textarea class="float-label" placeholder="Your message" name="message" rows="3"></textarea>
-            <input type="hidden" name="_subject" value="New contact" />
-            <input type="hidden" name="_next" value="{{  site.url }}/thanks" />
-            <input type="submit" class="button button-primary" value="Send">
-          </form>
-          <p>
-            Made by <a href="http://www.zachalbert.com/">Zac Halbert</a> in 2014, 
-            project and <a href="https://github.com/zachalbert/ios-camera-app-redesign">code</a> 
-            licensed under <a href="http://opensource.org/licenses/MIT" target="_blank">MIT</a>.
-          </p>
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="social-bank">
+              <a href="#" class="icon-twitter button"></a>
+              <a href="#" class="icon-dribbble button"></a>
+              <a href="#" class="icon-linkedin button"></a>
+              <a href="#" class="icon-github button"></a>
+              <a href="#" class="icon-instagram button"></a>
+            </div>
+            <p>
+              Built by <a href="http://www.zachalbert.com/" rel="author">Zac Halbert</a>, 2015. <a href="https://github.com/zachalbert/zachalbert.com_v6">The code for this website</a> is <a href="http://opensource.org/licenses/MIT" target="_blank">MIT licensed</a>.
+            </p>
+          </div>
         </div>
 
       </div>

@@ -2,16 +2,15 @@
 *^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^* ORRRY MIXINS
 ^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*^*/
 
-@mixin playGod($orbitSize, $order, $color, $planetSize) {
+@mixin buildPlanet($orbitSize, $orbitPos, $color, $planetSize) {
   $planetSize: $planetSize * 3;
-  $opacity: 0.55 - ($order/100%)*2;
+  $opacity: 0.55 - ($orbitPos/100%)*2;
 
-  /* …and God said, let there be orbits and planets. Yea, verily! */
   width: $orbitSize;
   height: $orbitSize;
   position: absolute;
-  left: $order + 26%;
-  top: ($order * 3) + 48%;
+  left: $orbitPos + 26%;
+  top: ($orbitPos * 3) + 48%;
 
   .orbit {
     width: 100%;
@@ -62,15 +61,14 @@
       box-sizing: border-box;
     }
   }
-
 }
 
-@mixin buildStar($size, $order, $color) {
+@mixin buildStar($size, $orbitPos, $color) {
   width: $size;
   height: $size;
   position: absolute;
-  left: $order + 26%;
-  top: ($order * 3) + 48%;
+  left: $orbitPos + 26%;
+  top: ($orbitPos * 3) + 48%;
 
   .orbit {
     width: 100%;
@@ -164,17 +162,18 @@ $pluto-size:    0.185em;
 $eris-size:     0.182em;
 
 // Build the sun and planets
+// @mixin buildPlanet($orbitSize, $orbitPos, $color, $planetSize)
 .sun      { @include buildStar(7%, 1.5%, $color-1); }
-.mercury  { @include playGod(10%,  2%, $color-2, $mercury-size / 1); }
-.venus    { @include playGod(16%,  3%, $color-3, $venus-size / 1); }
-.earth    { @include playGod(23%,  4%, $color-4, $earth-size / 1); }
-.mars     { @include playGod(31%,  5%, $color-5, $mars-size / 1); }
-.jupiter  { @include playGod(40%,  6%, $color-6, $jupiter-size / 5); }
-.saturn   { @include playGod(50%,  7%, $color-7, $saturn-size / 5); }
-.uranus   { @include playGod(61%,  8%, $color-8, $uranus-size / 5); }
-.neptune  { @include playGod(73%,  9%, $color-9, $neptune-size / 5); }
-.pluto    { @include playGod(86%, 10%, $color-10, $pluto-size / 0.5); }
-.eris     { @include playGod(100%, 11%, $color-11, $eris-size / 0.5); }
+.mercury  { @include buildPlanet(10%,  2%, $color-2, $mercury-size / 1); }
+.venus    { @include buildPlanet(16%,  3%, $color-3, $venus-size / 1); }
+.earth    { @include buildPlanet(23%,  4%, $color-4, $earth-size / 1); }
+.mars     { @include buildPlanet(31%,  5%, $color-5, $mars-size / 1); }
+.jupiter  { @include buildPlanet(40%,  6%, $color-6, $jupiter-size / 5); }
+.saturn   { @include buildPlanet(50%,  7%, $color-7, $saturn-size / 5); }
+.uranus   { @include buildPlanet(61%,  8%, $color-8, $uranus-size / 5); }
+.neptune  { @include buildPlanet(73%,  9%, $color-9, $neptune-size / 5); }
+.pluto    { @include buildPlanet(86%, 10%, $color-10, $pluto-size / 0.5); }
+.eris     { @include buildPlanet(100%, 11%, $color-11, $eris-size / 0.5); }
 
 // Moon styles
 .satellite {
@@ -227,28 +226,28 @@ $eris-size:     0.182em;
 }
 
 // Planet and moon governor values
-$speed: 14;
-$e-moon-molasses: $speed * 1;
-$m-moon-molasses: $speed * 0.02;
-$j-moon-molasses: $speed * 0.06;
-$s-moon-molasses: $speed * .0001;
-$u-moon-molasses: $speed * .0001;
-$n-moon-molasses: $speed * .0001;
-$p-moon-molasses: $speed * .0001;
-$er-moon-molasses: $speed * .0001;
+$speedLimit: 14;
+$e-moon-molasses: $speedLimit * 1;
+$m-moon-molasses: $speedLimit * 0.02;
+$j-moon-molasses: $speedLimit * 0.06;
+$s-moon-molasses: $speedLimit * .0001;
+$u-moon-molasses: $speedLimit * .0001;
+$n-moon-molasses: $speedLimit * .0001;
+$p-moon-molasses: $speedLimit * .0001;
+$er-moon-molasses: $speedLimit * .0001;
 
 // Planetary governors
 // http://nssdc.gsfc.nasa.gov/planetary/factsheet/
-$mercury-deg:   87.97 / $speed;
-$venus-deg:     224.63 / $speed;
-$earth-deg:     365.26 / $speed;
-$mars-deg:      687.05 / $speed;
-$jupiter-deg:   4331.94 / $speed;
-$saturn-deg:    10760.45 / $speed;
-$uranus-deg:    30685.19 / $speed;
-$neptune-deg:   60194.25 / $speed;
-$pluto-deg:     90620.10 / $speed;
-$eris-deg:      203447.79 / $speed;
+$mercury-deg:   87.97 / $speedLimit;
+$venus-deg:     224.63 / $speedLimit;
+$earth-deg:     365.26 / $speedLimit;
+$mars-deg:      687.05 / $speedLimit;
+$jupiter-deg:   4331.94 / $speedLimit;
+$saturn-deg:    10760.45 / $speedLimit;
+$uranus-deg:    30685.19 / $speedLimit;
+$neptune-deg:   60194.25 / $speedLimit;
+$pluto-deg:     90620.10 / $speedLimit;
+$eris-deg:      203447.79 / $speedLimit;
 
 // Moon governors
 

@@ -51,6 +51,7 @@ ol {
   }
 }
 
+h2,
 h3,
 p,
 blockquote,
@@ -86,4 +87,11 @@ blockquote {
   line-height: $line-height * 1.5;
   font-style: italic;
   text-align: justify;
+}
+
+code {
+  font-weight: bold;
+  padding: 0.25em 0.5em;
+  margin: 0 0.35em;
+  background: darken($color-background-light, 2%);
 }
