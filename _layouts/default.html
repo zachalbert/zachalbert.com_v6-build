@@ -60,9 +60,24 @@
             <div class="bio-pic" title="Zac Halbert"></div>
           </div>
           <div class="post_main">
-            <p>I'm a dude who does some stuff, and here's a few great folks i've worked with.</p>
-            <p>recurly, samagroup, nomnommer, broadly, sharefund, archively</p>
-            <p>Interested in working together?<a href="#contact" class="button meta-text text-button">Contact Me</a></p>
+            <p>
+              Hi, I'm Zac Halbert. I'm a digital product designer living in San Francisco, California with my Wife Sheena and sheepdog Rufus.
+            </p>
+            <p>
+              I build user-facing applications and webites for technology companies, especially startups aiming to make a meaingful, positive impact on everyone. My focus is on design in the early stages of a product lifecycle. Encompassed in that specialty is a toolbox that includes things like user research, wireframing, visual design, and frontend development.
+            </p>
+            <p>
+              I've been fortunate enough to work with really talented people at some amazing companies.
+            </p>
+            <p>
+              <span class="nascar recurly" title="Recurly"></span>
+              <span class="nascar samahope" title="SamaHope / SamaGroup"></span>
+              <span class="nascar nomnommer" title="NomNommer"></span>
+              <span class="nascar broadly" title="Broadly"></span>
+              <span class="nascar sharefund" title="ShareFund"></span>
+              <span class="nascar archively" title="Archively"></span>
+            </p>
+            <p><a href="#contact"><i class="icon-arrow-down no-underline hover-bounce"></i>&nbsp;&nbsp;&nbsp;Interested in working together?</a></p>
           </div>  
         </div>
       </section>
@@ -73,37 +88,43 @@
     <a href="#" id="contact" class="anchor-offset"></a>
     <footer class="site-footer" role="contentinfo">
         
-        <div class="row">
-          <div class="col-xs-12">
-            <h3>Hire me, <em>please</em>.</h3>
-            <p>This is some text about contacting / hiring me</p>
-            <form method="post" action="//formspree.io/hi@scouthawk.io" id="contact-form">
-              <input class="float-label" type="text" placeholder="Your name" name="name">
-              <input class="float-label" type="email" placeholder="Your email" name="email">
-
-              <textarea class="float-label" placeholder="Your message" name="message" rows="3"></textarea>
-              <input type="hidden" name="_subject" value="New contact" />
-              <input type="hidden" name="_next" value="{{  site.url }}/thanks" />
-              <input type="text" name="_gotcha" style="display:none" />
-              <input type="submit" class="button button-primary" value="Send">
-            </form>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-xs-12">
-            <div class="social-bank">
-              <a href="#" class="icon-twitter button"></a>
-              <a href="#" class="icon-dribbble button"></a>
-              <a href="#" class="icon-linkedin button"></a>
-              <a href="#" class="icon-github button"></a>
-              <a href="#" class="icon-instagram button"></a>
+        <section>
+          <div class="row">
+            <div class="post_side">
+              <h2>Get in touch</h2>
             </div>
-            <p>
-              Built by <a href="http://www.zachalbert.com/" rel="author">Zac Halbert</a>, 2015. <a href="https://github.com/zachalbert/zachalbert.com_v6">The code for this website</a> is <a href="http://opensource.org/licenses/MIT" target="_blank">MIT licensed</a>.
-            </p>
+            <div class="post_main">
+              <form method="post" action="//formspree.io/hi@scouthawk.io" id="contact-form">
+                <input class="float-label" type="text" placeholder="Your name" name="name" id="name">
+                <input class="float-label" type="email" placeholder="Your email" name="email" id="email">
+
+                <textarea class="float-label" placeholder="Your message" name="message" rows="3"></textarea>
+                <input type="checkbox" checked="checked" name="subscribe" id="subscribe"><label for="subscribe">Get occasional, high quality product design tips delivered to your inbox</label>
+                <input type="hidden" name="_subject" value="New contact" />
+                <input type="hidden" name="_next" value="{{  site.url }}/thanks" />
+                <input type="text" name="_gotcha" style="display:none" />
+                <input type="submit" class="button button-primary" value="Send">
+              </form>
+            </div>
           </div>
-        </div>
+        </section>
+        
+        <section class="page-bottom">
+          <div class="row">
+            <div class="post_side colophon">
+              <p>Built by <a href="http://www.zachalbert.com/" rel="author">Zac Halbert</a>, 2015.<br><a href="https://github.com/zachalbert/zachalbert.com_v6">The code for this site</a> is free to use under the <a href="http://opensource.org/licenses/MIT" target="_blank">MIT license</a>.</p>
+            </div>
+            <div class="post_main">
+              <div class="row full around-xs social-bank">
+                <div class="col-xs2"><a href="https://twitter.com/zachalbert" class="icon-twitter button"></a></div>
+                <div class="col-xs2"><a href="https://dribbble.com/zachalbert" class="icon-dribbble button"></a></div>
+                <div class="col-xs2"><a href="https://www.linkedin.com/in/zachalbert" class="icon-linkedin button"></a></div>
+                <div class="col-xs2"><a href="https://github.com/zachalbert" class="icon-github button"></a></div>
+                <div class="col-xs2"><a href="http://instagram.com/zachalbert" class="icon-instagram button"></a></div>
+              </div>
+            </div>
+          </div>
+        </section>
 
       </div>
     </footer>

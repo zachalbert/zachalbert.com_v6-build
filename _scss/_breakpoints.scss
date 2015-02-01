@@ -3,9 +3,7 @@ body {
 }
 
 @media #{$min-480} {
-  .social-bank {
-    margin-left: 0;
-  }
+
 }
 
 @media #{$min-640} {
@@ -59,10 +57,6 @@ body {
   .post-date {
     text-align: right;
     margin-top: -$lead-single;
-  }
-
-  .social-bank a.button {
-    margin-right: $half-gutter-width;
   }
 }
 

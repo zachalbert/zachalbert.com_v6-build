@@ -20,6 +20,19 @@ $color-10: #85454c;
 $color-11: #723948;
 $color-12: #5e3043;
 
+.color-1 { color: $color-1; }
+.color-2 { color: $color-2; }
+.color-3 { color: $color-3; }
+.color-4 { color: $color-4; }
+.color-5 { color: $color-5; }
+.color-6 { color: $color-6; }
+.color-7 { color: $color-7; }
+.color-8 { color: $color-8; }
+.color-9 { color: $color-9; }
+.color-10{ color: $color-10; }
+.color-11{ color: $color-11; }
+.color-12{ color: $color-12; }
+
 $color-background:        #fff;
 $color-background-light:  #fbfafb;
 $color-text:              #4D2636;
@@ -30,9 +43,9 @@ $color-link-hover:        #5D929B;
 $color-border:            $color-link;
 
 $color-footer:            $color-12;
-$color-footer-text:       $color-7;
-$color-footer-link:       $color-3;
-$color-footer-link-hover: $color-1;
+$color-footer-text:       $color-1;
+$color-footer-link:       $color-link;
+$color-footer-link-hover: $color-link-hover;
 
 $color-selection:         #fff;
 $color-selection-bg:      $color-text;

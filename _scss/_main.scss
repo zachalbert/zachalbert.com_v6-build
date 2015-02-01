@@ -47,6 +47,12 @@ a:active {
   color: $color-link-hover;
   transition: $transition-in;
   text-decoration: none;
+
+  .hover-bounce {
+    position: relative;
+    top: 0.2em;
+    transition: $transition-in;
+  }
 }
 
 a:active {
@@ -121,6 +127,15 @@ hr {
 
 .inline-block {
   display: inline-block;
+}
+
+.no-underline {
+  text-decoration: none !important;
+}
+
+.page-bottom {
+  margin-bottom: 0;
+  padding-bottom: $lead-triple;
 }
 
 .bare {
@@ -292,27 +307,27 @@ section {
 }
 
 .social-bank {
-  margin-left: -$font-size;
-  text-align: right;
-  padding-top: 0.6em;
-
   a.button {
-    margin: 0 0 $lead-single 0;
+    margin: 0;
     display: block;
-    float: right;
+
+    &:hover:after {
+      background: #fff;
+      border-color: #fff;
+    }
   }
 }
 
 .site-main {
   padding: $lead-quadruple 0 0;
   position: relative;
+}
 
-  section:first-child {
-    .row {
-      border-top: none;
-      padding-top: 0;
-    }  
-  }
+section:first-child {
+  .row {
+    border-top: none;
+    padding-top: 0;
+  }  
 }
 
 // Side:    col-xs-12 col-sm-5 col-md-4 side-column
@@ -356,16 +371,29 @@ section {
       @extend .col-main;
       display: block;
     }
-
-    .body h2 {
-      @extend .col-side;
-      display: block;
-      text-align: right;
-      position: relative;
-      margin-top: -$lead-double;
-      top: $lead-double;
-    }
   }
+}
+
+.post-single .body h2 {
+  @extend .col-side;
+  display: block;
+  text-align: right;
+  position: relative;
+  margin-top: -$lead-double;
+  top: $lead-double;
+
+  &:hover .header-link {
+    opacity: 1;
+  }
+}
+
+.header-link {
+  display: block;
+  position: absolute;
+  right: -5px;
+  color: $color-link;
+  opacity: 0;
+  text-decoration: none;
 }
 
 .grid_main,
@@ -798,6 +826,8 @@ p + .post-social {
   padding: 60% 0 0;
   position: relative;
   right: -40%;
+  box-sizing: border-box;
+  border: 5px solid $color-1;
 }
 
 .excerpt-action {
@@ -836,4 +866,13 @@ p + .post-social {
       }
     }
   }
+
+  label {
+    color: $color-1;
+  }
+}
+
+.colophon {
+  @extend .meta-text;
+  color: $color-1;
 }

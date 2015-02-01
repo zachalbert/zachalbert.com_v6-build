@@ -37,7 +37,12 @@ $(function() {
 
 $(document).ready(function() {
 
-  $('.float-label').floatlabel({slideInput: false});
+  $('.float-label').floatlabel({
+    slideInput: true,
+    labelStartTop: '10px',
+    labelEndTop: '-24px',
+    typeMatches: /text|password|email|number|textarea|search|url/
+  });
 
   // Set hover states
   $('.solar-system > div > .orbit').hover(function() {
@@ -79,13 +84,11 @@ $(document).ready(function() {
         localStorage.clear();
         localStorage.setItem("orrry_pause", "false");
         isPaused = false;
-        console.log('false')
       } else {
         $('body').addClass('paused');
         localStorage.clear();
         localStorage.setItem("orrry_pause", "true");
         isPaused = true;
-        console.log('true')
       }
     }
 
@@ -93,6 +96,25 @@ $(document).ready(function() {
 
   // Hyphenate side titles
   $('.post-title, .post-title a, .hyphenate').hyphenate('en-us');
+
+  // Add internal links to H2s
+  $(function() {
+    return $(".post-single .body h2, .post-single .body h3, .post-single .body h4, .post-single .body h5, .post-single .body h6").each(function(i, el) {
+      var $el, icon, id;
+      $el = $(el);
+      id = $el.attr('id');
+      icon = '<i>&infin;</i>';
+
+      if (id) {
+        // Clear id from the header
+        $el.removeAttr('id');
+
+        // Add :before object to the header with pos absolute and anchor offset class + id
+        return $el.prepend($("<a />").addClass("anchor-offset").attr("href", "#").attr("id", id))
+                  .prepend($("<a />").addClass("header-link").attr("href", "#" + id).html(icon));
+      }
+    });
+  });
 
 });
 
