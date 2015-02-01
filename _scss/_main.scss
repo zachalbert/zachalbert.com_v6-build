@@ -490,6 +490,25 @@ figure {
   }
 }
 
+a.thumbnail {
+  text-align: center;
+  margin-bottom: $lead-double;
+  display: block;
+
+  img {
+    border: 1px solid $color-text;
+  }
+
+  &:hover {
+    img {
+    }
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
 .post-date {
   @extend .meta-text;
   padding: 0 $half-gutter-width;
