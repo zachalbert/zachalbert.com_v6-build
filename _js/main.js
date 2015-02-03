@@ -116,6 +116,17 @@ $(document).ready(function() {
     });
   });
 
+  // Load Dribbble feed
+  $.jribbble.getShotsByPlayerId('zachalbert', function (playerShots) {
+      var html = [];
+  
+      $.each(playerShots.shots, function (i, shot) {
+          html.push('<a href="' + shot.url + '"><img src="' + shot.image_teaser_url + '" alt="' + shot.title + '"></a>');
+      });
+  
+      $('#portfolio').html(html.join(''));
+  }, {page: 1, per_page: 18});
+
 });
 
 

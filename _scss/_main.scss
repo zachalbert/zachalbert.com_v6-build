@@ -152,6 +152,10 @@ hr {
   border-radius: 2px;
 }
 
+img {
+  vertical-align: bottom;
+}
+
 ::-moz-selection {
   background: $color-selection-bg;
   color: $color-selection;
@@ -317,8 +321,8 @@ section {
     display: block;
 
     &:hover:after {
-      background: #fff;
-      border-color: #fff;
+      background: $color-1;
+      border-color: $color-1;
     }
   }
 }
@@ -496,12 +500,13 @@ figure {
 }
 
 a.thumbnail {
-  text-align: center;
+  text-align: left;
   margin-bottom: $lead-double;
   display: block;
 
   img {
     border: 1px solid $color-text;
+    margin-bottom: $lead-half;
   }
 
   &:hover {
@@ -512,6 +517,68 @@ a.thumbnail {
   &:last-child {
     margin-bottom: 0;
   }
+}
+
+#portfolio {
+  margin: 0;
+
+  a {
+    width: 33.3%;
+    margin: 0;
+    box-sizing: border-box;
+    padding: $lead-single + 4;
+    display: block;
+    float: left;
+
+    &:hover {
+
+    }
+  }
+
+  img {
+    width: 100%;
+    display: inline-block;
+  }
+}
+
+.nascarification {
+  width: 100%;
+  margin-bottom: $lead-single;
+  text-align: center;
+}
+
+.nascar {
+  &.recurly {
+    background-image: url('/images/nc-recurly.png');
+  }
+  &.samahope {
+    background-image: url('/images/nc-samahope.png');
+  }
+  &.samagroup {
+    background-image: url('/images/nc-samagroup.png');
+  }
+  &.nomnommer {
+    background-image: url('/images/nc-nomnommer.png');
+  }
+  &.broadly {
+    background-image: url('/images/nc-broadly.png');
+  }
+  &.sharefund {
+    background-image: url('/images/nc-sharefund.png');
+  }
+  &.archively {
+    background-image: url('/images/nc-archively.png');
+  }
+  
+  display: inline-block;
+  min-width: 27%;
+  min-height: 130px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  opacity: 0.12;
+  margin: 3%;
+  box-sizing: border-box;
 }
 
 .post-date {
@@ -547,7 +614,7 @@ p.top {
 
 #about + section {
   background: $color-text;
-  color: $color-1;
+  color: $color-footer-text;
   background-size: cover;
   margin-bottom: 0;
 
@@ -654,6 +721,10 @@ p.top {
   .symbol {
     margin-right: 1em;
   }
+}
+
+.label-floatlabel {
+  color: $color-footer-text !important;
 }
 
 .button {
@@ -869,7 +940,7 @@ p + .post-social {
   position: relative;
   right: -40%;
   box-sizing: border-box;
-  border: 5px solid $color-1;
+  border: 5px solid $color-footer-text;
 }
 
 .excerpt-action {
@@ -910,7 +981,11 @@ p + .post-social {
   }
 
   label {
-    color: $color-1;
+    color: $color-footer-text;
+  }
+
+  section>.row {
+    border-color: $color-text;
   }
 }
 

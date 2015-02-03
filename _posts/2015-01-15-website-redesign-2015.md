@@ -27,7 +27,7 @@ Since personal sites have very few design or technical constraints, I wanted to 
 
 Once I had the flexibility of a new grid, it was pretty easy to experiment with layout combinations such as the 2 column view I went with. 
 
-Typographically speaking, I went with _Abril from Typekit_. Its history in editorial work and tasty italics fit the whitespacey look I was going for. I used _type-scale.com_ to build a font-size scale, and used that same scale to create strips of 'lead' spacers. All block-level elements receive either one, two, or three spacers depending on the needs of the design.
+Typographically speaking, I went with <a href="https://typekit.com/fonts/abril-text">Abril Text</a> for body copy and <a href="https://typekit.com/fonts/abril-titling">Abril Titling</a> for headlines. Its history in editorial work and tasty italics fit the whitespacey look I was going for. I used _type-scale.com_ to build a font-size scale, and used that same scale to create strips of 'lead' spacers. All block-level elements receive either one, two, or three spacers depending on the needs of the design.
 
 {% highlight scss linenos %}
 ////// Type Scale //////
