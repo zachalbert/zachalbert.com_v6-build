@@ -147,6 +147,11 @@ hr {
   color: $color-text;
 }
 
+.img-border {
+  border: 1px solid $color-text;
+  border-radius: 2px;
+}
+
 ::-moz-selection {
   background: $color-selection-bg;
   color: $color-selection;
@@ -556,6 +561,22 @@ p.top {
   color: #fff;
 }
 
+.post_main-content {
+  position: relative;
+
+  &:after {
+    content: '';
+    width: 100%;
+    height: $lead-triple;
+    background: linear-gradient(to bottom, rgba(white,0), white);
+    display: block;
+    position: absolute;
+    bottom: $lead-single;
+    left: 0;
+    pointer-events: none;
+  }
+}
+
 .description-holder {
   opacity: 0;
   padding-bottom: 1px;
@@ -636,7 +657,7 @@ p.top {
 }
 
 .button {
-  padding: $font-size-small-1;
+  padding: $font-size-05;
   border-radius: $lead-single * 2;
   border: 1px solid $color-link;
   background: transparent;
@@ -659,6 +680,7 @@ p.top {
     border-radius: $lead-single * 2;
     transform: scale(0.4);
     transition: $transition-out;
+    opacity: 0;
   }
 
   &:before {
@@ -677,6 +699,7 @@ p.top {
       border-color: rgba($color-link-hover, 1);
       transform: scale(1);
       transition: $transition-in;
+      opacity: 1;
     }
   }
 
@@ -766,7 +789,7 @@ p + .post-social {
 
 [class*="icon-"] {
   &.button {
-    padding: ($font-size-small-1 + 1px) $font-size-small-1 ($font-size-small-1 - 1px);
+    padding: ($font-size-05 + 1px) $font-size-05 ($font-size-05 - 1px);
     width: $line-height;
     display: inline-block;
     margin-right: 4%;
@@ -781,7 +804,7 @@ p + .post-social {
   }
 
   &.icon-small.button {
-    padding: ($font-size-small-1 + 1px) $font-size-small-1 ($font-size-small-1 - 1px);
+    padding: ($font-size-05 + 1px) $font-size-05 ($font-size-05 - 1px);
     width: $line-height / 2;
     line-height: 1;
 
