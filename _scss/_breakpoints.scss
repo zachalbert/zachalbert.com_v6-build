@@ -77,6 +77,12 @@ body {
   .link-to-top-wrap {
     display: block;
   }
+
+  .link-bank {
+    a {
+      padding: $line-height + 2px;
+    }
+  }
 }
 
 @media #{$min-1024} {
