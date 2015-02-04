@@ -1,9 +1,8 @@
 name: "Zac Halbert"
-url: "http://localhost:3000"
+description: "The personal site of product designer Zac Halbert. UX, design, and code."
+url: "http://www.zachalbert.com/"
 markdown: kramdown
-# rdiscount:
-  # extensions: ['smart']
-highlighter: pygments # or rouge or null
+highlighter: pygments
 exclude: ["node_modules", "bower_components", "gulpfile.js", "package.json", "bower.json", "README.md"]
 excerpt_separator: "<!-- more -->"
 permalink: /:title

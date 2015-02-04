@@ -4,22 +4,12 @@ My personal site.
 
 ## To-do
 
-* Investigate the foundation flexbox grid
-* For the grid, think about this:
-** Perhaps, elements like side nav, p elements, etc should all get grid sizes in the stylesheet, rather than in the markup. This will allow full width things like images.
-* Site footer
-* Portfolio list page
-* Portfolio detail view
-* Figure out image sizing
 * Responsive tuning on the nav & header
 * Responsive tuning on the main column view
 * Get better icons on the orrry
 * Write a better thanks page
-* Change the orrry to more of a general experiment / project showcase area, easily swappable
-* Make the pause button toggle to a play button
-* Get excerpts to stop ignoring line breaks (currently only pulls 1st paragraph)
 * Complete metadata tag (implemention)[http://moz.com/blog/meta-data-templates-123]
-* Change contact to be more of a newsletter signup / contact form
+* Hook up to MC
 
 ## The Orrery
 
