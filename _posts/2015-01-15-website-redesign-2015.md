@@ -71,27 +71,44 @@ $lead-quintuple:   $line-height * 5;
 
 ## Gulpfile.js &amp; Automation
 
-Begin by either <a href="https://github.com/zachalbert/zachalbert.com_v6/fork">forking the repo for this website</a> or by replecating this site structure. While there is a certain amount of flexibility, <a href="http://jekyllrb.com/docs/structure/">jekyll dictates a certain directory structure</a>. (Jekyll is the tool that makes running a static blog easy by turning markdown files into html files.) I've included links to example files you can copy.
+Begin by either <a href="https://github.com/zachalbert/zachalbert.com_v6/fork">forking the repo for this website</a> or by replecating this site structure. While there is a certain amount of flexibility, <a href="http://jekyllrb.com/docs/structure/">jekyll dictates a certain directory structure</a>. (Jekyll is the tool that makes running a static blog easy by turning markdown files into html files.) I've included links to example files you can copy and customize on your own.
 
-* _posts
-** yyyy-mm-dd-post-title.md
-* _layouts
-** default.html (<a href="https://gist.github.com/zachalbert/f5b5636ff8500387d17a">example</a>)
-* _config.yml (<a href="">example</a>)
-* index.html ()
-* _config.yml (<a href="">example</a>)
+<pre class="highlight">
+|- <strong>_posts</strong>
+|--- yyyy-mm-dd-post-title.md (<a href="https://gist.githubusercontent.com/zachalbert/87465e43523e746b7e18/raw/f0c8496f3984f423886775cc8de20b4acee4935d/yyyy-mm-dd-post-title.md">example</a>)
+|- <strong>_layouts</strong>
+|--- default.html (<a href="https://gist.github.com/zachalbert/f5b5636ff8500387d17a">example</a>)
+|- <strong>_site</strong> (<em>leave empty &mdash; your static site will be generated to this directory</em>)
+|- _config.yml (<a href="https://github.com/zachalbert/zachalbert.com_v6/blob/master/_config.yml">example</a>)
+|- index.html (<em>start working here</em>)
+|- gulpfile.js (<a href="https://github.com/zachalbert/zachalbert.com_v6/blob/master/gulpfile.js">example</a>)
+|- package.json (<a href="https://github.com/zachalbert/zachalbert.com_v6/blob/master/package.json">example</a>)
+|- .gitignore (<a href="https://github.com/zachalbert/zachalbert.com_v6/blob/master/.gitignore">example</a>)
+</pre>
 
-<script src="http://gist-it.appspot.com/github/zachalbert/zachalbert.com_v6/blob/master/gulpfile.js"></script>
+Though not required, you should also run both `git init` and `bower init` from the command line in the root of your site directory. The first command will start a local git repo which you can later deploy to github pages to make your site public easily. Use the bower command if you're interested in using bower to manage javascript dependencies.
 
-### Site St
-
-The root o
-
-## Jekyll integration within gulp
-
-Yay...
+Setup can be tough to get used to, but once it's all working, a single command: `npm start` will start a chain of processes that installs and updates any missing dependencies, rebuilds and watches *all* of your files for changes, starts a local server with livereload and CSS inject to show your code changes realtime in the browser, rebuilds the sitemap, <em>AND</em> minifies and concatenates CSS and JS files for production.
 
 ## Deploying to Github pages
 
-Yay...
+Once you have a local site you're happy with, deploying it to github pages is quite simple.
 
+The first step is making sure you have created a repository on github.com and <a href="https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/">have pushed your local repository to it</a>. Once done, you'll be able to follow <a href="https://pages.github.com/">this helpful guide on github page's own site</a>.
+
+Once everything is working, notice there is a block in `gulpfile.js` that automates the github pages deploy process.
+
+{% highlight javascript linenos %}
+// Deploy to github gulp-gh-pages
+gulp.task('deploy', ['jekyll-build'], function() {
+  return gulp.src('./_site/**/*')
+    .pipe(deploy({
+      remoteUrl: "git@github.com:USERNAME/REPO.git",
+      branch: "master"
+    }));
+});
+{% endhighlight %}
+
+Once everything is working, updating your blog is easy. You just run `npm start` to begin your static site generator and local server, then add a new markdown file to the `_posts` directory. You'll be able to watch your site regenerate every time you make changes to the new post. When you're satisfied, commit your changes and run `gulp deploy` to push everything live.
+
+_Happy building!_

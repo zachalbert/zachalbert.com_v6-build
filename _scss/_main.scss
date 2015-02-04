@@ -97,6 +97,9 @@ hr {
   margin: $lead-half 0 $lead-single $lead-single;
 }
 
+.no-padding-left { padding-left: 0; }
+.no-padding-right { padding-right: 0; }
+
 .pull-left {
   float: left;
 }
@@ -728,7 +731,7 @@ p.top {
 }
 
 .button {
-  padding: $font-size-05;
+  padding: $font-size-05 + 2;
   border-radius: $lead-single * 2;
   border: 1px solid $color-link;
   background: transparent;
@@ -736,6 +739,11 @@ p.top {
   text-align: center;
   position: relative;
   transition: $transition-out;
+
+  span {
+    position: relative;
+    z-index: 2;
+  }
 
   &:after {
     content: '';
