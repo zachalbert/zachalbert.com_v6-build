@@ -1,4 +1,8 @@
-var topOfPage = $('.site-main').offset().top - 84;
+if( screen.width < 640 ) {
+  var topOfPage = $('.site-main').offset().top - 168;
+} else {
+  var topOfPage = $('.site-main').offset().top - 84;
+}
 
 $(function() {
   // Scatter the stars about the heavens

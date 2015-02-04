@@ -3,7 +3,18 @@ body {
 }
 
 @media #{$min-480} {
+  .separator {
+    &.left {
+      margin-left: $lead-single;
+    }
+  }
 
+  .button {
+    &.text-button {
+      padding-left: $lead-single;
+      padding-right: $lead-single;
+    }
+  }
 }
 
 @media #{$min-640} {
@@ -61,6 +72,12 @@ body {
 
   .post_side {
     text-align: right;
+    padding-left: 0;
+  }
+
+  .bio-pic {
+    right: -40%;
+    margin: 0;
   }
 }
 

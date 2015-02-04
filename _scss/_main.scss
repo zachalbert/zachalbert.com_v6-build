@@ -293,6 +293,8 @@ section {
 }
 
 .link-bank {
+  text-align: right;
+
   a {
     padding: ($line-height + 2px) 18px;
     transition: all 0.35s ease-in-out;
@@ -370,7 +372,6 @@ section:first-child {
 
 .post_side {
   text-align: left;
-  padding-left: 0;
 }
 
 .post {
@@ -431,7 +432,7 @@ section:first-child {
   position: relative;
 
   &.left {
-    margin: 0 $lead-half 0 $lead-single;
+    margin: 0 $lead-half;
   }
 
   &:after {
@@ -741,6 +742,7 @@ p.top {
   text-align: center;
   position: relative;
   transition: $transition-out;
+  line-height: $scale;
 
   span {
     position: relative;
@@ -801,8 +803,8 @@ p.top {
   }
 
   &.text-button {
-    padding-left: $lead-single;
-    padding-right: $lead-single;
+    padding-left: $lead-half/2;
+    padding-right: $lead-half/2;
 
     &:hover,
     &:active {
@@ -952,7 +954,7 @@ p + .post-social {
   height: 0;
   padding: 60% 0 0;
   position: relative;
-  right: -40%;
+  margin: 0 auto $lead-double;
   box-sizing: border-box;
   border: 5px solid $color-footer-text;
 }
