@@ -13,4 +13,4 @@ categories:
 
 <!-- more -->
 
-I had the opportunity to enter a <a href="http://mblongii.com/2013/01/15/fully-exploring-the-potential-space/">logo contest</a> for a UX group I've been attending. It's called <a href="http://sf.lean-ux.com/">Lean UX San Francisco</a> and is a sharp group of people focused on implementing lean thinking in their UX teams. There were a lot of great entries, but I'm proud to say my entry won.
+I had the opportunity to enter a logo contest for a UX group I've been attending. It's called <a href="http://sf.lean-ux.com/">Lean UX San Francisco</a> and is a sharp group of people focused on implementing lean thinking in their UX teams. There were a lot of great entries, but I'm proud to say my entry won.

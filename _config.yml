@@ -1,8 +1,9 @@
 name: "Zac Halbert"
 description: "The personal site of product designer Zac Halbert. UX, design, and code."
-url: "http://www.zachalbert.com/"
+url: "https://www.zachalbert.com"
 markdown: kramdown
 highlighter: pygments
+enforce_ssl: www.zachalbert.com
 exclude: ["node_modules", "bower_components", "gulpfile.js", "package.json", "bower.json", "README.md"]
 excerpt_separator: "<!-- more -->"
 permalink: /:title

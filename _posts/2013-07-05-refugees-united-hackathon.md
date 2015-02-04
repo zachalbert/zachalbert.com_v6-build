@@ -35,5 +35,5 @@ Here&#8217;s a link to the [press release][3], and here&#8217;s how our project 
 <img class="aligncenter size-full wp-image-535" alt="project-description" src="/images/project-description.png" width="612" height="792" />
 
  [1]: https://refunite.org/
- [2]: http://info.refunite.org/content/founders-story
+ [2]: https://www.refunite.org/
  [3]: http://refunite.tumblr.com/post/53439703095/announcing-the-winners-of-the-global-hackforgood

@@ -1,6 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  {% if site.enforce_ssl %}
+  <!--
+    redirect users to the https version of the website.
+    but: only check when on the production domain, as set in _config.yml.
+   -->
+  <script type="text/javascript">
+    var enforce = "{{ site.enforce_ssl }}";
+    if ((enforce == window.location.host) && (window.location.protocol != "https:"))
+      window.location = window.location.toString().replace(/^http:/, "https:");
+  </script>
+  {% endif %}
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -8,6 +19,7 @@
   <title>{{ page.title }}</title>
   <meta name="description" content="{{ site.description }}">
   <meta name="author" content="{{ site.name }}">
+  <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
 
   {% capture header %}
   <meta property="og:locale" content="en_US">
@@ -87,45 +99,44 @@
     <a href="#" id="contact" class="anchor-offset"></a>
     <footer class="site-footer" role="contentinfo">
         
-        <section>
-          <div class="row">
-            <div class="post_side">
-              <h2>Get in touch</h2>
-            </div>
-            <div class="post_main">
-              <form method="post" action="//formspree.io/hi@scouthawk.io" id="contact-form">
-                <input class="float-label" type="text" placeholder="Your name" name="name" id="name">
-                <input class="float-label" type="email" placeholder="Your email" name="email" id="email">
+      <section>
+        <div class="row">
+          <div class="post_side">
+            <h2>Get in touch</h2>
+          </div>
+          <div class="post_main">
+            <form method="post" action="//formspree.io/hi@scouthawk.io" id="contact-form">
+              <input class="float-label" type="text" placeholder="Your name" name="name" id="name">
+              <input class="float-label" type="email" placeholder="Your email" name="email" id="email">
 
-                <textarea class="float-label" placeholder="Your message" name="message" rows="3"></textarea>
-                <input type="checkbox" checked="checked" name="subscribe" id="subscribe"><label for="subscribe">Get occasional, high quality product design tips delivered to your inbox</label>
-                <input type="hidden" name="_subject" value="New contact" />
-                <input type="hidden" name="_next" value="{{  site.url }}/thanks" />
-                <input type="text" name="_gotcha" style="display:none" />
-                <input type="submit" class="button button-primary" value="Send">
-              </form>
+              <textarea class="float-label" placeholder="Your message" name="message" rows="3"></textarea>
+              <input type="checkbox" checked="checked" name="subscribe" id="subscribe"><label for="subscribe">Get occasional, high quality product design tips delivered to your inbox</label>
+              <input type="hidden" name="_subject" value="New contact" />
+              <input type="hidden" name="_next" value="{{  site.url }}/thanks" />
+              <input type="text" name="_gotcha" style="display:none" />
+              <input type="submit" class="button button-primary" value="Send">
+            </form>
+          </div>
+        </div>
+      </section>
+      
+      <section class="page-bottom">
+        <div class="row">
+          <div class="post_side colophon">
+            <p>Built by <a href="{{ site.url }}" rel="author">Zac Halbert</a>, 2015.<br><a href="https://github.com/zachalbert/zachalbert.com_v6">The code for this site</a> is free to use under the <a href="http://opensource.org/licenses/MIT" target="_blank">MIT license</a>.</p>
+          </div>
+          <div class="post_main">
+            <div class="row full around-xs social-bank">
+              <div class="col-xs2"><a href="https://twitter.com/zachalbert" class="icon-twitter button"></a></div>
+              <div class="col-xs2"><a href="https://dribbble.com/zachalbert" class="icon-dribbble button"></a></div>
+              <div class="col-xs2"><a href="https://www.linkedin.com/in/zachalbert" class="icon-linkedin button"></a></div>
+              <div class="col-xs2"><a href="https://github.com/zachalbert" class="icon-github button"></a></div>
+              <div class="col-xs2"><a href="http://instagram.com/zachalbert" class="icon-instagram button"></a></div>
             </div>
           </div>
-        </section>
-        
-        <section class="page-bottom">
-          <div class="row">
-            <div class="post_side colophon">
-              <p>Built by <a href="http://www.zachalbert.com/" rel="author">Zac Halbert</a>, 2015.<br><a href="https://github.com/zachalbert/zachalbert.com_v6">The code for this site</a> is free to use under the <a href="http://opensource.org/licenses/MIT" target="_blank">MIT license</a>.</p>
-            </div>
-            <div class="post_main">
-              <div class="row full around-xs social-bank">
-                <div class="col-xs2"><a href="https://twitter.com/zachalbert" class="icon-twitter button"></a></div>
-                <div class="col-xs2"><a href="https://dribbble.com/zachalbert" class="icon-dribbble button"></a></div>
-                <div class="col-xs2"><a href="https://www.linkedin.com/in/zachalbert" class="icon-linkedin button"></a></div>
-                <div class="col-xs2"><a href="https://github.com/zachalbert" class="icon-github button"></a></div>
-                <div class="col-xs2"><a href="http://instagram.com/zachalbert" class="icon-instagram button"></a></div>
-              </div>
-            </div>
-          </div>
-        </section>
+        </div>
+      </section>
 
-      </div>
     </footer>
 
     <script src="/js/site.min.js"></script>    

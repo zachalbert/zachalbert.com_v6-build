@@ -13,6 +13,4 @@ In cases where you can’t remove complexity, try masking it. Progressive disclo
 
 <!-- more -->
 
-That&#8217;s an excerpt from a blog post I wrote for the Recurly company blog about [masking complexity through progressive disclosure][1]. Check it out!
-
- [1]: http://zzz.ac/mcpd
+That&#8217;s an excerpt from a blog post I wrote for the Recurly company blog about <a href="https://blog.recurly.com/2013/04/masking-complexity-through-progressive-disclosure">masking complexity through progressive disclosure</a>. Check it out!
