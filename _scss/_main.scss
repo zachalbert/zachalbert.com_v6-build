@@ -83,7 +83,7 @@ hr {
   @extend .site-border;
 }
 
-.col-no-padding {
+.no-padding {
   padding: 0;
 }
 
@@ -294,7 +294,7 @@ section {
 
 .link-bank {
   a {
-    padding: $line-height + 2px;
+    padding: ($line-height + 2px) 18px;
     transition: all 0.35s ease-in-out;
 
     &:first-child {
@@ -369,7 +369,7 @@ section:first-child {
 }
 
 .post_side {
-  text-align: right;
+  text-align: left;
   padding-left: 0;
 }
 
@@ -904,6 +904,7 @@ p + .post-social {
   transition: all 0.35s ease-in-out;
   color: $color-link;
   border-color: $color-link;
+  display: none;
 
   &:hover {
     transform: rotate(-180deg) scale(0.95);
@@ -914,6 +915,10 @@ p + .post-social {
     transform: rotate(-180deg) scale(0.85);
     transition: all 0.35s ease-in-out;
   }
+}
+
+.link-to-top-wrap {
+  display: none;
 }
 
 .link-list {

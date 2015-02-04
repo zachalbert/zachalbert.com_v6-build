@@ -58,6 +58,10 @@ body {
     text-align: right;
     margin-top: -$lead-single;
   }
+
+  .post_side {
+    text-align: right;
+  }
 }
 
 @media #{$min-768} {
@@ -68,6 +72,10 @@ body {
 
   blockquote {
     font-size: $font-size-2;
+  }
+
+  .link-to-top-wrap {
+    display: block;
   }
 }
 
