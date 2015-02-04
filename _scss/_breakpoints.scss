@@ -86,11 +86,23 @@ body {
 }
 
 @media #{$min-1024} {
+
+  #portfolio {
+    a {
+      padding: $lead-double;
+    }
+  }
   
 }
 
 @media #{$min-1200} {
   .row {
     width: 75%;
+  }
+
+    #portfolio {
+    a {
+      padding: $lead-double + 6;
+    }
   }
 }
