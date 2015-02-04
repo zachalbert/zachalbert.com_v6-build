@@ -904,7 +904,6 @@ p + .post-social {
   transition: all 0.35s ease-in-out;
   color: $color-link;
   border-color: $color-link;
-  display: none;
 
   &:hover {
     transform: rotate(-180deg) scale(0.95);
