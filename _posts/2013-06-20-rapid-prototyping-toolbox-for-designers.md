@@ -1,16 +1,17 @@
 ---
-published: false
+published: true
 title: A Rapid Prototyping Toolbox for Designers with Jekyll and Foundation 4
 author: zac
 layout: post
 permalink: /rapid-prototyping-toolbox-for-designers/
+comments: true
 categories:
   - Code
   - Content
 ---
 Learn how to rapidly prototype marketing websites or blogs with a simple set of tools&#8211;Jekyll and Foundation 4. This isn&#8217;t necessarily the **fastest** way to build a prototype, but this is the most extensible way I&#8217;ve found that allows you to move seamlessly from prototype to production. I built [WelcomeMat.co][1] in order to test these tools in a somewhat-real-world environment.
 
-**EDIT:** This post is a bit out of date. I now recommend checking out my new post for <a href="/website-redesign-2015/">rapid prototyping static websites using gulp and jekyll</a>.
+<span class="alert">**EDIT [01/15/2015]:** This post is a bit out of date. I now recommend checking out my new post for <a href="/website-redesign-2015/">rapid prototyping static websites using gulp and jekyll</a>.</span>
 
 <!-- more -->
 
@@ -24,41 +25,11 @@ There are certainly downsides to learning Jekyll, too. There&#8217;s a bit of a 
 
 Foundation is a frontend framework that gives you baked-in support for responsive grid systems, modals, image carousels, etc. It makes it easy to do 95% of what you&#8217;d want to do for a blog or marketing site, and makes CSS layout more sensical (once you learn the system).
 
-### Prerequisites and a Disclaimer
+## Prerequisites
 
-Before diving into Jekyll and Foundation 4, you should have a reasonable grasp on HTML and CSS. You don&#8217;t need to be an expert, though you should know how to Google markup structures you&#8217;re unfamiliar with. Though Javascript or dynamic scripting experience helps, it&#8217;s not **required**. It will simply make it easier to work with Foundation&#8217;s included Javascript components. And now, disclaimer time—in the style of [@ProbablyMonty][2].
+Before diving into Jekyll and Foundation 4, you should have a reasonable grasp on HTML and CSS. You don&#8217;t need to be an expert, though you should know how to Google markup structures you&#8217;re unfamiliar with. Though Javascript or dynamic scripting experience helps, it&#8217;s not **required**. It will simply make it easier to work with Foundation&#8217;s included Javascript components.
 
-**Is this a step-by-step tutorial?**
-
-This isn&#8217;t a step-by-step tutorial as much as a general guide for how I used the tools to make something.
-
-**But, there are many steps to a prototype before you get to code!**
-
-You&#8217;re right. I&#8217;m not going to talk about the process from idea to sketch to finished comp. This is, after all, a prototyping toolbox *for designers*, so I assume you already have a process that works for you. Many designers I know might be able to wade into the code a bit, but don&#8217;t really have a solid way of turning their design comps into working code.
-
-**You talk about a prototype than can handle production traffic, but what do you know about production traffic?**
-
-Very little, thanks for asking. I&#8217;m a designer, and have merely observed coworkers dealing with real production traffic. WelcomeMat.co got only 7,000 unique visits in its first week of life. Now I&#8217;m not talking about developer or ops replacement here—for any real app or business you hope to launch, you&#8217;re gonna have to talk to someone who knows what they&#8217;re doing.
-
-**So why isn&#8217;t this a tutorial on how to use Jekyll and Foundation 4?**
-
-Well, mostly because that seems like it would be a lot of work. If you&#8217;d like to see a real tutorial, [tweet me][3] with how many donuts you plan on bribing me with to write it.
-
-**…but but but, Bootstrap is better!**
-
-You are, of course, referring to [Twitter Bootstrap][4], another equally amazing frontend framework. And you may be right, too. However, hold your horses&#8211;I&#8217;ll get to why I picked Foundation later. The TL;DR here is that the tool that you know better is the one you should be using.
-
-**…but but but, LESS is better for designers than SASS/Compass!**
-
-See point #4.
-
-**Whoaaaa there, hold up. I have to use the terminal?**
-
-First, suck it up. The terminal is not nearly as complex as Photoshop. Second, [read this][5].
-  8. **I&#8217;m a real developer, and you&#8217;ve offended me with this post!  
-    **That&#8217;s very likely. I&#8217;m a designer primarily, so I&#8217;m going to get some things wrong. I am a lover of learning, however, so [let me know][3] what computer science atrocities I&#8217;ve committed and I&#8217;ll be happy to correct them. I *do* credit a real developer for inspiring me to pick up Jekyll, however—[@gesa][6] (who elects presidents and makes grid-systems dance before her very eyes). However, I am solely responsible for taking her pure, honest instruction and perverting it to the form you see here.
-
-### **What the perfect rapid prototyping toolbox looks like**
+## What the perfect rapid prototyping toolbox looks like
 
 I&#8217;ve used a few tools during the course of my career building Internet, but certainly not all of them. I&#8217;m not out to find the very best of the best, but rather the tools that satisfy my criteria for success. They should:
 
@@ -84,7 +55,7 @@ I&#8217;ve used a few tools during the course of my career building Internet, bu
 
 *(Side-sidenote: It was pointed out by [@davebarnow][11] that [Mixture.io][12] does much of the static site generation and site management stuff for you, obfuscating some of the complexities behind a nice UI. Full disclaimer—I haven&#8217;t used Mixture for a real project yet, as I prefer to understand what&#8217;s going on under the hood first. It&#8217;s an awesome app (though the onboarding inside the app could use some work), and you should absolutely [check it out][12] if it helps you crank out your ideas quicker).*
 
-### **Here&#8217;s what my rapid prototyping toolbox looks like**
+## Here&#8217;s what my rapid prototyping toolbox looks like
 
 The main stars of the toolbox are Jekyll and Foundation 4. However I&#8217;ll also point out some of the supporting tools, as well as why I picked them.
 
@@ -92,15 +63,13 @@ The main stars of the toolbox are Jekyll and Foundation 4. However I&#8217;ll al
 
 Jekyll is a so-called &#8220;blog aware static site generator.&#8221; This means it&#8217;s similar to blogging engines like WordPress, which are built to showcase episodic content and use a database to build a webpage from &#8220;includes&#8221; (or &#8220;partials&#8221;). Includes allow you to have a single file that contains the content for your header, a single file for your footer, and so on—allowing you to [make your logo bigger][13] in a single file instead of copying and pasting your changes to every page of your site.
 
-Jekyll is a bit different than a system like WordPress, in that there is no database, and no admin interface. All your &#8220;posts&#8221; are simple HTML or Markdown files located in a particular directory of your site. You still have most of the functionality of a database-driven website, like being able to add your own meta data to a post (for WelcomeMat.co, I have attributes on each post called title, size, author, and authorURL). The net result of a Jekyll site, however, is that it outputs plain ol&#8217; HTML. Few things are more performant than straight HTML. It also makes deploying your code a breeze, since you&#8217;re simply moving everything in your &#8220;_site&#8221; directory to your server. Here&#8217;s a great tutorial on [getting started with Jekyll][14].  
-****
+Jekyll is a bit different than a system like WordPress, in that there is no database, and no admin interface. All your &#8220;posts&#8221; are simple HTML or Markdown files located in a particular directory of your site. You still have most of the functionality of a database-driven website, like being able to add your own meta data to a post (for WelcomeMat.co, I have attributes on each post called title, size, author, and authorURL). The net result of a Jekyll site, however, is that it outputs plain ol&#8217; HTML. Few things are more performant than straight HTML. It also makes deploying your code a breeze, since you&#8217;re simply moving everything in your &#8220;_site&#8221; directory to your server. Here&#8217;s a great tutorial on [getting started with Jekyll][14].
 
-### **ZURB Foundation 4**
+### ZURB Foundation 4
 
 [Foundation][15] provides you with a markup and CSS template so you can rapidly build out a design based on a 12 column grid. It&#8217;s a popular but lesser-known competitor to [Twitter Bootstrap][4], which has made it possible for developers to build sites that all look the same for years. You could substitute Boostrap for Foundation if you know it better, or any of the other [myriad frontend frameworks][16] to the same effect. I prefer Foundation because it uses a grid system that is responsive by default, and gives you access to a small grid and a large grid. This means you can define how your site should look on mobile devices up to iPad size, and how it should look on devices larger than that. You can easily modify your CSS to add more granular breakpoints, but starting with a small device and a large device makes it achingly simple to make your site responsive by default (I hadn&#8217;t intended to make WelcomeMat.co responsive when I started building, but Foundation made it silly not to).
 
-On top of that, Foundation is a tad plainer by default, which encourages you to do *something* other than the default styling. As a designer, I give this two thumbs up. If you&#8217;re a lazy designer, then use Bootstrap (but don&#8217;t be a lazy designer). [The Foundation Docs][17] are well-written and a very complete place to start learning about it. Another big reason I prefer Foundation is that it&#8217;s written in SASS by default. Which leads me too…  
-****
+On top of that, Foundation is a tad plainer by default, which encourages you to do *something* other than the default styling. As a designer, I give this two thumbs up. If you&#8217;re a lazy designer, then use Bootstrap (but don&#8217;t be a lazy designer). [The Foundation Docs][17] are <strike>well-written and a very complete place to start learning about it</strike> _(I'm told by many they're not that great, so I withdraw this assertion)_. Another big reason I prefer Foundation is that it&#8217;s written in SASS by default. Which leads me too…
 
 ### [SASS/Compass][18]
 
@@ -110,21 +79,19 @@ People who know stuff about things will tell you 1,000 reasons why LESS is bette
 
 ### Icon Fonts
 
-I&#8217;m currently in love with both [Geomicons][22] and [SymbolSet Pika][23]. Icon fonts give you the ability to rapidly add icons by simply adding classes to your markup like &#8220;icon-home.&#8221; Plus, you can control the look with CSS rules in the same way you can control the look of text with CSS (since the icon ***is*** text). Additionally, they&#8217;re vector based so will look good no matter how pixel-dense the screen. Icon fonts allow you to stay in the code without futzing with image exports (and @2x exports for high-density screens). Overall, this will make you faster. Again, allow me to [let the illustrious Chris Coyier convince you that you should be using icon fonts][24].  
-****
+I&#8217;m currently in love with both [Geomicons][22] and [SymbolSet Pika][23]. Icon fonts give you the ability to rapidly add icons by simply adding classes to your markup like &#8220;icon-home.&#8221; Plus, you can control the look with CSS rules in the same way you can control the look of text with CSS (since the icon ***is*** text). Additionally, they&#8217;re vector based so will look good no matter how pixel-dense the screen. Icon fonts allow you to stay in the code without futzing with image exports (and @2x exports for high-density screens). Overall, this will make you faster. Again, allow me to [let the illustrious Chris Coyier convince you that you should be using icon fonts][24].
 
 To build your own icon font from SVG files or pick from some awesome icon font sets, check out [IcoMoon.io][25] or [Fontello][26]. I used IcoMoon to generate the icons for this site.
 
-### **Webfonts**
+### Webfonts
 
-[Google Fonts][27], [Typekit][28], and numerous other services give us access to real typography like we&#8217;ve never had before. We&#8217;re no longer restricted to Georgia, Helvetica, et al. In fact, we&#8217;re really only limited to the fonts that are available on these services. Many ridiculously more qualified people than myself have written copious amounts about the state of web typography, so suffice to say, when you start a design, see what&#8217;s available before you settle on typography. I like to pick my type by looking at Google Fonts and Typekit and taking a screenshot to mock it up. It&#8217;s currently a little tough to get these typefaces loaded on your machine to play around with in Photoshop or Illustrator (though Google Fonts do allow you to download your choices). This is supposed to be changing soon with many major webtype services launching desktop versions.  
-****
+[Google Fonts][27], [Typekit][28], and numerous other services give us access to real typography like we&#8217;ve never had before. We&#8217;re no longer restricted to Georgia, Helvetica, et al. In fact, we&#8217;re really only limited to the fonts that are available on these services. Many ridiculously more qualified people than myself have written copious amounts about the state of web typography, so suffice to say, when you start a design, see what&#8217;s available before you settle on typography. I like to pick my type by looking at Google Fonts and Typekit and taking a screenshot to mock it up. It&#8217;s currently a little tough to get these typefaces loaded on your machine to play around with in Photoshop or Illustrator (though Google Fonts do allow you to download your choices). This is supposed to be changing soon with many major webtype services launching desktop versions.
 
-### **Amazon S3**
+### Amazon S3
 
 [Amazon S3][29] has made hosting a complete breeze. I no longer have to worry about getting a hosting account set up, or worry about what getting an influx of traffic will do to my hosting bill. S3 will adapt to the needs of your site, and it&#8217;s pretty cheap too. For your prototypes that get no attention, it&#8217;s basically free to keep them running (aside from your yearly domain registration). Synching your files to S3 is still a bit of a chore, and a topic for another day. The benefits far outweigh the cons, though.
 
-### **Conclusion**
+## Conclusion
 
 This toolbox isn&#8217;t necessarily the best one out there, but it&#8217;s allowed me to transition my janky coding skills to being able to release reasonably stable websites&#8211;*quickly*. There are many alternative configurations, but I&#8217;d encourage you to create your own list of [success criteria][30] for what you want your tools to accomplish. Since web designers are raccoons, it&#8217;s easy to get distracted by bright, shiny objects. A list of success criteria will help keep you productive instead of distracted.
 

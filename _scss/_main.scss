@@ -154,7 +154,7 @@ hr {
 
 .img-border {
   border: 1px solid $color-text;
-  border-radius: 2px;
+  border-radius: $border-radius;
 }
 
 img {
@@ -523,6 +523,15 @@ a.thumbnail {
   }
 }
 
+ul,
+ol {
+  margin-left: 0;
+
+  li {
+    margin: 0 0 $lead-half $lead-single;
+  }
+}
+
 #portfolio {
   margin: 0;
 
@@ -714,7 +723,7 @@ p.top {
   left: 0;
   padding: 0.45em 1.25em;
   background: rgba($color-background, 0.65);
-  border-radius: 2px;
+  border-radius: $border-radius;
   font-weight: 100;
   z-index: 100;
   letter-spacing: 0.25em;
@@ -1006,6 +1015,14 @@ p + .post-social {
 .colophon {
   @extend .meta-text;
   color: $color-1;
+}
+
+.alert {
+  display: block;
+  padding: $lead-single;
+  background: $color-background-light;
+  border-radius: $border-radius;
+  border: 1px solid $color-border;
 }
 
 blockquote.twitter-tweet {

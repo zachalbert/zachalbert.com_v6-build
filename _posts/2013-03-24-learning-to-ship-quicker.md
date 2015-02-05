@@ -8,6 +8,8 @@ comments: true
 ---
 The redesign of this site has been a really long time coming. What I mean by that is I&#8217;ve been stalling for *over a year*. I&#8217;ve been learning to ship quicker however, and I&#8217;m going to share a bit about what inspired me.
 
+<!-- more -->
+
 For context, I&#8217;ve been building websites since I was 13. I can crank out a site like this in a few weeks for a client. Yet I found myself in this ridiculous (and counter-productive) feedback loop that oscillated between &#8220;I really need to get this done,&#8221; and &#8220;Why the hell isn&#8217;t it done yet?&#8221; I wasn&#8217;t even just working slowly, I was completely stalled. Learning about [Lean UX][1] and outcome-centric thinking is what helped me learn to ship quicker, and I want to share some of those resources.
 
 <blockquote class="twitter-tweet">
