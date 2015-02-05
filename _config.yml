@@ -10,4 +10,3 @@ paginate: 5
 paginate_path: "/p:num"
 gems:
   - jekyll-sitemap
-  - jekyll-redirect-from
