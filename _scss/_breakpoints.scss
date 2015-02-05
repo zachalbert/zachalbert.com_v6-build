@@ -79,6 +79,11 @@ body {
     right: -40%;
     margin: 0;
   }
+
+  .post_main,
+  .col-main {
+    padding-right: 0;
+  }
 }
 
 @media #{$min-768} {

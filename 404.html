@@ -4,5 +4,47 @@ title: 404
 ---
 
         <section>
-          <h1>:(</h1>
+          <div class="post">
+
+            <div class="post_side">
+              <header>
+                <div class="inner">
+                  <h1 class="post-title entry-title">404</h1>
+                  <h2>Sadface :(</h2>
+                </div>
+              </header>
+            </div>
+
+            <div class="post_main">
+              <div class="post_main-content">
+                <p></p>
+                <p>
+                  You may have been led to believe that something exists at this URL, but it turns out this is not the case.
+                </p>
+                <h3>Take heart &mdash; hope is not lost!</h3>
+                <p>
+                  There may yet be a way to find what you were hoping to find. For starters, here are a few popular posts.
+                </p>
+                <ul>
+                  <li><a href="/rapid-prototyping-toolbox-for-designers/">Rapid Prototyping Toolbox for Designers</a></li>
+                  <li><a href="/3-rules-for-better-design-critique-a-cheatsheet-for-the-whole-team/">3 Rules for Better Design Critique</a></li>
+                  <li><a href="/learning-to-ship-quicker/">Learning to Ship Quicker</a></li>
+                </ul>
+
+                  Try <a href="/">perusing the blog post archives
+                </p>
+              </div>
+              <div class="post_main-meta">
+                <div class="row middle-xs full">
+                  <div class="col-xs-6 no-padding-left">
+                    <time datetime="2014-11" class="post-date">{{ post.date | date: "%b %Y" }}<span class="separator left">&bull;</span></time>
+                  </div>
+                  <div class="col-xs-6 bare">
+                    <a href="{{ post.url }}" class="button meta-text text-button">read more&hellip;</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
         </section>

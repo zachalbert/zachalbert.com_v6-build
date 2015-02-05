@@ -56,7 +56,7 @@ Hide your mask layer and select the layer with your compressed image. If you hav
 
 ### Step 8
 
-<img class="alignright size-full wp-image-397" alt="ruf-s5" src="/images/ruf-s5.png" width="237" height="237" />Now we&#8217;re left with an image that&#8217;s already undergone JPG compression and ready to be saved as a PNG. Since a lot of image information has been stripped, the PNG will necessarily be smaller than the original `357KB`. Using the save for web dialog again, save as a PNG-24. The new version comes out to `239KB`, a 33% savings.
+<img class="align-right size-full wp-image-397" alt="ruf-s5" src="/images/ruf-s5.png" width="237" height="237" />Now we&#8217;re left with an image that&#8217;s already undergone JPG compression and ready to be saved as a PNG. Since a lot of image information has been stripped, the PNG will necessarily be smaller than the original `357KB`. Using the save for web dialog again, save as a PNG-24. The new version comes out to `239KB`, a 33% savings.
 
 <h3 style="clear: both;">
   It sounds like a lot of work for 33% savings…
