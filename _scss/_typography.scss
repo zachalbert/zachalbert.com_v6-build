@@ -89,6 +89,13 @@ blockquote {
   text-align: justify;
 }
 
+cite {
+  @extend .small-text;
+  clear: left;
+  text-align: right;
+  display: block;
+}
+
 code {
   font-weight: bold;
   padding: 0.25em 0.5em;
