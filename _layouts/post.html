@@ -22,6 +22,16 @@ layout: default
                 </div>
               </div>
               {% endif %} -->
+              
+              {% if page.social != false %}
+              <ul class="post-social col-main">
+                <li><a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.zachalbert.com&t=" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&t=' + encodeURIComponent(document.URL)); return false;" class="icon-facebook button"></a></li>
+                <li><a href="https://twitter.com/intent/tweet?source=http%3A%2F%2Fwww.zachalbert.com&text=:%20http%3A%2F%2Fwww.zachalbert.com&via=zachalbert" target="_blank" title="Tweet" onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + ':%20'  + encodeURIComponent(document.URL)); return false;" class="icon-twitter button"></a></li>
+                <li><a href="https://plus.google.com/share?url=http%3A%2F%2Fwww.zachalbert.com" target="_blank" title="Share on Google+" onclick="window.open('https://plus.google.com/share?url=' + encodeURIComponent(document.URL)); return false;" class="icon-google-plus button"></a></li>
+                <li><a href="http://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Fwww.zachalbert.com&title=&summary=&source=http%3A%2F%2Fwww.zachalbert.com" target="_blank" title="Share on LinkedIn" onclick="window.open('http://www.linkedin.com/shareArticle?mini=true&url=' + encodeURIComponent(document.URL) + '&title=' +  encodeURIComponent(document.title)); return false;" class="icon-linkedin button"></a></li>
+                <li><a href="mailto:?subject=&body=:%20http%3A%2F%2Fwww.zachalbert.com" target="_blank" title="Email" onclick="window.open('mailto:?subject=' + encodeURIComponent(document.title) + '&body=' +  encodeURIComponent(document.URL)); return false;" class="icon-mail-filled button"></a></li>
+              </ul>
+              {% endif %}
             
             </div>
             <hr>

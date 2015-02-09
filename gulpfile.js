@@ -56,8 +56,8 @@ gulp.task('styles', function() {
     .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
     .pipe(minifyCSS({ keepBreaks: false }))
     .pipe(gulp.dest('_site/css'))
-    .pipe(browserSync.reload({stream: true}))
-    .pipe(gulp.dest('css'));
+    .pipe(gulp.dest('css'))
+    .pipe(browserSync.reload({stream: true}));
 });
 
 
@@ -83,7 +83,7 @@ gulp.task('scripts', function() {
 
 // Watch task
 gulp.task('watch', function() {
-  gulp.watch('_scss/*.scss', ['styles']);
+  gulp.watch('_scss/**/*.scss', ['styles']);
   gulp.watch(['_js/*.js', 'bower_components/**/*.js'], ['scripts', 'jekyll-rebuild']);
   gulp.watch(['index.html', '_includes/*.html', '_layouts/*.html', '_posts/*', 'thanks/*.html', 'work/*.html', 'images/*'], ['jekyll-rebuild']);
 });

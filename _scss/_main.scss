@@ -866,10 +866,13 @@ p.top {
 }
 
 .post-social {
-  a {
-    float: left;
+  li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 $lead-single 0 0;
 
-    &:first-child {
+    a {
+      margin: 0;
     }
   }
 }
