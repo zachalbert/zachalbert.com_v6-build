@@ -32,7 +32,10 @@ img {
 }
 
 iframe {
+  width: 100%;
   max-width: 100%;
+  height: auto;
+  min-height: 15em;
 }
 
 a,
@@ -501,7 +504,6 @@ figcaption {
 figcaption {
   @extend .meta-text;
   color: $color-text-light;
-  padding-left: 0;
   font-style: normal;
 }
 

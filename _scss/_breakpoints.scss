@@ -30,6 +30,10 @@ body,
       padding-right: 18px;
     }
   }
+
+  iframe {
+    min-height: 25em;
+  }
 }
 
 @media #{$min-640} {
@@ -100,6 +104,10 @@ body,
     right: -40%;
     margin: 0;
   }
+
+  iframe {
+    min-height: 30em;
+  }
 }
 
 @media #{$min-768} {
@@ -165,12 +173,17 @@ body,
   .row {
     width: 85%;
   }
+
+  iframe {
+    min-height: 40em;
+  }
   
 }
 
 @media #{$min-1200} {
   .row {
     width: 80%;
+    max-width: 1200px;
   }
 
     #portfolio {
