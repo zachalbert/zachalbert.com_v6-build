@@ -1,4 +1,5 @@
-body {
+body,
+.site-nav {
   min-width: $screen-min-width;
 }
 
@@ -20,6 +21,13 @@ body {
     li {
       display: inline-block;
       margin: 0 $lead-half 0 0;
+    }
+  }
+
+  .link-bank {
+    a {
+      padding-left: 18px;
+      padding-right: 18px;
     }
   }
 }
@@ -92,7 +100,6 @@ body {
     right: -40%;
     margin: 0;
   }
-
 }
 
 @media #{$min-768} {
@@ -121,6 +128,8 @@ body {
   .link-bank {
     a {
       padding: $line-height + 2px;
+      position: relative;
+      top: $lead-half;
     }
   }
 
@@ -133,6 +142,14 @@ body {
   .aside {
     .inner {
       padding-left: 0;
+    }
+  }
+
+  .nav-wrap {
+    .link-bank {
+      a:first-child {
+        margin-left: -$lead-single;
+      }
     }
   }
 }
