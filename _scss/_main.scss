@@ -395,10 +395,7 @@ section:first-child {
 .post-single .body h2 {
   @extend .col-side;
   display: block;
-  text-align: right;
   position: relative;
-  margin-top: -$lead-double;
-  top: $lead-double;
 
   &:hover .header-link {
     opacity: 1;
@@ -408,10 +405,15 @@ section:first-child {
 .header-link {
   display: block;
   position: absolute;
-  right: -5px;
+  left: 2px;
   color: $color-link;
   opacity: 0;
   text-decoration: none;
+
+  &:active,
+  &:focus {
+    transform: scale(1);
+  }
 }
 
 .grid_main,
@@ -468,6 +470,8 @@ figcaption {
     position: relative;
     left: 0;
     width: 100%;
+    padding-left: 0;
+    box-sizing: border-box;
 
     h1,
     h2,
@@ -881,8 +885,9 @@ p.top {
 .post-social {
   li {
     list-style: none;
-    display: inline-block;
-    margin: 0 $lead-single 0 0;
+    display: block;
+    margin: 0 0 $lead-half 0;
+    text-align: center;
 
     a {
       margin: 0;

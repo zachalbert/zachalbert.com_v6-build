@@ -11,6 +11,7 @@ title: Zac Halbert
               <header>
                 <div class="inner">
                   <h1 class="post-title entry-title"><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h1>
+                  {% if post.subtitle %}<h2>{{ post.subtitle }}</h2>{% endif %}
                 </div>
               </header>
             </div>

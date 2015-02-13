@@ -15,6 +15,13 @@ body {
       padding-right: $lead-single;
     }
   }
+
+  .post-social {
+    li {
+      display: inline-block;
+      margin: 0 $lead-half 0 0;
+    }
+  }
 }
 
 @media #{$min-640} {
@@ -31,6 +38,7 @@ body {
     position: absolute;
     text-align: right;
     width: 100%;
+    padding-left: $lead-half;
   }
 
   .aside {
@@ -50,6 +58,16 @@ body {
         padding-right: $half-gutter-width;
       }
     }
+  }
+
+  .header-link {
+    right: -5px;
+  }
+
+  .post-single .body h2 {
+    margin-top: -$lead-double;
+    top: $lead-double;
+    text-align: right;
   }
 
   blockquote {
@@ -103,6 +121,18 @@ body {
   .link-bank {
     a {
       padding: $line-height + 2px;
+    }
+  }
+
+  .post-social {
+    li {
+      margin-right: $lead-single;
+    }
+  }
+
+  .aside {
+    .inner {
+      padding-left: 0;
     }
   }
 }
