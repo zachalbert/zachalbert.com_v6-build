@@ -12,5 +12,6 @@ Many of the “less is more” arguments sound great, and the sentiment comes fr
 In cases where you can’t remove complexity, try masking it. Progressive disclosure gives you the best of both worlds by *showing less*, but *providing more*.
 
 <!-- more -->
+<div class="anchor-offset" id="more"></div>
 
 That&#8217;s an excerpt from a blog post I wrote for the Recurly company blog about <a href="https://blog.recurly.com/2013/04/masking-complexity-through-progressive-disclosure">masking complexity through progressive disclosure</a>. Check it out!

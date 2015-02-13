@@ -9,6 +9,7 @@ categories:
 ### A few months ago, I left my job at Recurly to join a non-profit startup. Why did I leave the stability of a well-paid tech startup job?
 
 <!-- more -->
+<div class="anchor-offset" id="more"></div>
 
 > &ldquo;Anything done purely for yourself empties very quickly.&rdquo;
 

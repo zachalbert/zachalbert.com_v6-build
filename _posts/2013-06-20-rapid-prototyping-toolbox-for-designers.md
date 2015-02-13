@@ -14,6 +14,7 @@ Learn how to rapidly prototype marketing websites or blogs with a simple set of 
 <span class="alert">**EDIT [01/15/2015]:** This post is a bit out of date. I now recommend checking out my new post for <a href="/website-redesign-2015/">rapid prototyping static websites using gulp and jekyll</a>.</span>
 
 <!-- more -->
+<div class="anchor-offset" id="more"></div>
 
 <figure>
   <img class="size-full wp-image-522 " alt="A Rapid Prototyping Toolbox with Jekyll + Foundation 4" src="/images/foundation-zurb-3.jpg" width="1600" height="832" />

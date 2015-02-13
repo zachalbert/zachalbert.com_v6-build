@@ -11,6 +11,7 @@ categories:
 JPG images provide small file sizes, but don&#8217;t give you the flexibility of transparency. PNGs provide you with transparency, but don&#8217;t compress visually complex images very well. I have been experimenting with a technique to get the best of both worlds.
 
 <!-- more -->
+<div class="anchor-offset" id="more"></div>
 
 Before we begin, let me first say that the *best* solution is to set `overflow: hidden` on a parent element that contains a compressed JPG, as in the case of round avatars. Using CSS3 and the `border-radius` property, you can simulate round corners on an image pretty easily. This technique works because the part you want to be transparent (the mask) is a *regular shape*. However, if you need your mask to be an *irregular* shape, then you&#8217;re stuck using PNGs and dealing with a large file size. The problem is compounded by the fact that you now have 2x retina images to worry about, making file size even more of an issue.
 

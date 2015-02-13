@@ -15,3 +15,4 @@ categories:
 <img class="align-right" alt="Job Land" src="/images/jobland.gif" width="200" height="150" />[I got a job.](http://recurly.com) I&#8217;ve joined the awesome team at [Recurly](http://recurly.com) as Senior UX Designer. Look forward to some *sweet* new usability in the best subscription billing platform out there.
 
 <!-- more -->
+<div class="anchor-offset" id="more"></div>

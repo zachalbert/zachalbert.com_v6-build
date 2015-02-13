@@ -22,8 +22,8 @@ body {
   body {
   }
 
-  .row {
-    width: 90%;
+  .post_side {
+    text-align: right;
   }
   
   .aside .inner,
@@ -70,26 +70,26 @@ body {
     margin-top: -$lead-single;
   }
 
-  .post_side {
-    text-align: right;
-    padding-left: 0;
-  }
-
   .bio-pic {
     right: -40%;
     margin: 0;
   }
 
-  .post_main,
-  .col-main {
-    padding-right: 0;
-  }
 }
 
 @media #{$min-768} {
   
   .row {
-    width: 80%;
+    width: 90%;
+  }
+
+  .post_side {
+    padding-left: 0;
+  }
+
+  .post_main,
+  .col-main {
+    padding-right: 0;
   }
 
   blockquote {
@@ -114,12 +114,16 @@ body {
       padding: $lead-double;
     }
   }
+
+  .row {
+    width: 85%;
+  }
   
 }
 
 @media #{$min-1200} {
   .row {
-    width: 75%;
+    width: 80%;
   }
 
     #portfolio {

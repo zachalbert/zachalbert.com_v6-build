@@ -14,6 +14,7 @@ As the sole product designer for a tiny startup called Samahope, I often require
 By providing a bit of structure with 3 simple rules, I’ve found my team to be awesome critique partners. The critique sessions look a little bit different than getting a bunch of designers together (fewer turtlenecks, for instance), but the outcome is just as good.
 
 <!-- more -->
+<div class="anchor-offset" id="more"></div>
 
 ### Rule 1 — Understand the project goals
 

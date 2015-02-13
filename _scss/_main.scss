@@ -57,7 +57,6 @@ a:active {
 
 a:active {
   transform: scale(0.97);
-  display: inline-block;
 }
 
 a[href^="#"] {
@@ -65,7 +64,8 @@ a[href^="#"] {
 }
 
 .anchor-offset {
-  display: inline;
+  display: block;
+  visibility: hidden;
   position: relative;
   top: -$nav-height;
   left: 0;
@@ -190,7 +190,7 @@ section {
 }
 
 .row {
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
 
   &.full {
@@ -384,6 +384,11 @@ section:first-child {
       @extend .col-main;
       display: block;
     }
+
+    ul ul {
+      margin-left: 0;
+      max-width: 100%;
+    }
   }
 }
 
@@ -527,9 +532,17 @@ ul,
 ol {
   margin-left: 0;
   padding-left: 0;
+  padding-bottom: $lead-half;
 
   li {
-    margin: 0 0 $lead-half $lead-single;
+    margin-bottom: 0;
+    padding: $lead-half 0 0;
+  }
+
+  ul,
+  ol {
+    margin-bottom: 0;
+    padding-bottom: 0;
   }
 }
 

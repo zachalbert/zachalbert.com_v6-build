@@ -17,6 +17,7 @@ It uses jekyll for the blog engine, wrapped inside gulp for handling stuff like 
 You can follow along if you want to duplicate my setup. It should be easy enough to use for designers who aren't afraid of a bit of command line.
 
 <!-- more -->
+<div class="anchor-offset" id="more"></div>
 
 ## Out with the old
 

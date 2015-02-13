@@ -11,6 +11,7 @@ categories:
 A few weeks ago, I participated in my first hackathon for <a href="https://refunite.org/">Refugees United</a> (supported by Ericsson). This organization “&#8230;aims to directly help families reconnect with missing loved ones through a safe, secure search tool that allows for full anonymity and is free of charge.”
 
 <!-- more -->
+<div class="anchor-offset" id="more"></div>
 
 Refugees United is doing awesome work and has already reconnected more refugee families this year than the entire Red Cross averages over a full year. I love seeing the use of technology to solve very real problems that shouldn&#8217;t exist, but do. Not that the next big Twitter or Facebook isn&#8217;t fun to think about, but siblings, children, and parents are being separated from each other in war-torn areas of our world—never to be reunited in many cases. [Read the story][2] that led brothers David and Christopher Mikkelsen to try to change all that.
 

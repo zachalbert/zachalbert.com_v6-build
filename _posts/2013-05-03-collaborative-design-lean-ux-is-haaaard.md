@@ -11,6 +11,7 @@ categories:
 I gave a talk to the good people at Lean UX SF last night about the challenges UX people face moving their company cultures towards a collaborative design model.
 
 <!-- more -->
+<div class="anchor-offset" id="more"></div>
 
 I gave a case study from my work integrating collaborative design at Recurly (along with [Andy Montgomery][1]). The audience was nicer than they needed to be for my first public speaking engagement, as was the organizer [Mike Long][2] and host [Arseni Harkanou (at Über Experience)][3].
 
