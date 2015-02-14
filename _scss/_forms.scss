@@ -23,12 +23,15 @@ input[type="checkbox"] {
   margin: 0;
   width: auto;
   padding: 0;
+  float: left;
 
   & + label {
-    float: right;
+    float: left;
     width: 94%;
     text-align: left;
-    margin-bottom: $lead-single;
+    margin: -6px 0 $lead-single;
+    box-sizing: border-box;
+    padding-left: $lead-half;
   }
 }
 
