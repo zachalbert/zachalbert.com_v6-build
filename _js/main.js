@@ -98,6 +98,15 @@ $(document).ready(function() {
 
   });
 
+  // Kill Orrry description holder
+  var orrryEls = $('.description-holder h1, .description-holder p');
+
+  $('.close-description-holder').click(function(e) {
+    e.preventDefault();
+    orrryEls.slideToggle("5000");
+    $(this).toggleClass('__spin');  
+  });
+
   // Hyphenate side titles
   $('.post-title, .post-title a, .hyphenate').hyphenate('en-us');
 

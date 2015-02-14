@@ -144,6 +144,14 @@ hr {
   padding: 0 !important;
 }
 
+.__spin {
+  transform: rotate(45deg) scale(1) !important;
+
+  &:hover {
+    transform: rotate(45deg) scale(0.95) !important;
+  }
+}
+
 .color-text {
   color: $color-text;
 }
@@ -676,8 +684,11 @@ p.top {
 
 .description-holder {
   opacity: 0;
-  padding-bottom: 1px;
+  padding-bottom: $lead-single;
+  padding-top: $lead-single;
   z-index: 12;
+  background: rgba($color-text, 0.35);
+  border-radius: $border-radius;
 
   a {
     color: #fff;

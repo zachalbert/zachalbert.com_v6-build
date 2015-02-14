@@ -4,6 +4,11 @@ body,
 }
 
 @media #{$min-480} {
+
+  .galaxy {
+    height: 80%;
+  }
+
   .separator {
     &.left {
       margin-left: $lead-single;
@@ -43,7 +48,12 @@ body,
 
 @media #{$min-640} {
   
-  body {
+  .galaxy {
+    height: 90%;
+  }
+
+  .description-holder {
+    background: none;
   }
 
   .post_side {
@@ -170,6 +180,10 @@ body,
 }
 
 @media #{$min-1024} {
+
+  .galaxy {
+    height: 100%;
+  }
 
   #portfolio {
     a {
