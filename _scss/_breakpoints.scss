@@ -133,6 +133,10 @@ body,
     width: 90%;
   }
 
+  .nascar {
+    min-height: $lead-quadruple;
+  }
+
   .post_side {
     padding-left: 0;
   }
@@ -183,6 +187,10 @@ body,
 
   .galaxy {
     height: 100%;
+  }
+
+  .nascar {
+    min-height: $lead-quintuple;
   }
 
   #portfolio {
