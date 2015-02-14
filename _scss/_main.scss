@@ -31,13 +31,6 @@ img {
   height: auto;
 }
 
-iframe {
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-  min-height: 15em;
-}
-
 a,
 a:visited {
   color: $color-link;
@@ -511,6 +504,10 @@ figure {
   img,
   iframe {
     margin: 0 0 $lead-single;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    min-height: 15em;
   }
 }
 
@@ -981,9 +978,9 @@ p + .post-social {
   background-size: 100%;
   background-position-y: -5px;
   border-radius: 50%;
-  width: 60%;
+  width: 50%;
   height: 0;
-  padding: 60% 0 0;
+  padding: 50% 0 0;
   position: relative;
   margin: 0 auto $lead-double;
   box-sizing: border-box;

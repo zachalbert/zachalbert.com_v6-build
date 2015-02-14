@@ -226,28 +226,28 @@ $eris-size:     0.182em;
 }
 
 // Planet and moon governor values
-$speedLimit: 8;
-$e-moon-molasses: $speedLimit * 1;
-$m-moon-molasses: $speedLimit * 0.02;
-$j-moon-molasses: $speedLimit * 0.06;
-$s-moon-molasses: $speedLimit * .0001;
-$u-moon-molasses: $speedLimit * .0001;
-$n-moon-molasses: $speedLimit * .0001;
-$p-moon-molasses: $speedLimit * .0001;
-$er-moon-molasses: $speedLimit * .0001;
+$speed: 8;
+$e-moon-molasses: $speed * 1;
+$m-moon-molasses: $speed * 0.02;
+$j-moon-molasses: $speed * 0.06;
+$s-moon-molasses: $speed * .0001;
+$u-moon-molasses: $speed * .0001;
+$n-moon-molasses: $speed * .0001;
+$p-moon-molasses: $speed * .0001;
+$er-moon-molasses: $speed * .0001;
 
 // Planetary governors
 // http://nssdc.gsfc.nasa.gov/planetary/factsheet/
-$mercury-deg:   87.97 / $speedLimit;
-$venus-deg:     224.63 / $speedLimit;
-$earth-deg:     365.26 / $speedLimit;
-$mars-deg:      687.05 / $speedLimit;
-$jupiter-deg:   4331.94 / $speedLimit;
-$saturn-deg:    10760.45 / $speedLimit;
-$uranus-deg:    30685.19 / $speedLimit;
-$neptune-deg:   60194.25 / $speedLimit;
-$pluto-deg:     90620.10 / $speedLimit;
-$eris-deg:      203447.79 / $speedLimit;
+$mercury-deg:   87.97 / $speed;
+$venus-deg:     224.63 / $speed;
+$earth-deg:     365.26 / $speed;
+$mars-deg:      687.05 / $speed;
+$jupiter-deg:   4331.94 / $speed;
+$saturn-deg:    10760.45 / $speed;
+$uranus-deg:    30685.19 / $speed;
+$neptune-deg:   60194.25 / $speed;
+$pluto-deg:     90620.10 / $speed;
+$eris-deg:      203447.79 / $speed;
 
 // Moon governors
 

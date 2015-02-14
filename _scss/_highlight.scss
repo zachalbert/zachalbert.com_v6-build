@@ -18,6 +18,16 @@
     margin: 0;
     background: none;
   }
+
+  & + .note {
+    @extend small;
+    margin: -$lead-double 0 $lead-double;
+    background: darken($color-background-light, 5%);
+    line-height: $lead-double;
+    padding: 0 $lead-single;
+    text-align: right;
+    border-radius: 0 0 $border-radius $border-radius;
+  }
 }
 
 .highlight .c { color: #999988; font-style: italic } /* Comment */

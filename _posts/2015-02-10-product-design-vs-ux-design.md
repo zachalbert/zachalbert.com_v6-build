@@ -1,5 +1,5 @@
 ---
-published: true
+published: false
 title: How to pick a design specialty
 subtitle: A new designer's guide to understanding the differences between the specialties
 author: zac
