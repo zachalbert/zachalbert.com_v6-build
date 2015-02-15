@@ -37,8 +37,8 @@ title: Zac Halbert
         {% endfor %}
         
         <section>
-          <div class="row middle-xs between">
-            <div class="col-xs-4 col-sm-3 bare">
+          <div class="row middle-xs between pagination">
+            <div class="col-xs-5 col-sm-4 col-md-3 outside-left">
               {% if paginator.previous_page %}
                 {% if paginator.previous_page == 1 %}
                     <a href="/" class="button meta-text text-button"><span class="icon-arrow-left"></span>Previous</a>
@@ -50,11 +50,11 @@ title: Zac Halbert
               {% endif %}
             </div>
 
-            <div class="col-xs-4 col-sm-6">
+            <div class="col-xs-2 col-sm-4 col-md-6 bare">
               <span class="page-number" title="Page {{ paginator.page }} of {{ paginator.total_pages }}"><span class="color-text">{{ paginator.page }}</span><span class="page-separator">/</span>{{ paginator.total_pages }}</span>
             </div>
 
-            <div class="col-xs-4 col-sm-3 bare">
+            <div class="col-xs-5 col-sm-4 col-md-3 outside-right">
               {% if paginator.next_page %}
                 <a href="/p{{ paginator.next_page }}" class="button meta-text text-button">Next<span class="icon-arrow-right"></span></a>
               {% else %}

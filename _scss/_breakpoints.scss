@@ -15,6 +15,17 @@ body,
     }
   }
 
+  .pagination {
+    .button {
+      padding-left: $lead-single;
+      padding-right: $lead-single;
+
+      [class*="icon-"] {
+        display: inline-block;
+      }
+    }
+  }
+
   .button {
     &.text-button {
       padding-left: $lead-single;

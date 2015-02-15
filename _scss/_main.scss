@@ -144,6 +144,14 @@ hr {
   padding: 0 !important;
 }
 
+.outside-left {
+  margin-right: 0 !important;
+}
+
+.outside-right {
+  margin-left: 0 !important;
+}
+
 .__spin {
   transform: rotate(45deg) scale(1) !important;
 
@@ -666,6 +674,25 @@ p.top {
   color: #fff;
 }
 
+.pagination {
+  .button {
+    padding-left: $lead-half;
+    padding-right: $lead-half;
+
+    [class*="icon-"] {
+      display: none;
+    }
+
+    [class*="-left"] {
+      margin-left: 0;
+    }
+
+    [class*="-right"] {
+      margin-right: 0;
+    }
+  }
+}
+
 .post_main-content {
   position: relative;
 
@@ -697,6 +724,17 @@ p.top {
 
   p a:hover {
     color: #fff;
+  }
+
+  a.button.__spin {
+    color: $color-text;
+    
+    &:after {
+      background: rgba(255,255,255, 1);
+      border-color: #fff;
+      opacity: 1;
+      transform: scale(1);
+    }
   }
 }
 
