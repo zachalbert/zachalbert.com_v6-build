@@ -14,11 +14,6 @@ textarea {
   box-sizing: border-box;
 }
 
-input[type="submit"] {
-  padding: 1em;
-  border: 1px solid darken($color-footer, 20%);
-}
-
 input[type="checkbox"] {
   margin: 0;
   width: auto;

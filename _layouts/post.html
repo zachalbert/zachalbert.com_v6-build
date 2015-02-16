@@ -20,11 +20,8 @@ layout: default
               {% endif %}
             
             </div>
-            <hr>
-            {% include subscribe.html %}
-
+            
             {% if page.comments %}
-            <hr>
             <div class="post-comments col-main">
               <div id="disqus_thread"></div>
               <script type="text/javascript">
@@ -41,6 +38,12 @@ layout: default
               <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
             </div>
             {% endif %}
+
+          </div>
+        </section>
+
+        {% include subscribe.html %}
+
 
           </div>
         </section>

@@ -9,6 +9,10 @@ body,
     height: 80%;
   }
 
+  p.top {
+    padding-top: $lead-single;
+  }
+
   .separator {
     &.left {
       margin-left: $lead-single;
@@ -63,6 +67,12 @@ body,
     height: 90%;
   }
 
+  #portfolio {
+    a {
+      width: 33.3%;
+    }
+  }
+
   .description-holder {
     background: none;
   }
@@ -95,6 +105,12 @@ body,
       ol {
         padding-right: $half-gutter-width;
       }
+    }
+  }
+  
+  .subscribe {
+    .mc-text {
+      padding-right: $lead-half;
     }
   }
 
