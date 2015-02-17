@@ -6,3 +6,5 @@ tmp
 bower_components/
 npm-debug.log
 _site
+*.sublime-project
+*.sublime-workspace
