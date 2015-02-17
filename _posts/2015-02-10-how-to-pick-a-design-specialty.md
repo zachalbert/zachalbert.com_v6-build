@@ -1,7 +1,7 @@
 ---
-published: false
+published: true
 title: How to pick a design specialty
-subtitle: A new designer's guide to understanding the differences between the specialties
+subtitle: A new designer's guide to understanding the differences between job titles in the design industry
 author: zac
 layout: post
 permalink: /how-to-pick-a-design-specialty/
@@ -12,11 +12,11 @@ categories:
   - UX
 ---
 
-I've seen this question appear in places like <a href="http://zurb.com/tavern">Tavern</a>, <a href="https://www.quora.com/Whats-the-difference-between-a-product-manager-and-a-product-designer">Quora</a>, and I've also been asked by designers new to the field how all the various job titles interact with one another. Where do they overlap, what skills are different, what's the difference between interaction and UX, visual and researcher, and so on. I want to weigh in on this confusing question to attempt to bring some clarity to the matter.
+I've seen this question appear in places like <a href="http://zurb.com/tavern">Tavern</a>, <a href="https://www.quora.com/Whats-the-difference-between-a-product-manager-and-a-product-designer">Quora</a>, and I've also been asked by designers new to the field how all the various job titles interact with one another. Where do they overlap, what skills are different, what's the difference between an interaction and UX designer, and so on. I want to weigh in on this confusing question to attempt to bring some clarity to the matter.
 
 ### Design is the layer between customer and business
 
-All designers are working on the same thing: to make the experience of a product, service, or marketing message the best that it can possibly be. The experience is the layer — the glue, if you will — between the customer and the apparatus created by engineers and business people. The boundaries of this experience are continually expanding too, as we've seen with examples like <a href="https://stripe.com/docs/api">Stripe's well-designed and thought out API and docs</a>.
+All designers are working on the same thing: to make the experience of a product, service, or marketing message the best that it can possibly be. The experience is the layer — the glue, if you will — between the customer and the apparatus created by engineers and business people. The boundaries of this experience encompass everything from marketing communication to the experience of using an API and searching through documentation.
 
 The way designers describe what they do is impossible to understand outside the context of the product they're producing and the audience they're producing it for. A product designer who designs medical devices for the elderly will have an entirely different skillset than a product designer for a consumer ride-sharing startup.
 
