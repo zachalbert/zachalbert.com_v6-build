@@ -12,12 +12,16 @@ categories:
 
 Every other year I go through a molting cycle where I shed my old website and build something new. With each iteration, I try to make it a little cleaner, a little easier to use. It's an opportunity to re-examine my toolbox, and experiment with things I've been meaning to try. One of the best discoveries this cycle has been a really fast, powerful setup for building static marketing or blog sites.
 
-It uses jekyll for the blog engine, wrapped inside gulp for handling stuff like minification and live browser reload, and the end result is a directory of lightning fast vanilla HTML. By deploying to github pages, the tedium surrounding just getting a website live is gone. This is the *perfect* setup for prototyping websites and landing pages. None of these tools are particularly new, but the speed and ease of putting a real website online shocked me.
-
-You can follow along if you want to duplicate my setup. It should be easy enough to use for designers who aren't afraid of a bit of command line.
+This post is less about the design decisions I made and more about the technical tools I used to turn the design into something real. The main engine behind the entire setup is <a href="http://jekyllrb.com/">jekyll</a>, a tool for taking a collection of markdown files and reusable template code and outputting flat, vanilla HTML.
 
 <!-- more -->
 <div class="anchor-offset" id="more"></div>
+
+What makes this particular setup special, however, is that jekyll is wrapped inside a tool called <a href="http://gulpjs.com/">gulp.js</a>, which handles all the menial tasks you would normally need, such as minifying your code, building a sitemap.xml, and performing live reloading of the browser during active development.
+
+This provides us all the benefits of a plain HTML site (lightning fast load times, few moving parts for easier debugging), with all the convenience of modern development (templating and code partials, automatic task running, live browser reload). On top of that, <a href="https://pages.github.com/">github</a> is made to host jekyll sites easily, turning the ordinaly tedious process of launching and pushing changes to a website into a simple affair. This is the *perfect* setup for prototyping websites and landing pages.
+
+You can follow along if you want to duplicate this setup. It will require some command line work, but it's relatively minimal.
 
 ## Out with the old
 
@@ -69,6 +73,9 @@ $lead-quadruple:   $line-height * 4;
 $lead-quintuple:   $line-height * 5;
 .lead-quintuple  { margin-bottom: $line-height * 5; }
 {% endhighlight %}
+<div class="note">
+  Full code <a href="https://github.com/zachalbert/zachalbert.com_v6">available on github</a>.
+</div>
 
 ## Gulpfile.js &amp; Automation
 
@@ -86,6 +93,9 @@ Begin by either <a href="https://github.com/zachalbert/zachalbert.com_v6/fork">f
 |- package.json (<a href="https://github.com/zachalbert/zachalbert.com_v6/blob/master/package.json">example</a>)
 |- .gitignore (<a href="https://github.com/zachalbert/zachalbert.com_v6/blob/master/.gitignore">example</a>)
 </pre>
+<div class="note">
+  Full code <a href="https://github.com/zachalbert/zachalbert.com_v6">available on github</a>.
+</div>
 
 Though not required, you should also run both `git init` and `bower init` from the command line in the root of your site directory. The first command will start a local git repo which you can later deploy to github pages to make your site public easily. Use the bower command if you're interested in using bower to manage javascript dependencies.
 
@@ -109,6 +119,9 @@ gulp.task('deploy', ['jekyll-build'], function() {
     }));
 });
 {% endhighlight %}
+<div class="note">
+  Full code <a href="https://github.com/zachalbert/zachalbert.com_v6">available on github</a>.
+</div>
 
 Once everything is working, updating your blog is easy. You just run `npm start` to begin your static site generator and local server, then add a new markdown file to the `_posts` directory. You'll be able to watch your site regenerate every time you make changes to the new post. When you're satisfied, commit your changes and run `gulp deploy` to push everything live.
 
