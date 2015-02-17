@@ -58,7 +58,7 @@ Notice there&#8217;s no implementation assumptions in that last statement. It co
 
 So why is it so important to learn how to ship quickly? This is so obvious it hardly bears repeating, but here it is anyway: *The web is a continuously evolving medium.* There is an impermanence to it like nothing else, and the act of contributing changes it forever. [Frank Chimero][9] sums up what it means to work in the world of web & design better than anyone else:
 
-> &#8220;Culture changes what it expects from design after design changes culture.&#8221;<cite><em>Frank Chimero, from </em><a href="http://www.shapeofdesignbook.com/chapter06.html">The Shape of Design, chapter 6</a>.</cite>
+> &#8220;Culture changes what it expects from design after design changes culture.&#8221;<cite><em>Frank Chimero, from </em><a href="http://read.shapeofdesignbook.com/chapter06.html">The Shape of Design, chapter 6</a>.</cite>
 
 In other words, you know that awesome thing you&#8217;ve been building for the last year? Well&#8230; it&#8217;s already [4.7 internet years out of date][10].
 
@@ -72,7 +72,7 @@ The hardest part about all this is knowing exactly *what* to cut, and *when it
  [6]: http://executebook.com/
  [7]: https://trello.com/
  [8]: http://evernote.com/
- [9]: http://frankchimero.com/work/
+ [9]: http://frankchimero.com/
  [10]: http://www.fatdux.com/blog/2009/09/22/calculating-the-length-of-an-internet-year/
  [11]: http://nathanbarry.com/89697-reasons-to-teach/
  [12]: http://forrst.com/posts/Dribbble_to_WordPress-wZv
