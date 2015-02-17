@@ -7,8 +7,8 @@ layout: post
 permalink: /ten-million-smiles/
 comments: true
 categories:
-  - News
-  - Portfolio
+  - Product Design
+  - Design Theory
 ---
 
 If you're a designer, then you're responsible for making things that people use.

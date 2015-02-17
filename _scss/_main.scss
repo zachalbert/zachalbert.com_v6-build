@@ -546,13 +546,7 @@ a.thumbnail {
   display: block;
 
   img {
-    border: 1px solid $color-text;
     margin-bottom: $lead-half;
-  }
-
-  &:hover {
-    img {
-    }
   }
 
   &:last-child {
