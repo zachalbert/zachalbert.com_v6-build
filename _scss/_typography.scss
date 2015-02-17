@@ -27,7 +27,8 @@ body {
 em     { font-style: italic; }
 strong { font-weight: $weight-bold; }
 
-h1 {
+h1,
+.h1 {
   font-size: $font-size-3; 
   margin-bottom: $lead-single;
   line-height: $line-height * 2;

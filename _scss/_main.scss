@@ -526,6 +526,10 @@ figcaption {
   .mc-text {
     margin-bottom: $lead-single;
   }
+
+  .post-title {
+    @extend h1;
+  }
 }
 
 figcaption {
