@@ -7,11 +7,9 @@ categories:
   - News
   - Portfolio
 ---
-<div class="col-main">
-  <figure>
-    <img alt="Winner of the Lean UX San Francisco logo contest" src="/images/leanUX-logo@2x.png" width="600" height="600">
-  </figure> 
-</div>
+<figure class="half">
+  <img alt="Winner of the Lean UX San Francisco logo contest" src="/images/leanUX-logo@2x.png" width="600" height="600">
+</figure> 
 
 <!-- more -->
 <div class="anchor-offset" id="more"></div>

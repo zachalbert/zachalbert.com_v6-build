@@ -392,7 +392,8 @@ section:first-child {
     h3,
     p,
     ul,
-    ol {
+    ol,
+    figure.half {
       @extend .col-main;
       display: block;
     }
@@ -402,6 +403,10 @@ section:first-child {
       max-width: 100%;
     }
   }
+}
+
+.body {
+  width: 100%;
 }
 
 .post-single .body h2 {
