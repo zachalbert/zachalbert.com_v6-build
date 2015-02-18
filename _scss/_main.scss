@@ -215,11 +215,19 @@ section {
   .mask {
     position: fixed;
   }
+
+  .site-nav-bg {
+    background: #fff;
+  }
 }
 
 .__top {
   .link-bank a {
     color: $color-link;
+  }
+
+  .site-nav-bg {
+    border-bottom: 1px solid lighten($color-link, 25%);
   }
   
   .link-to-top.button {
@@ -271,10 +279,8 @@ section {
 }
 
 .site-nav-bg {
-  background: #fff;
   width: 100%;
   height: $nav-height;
-  border-bottom: 1px solid lighten($color-link, 25%);
   box-sizing: border-box;
 }
 

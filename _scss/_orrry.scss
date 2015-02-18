@@ -205,10 +205,38 @@ $eris-size:     0.182em;
 @-webkit-keyframes year {
   from {
     -webkit-transform: rotate3d(0, 0, 1, 180deg);
+       -moz-transform: rotate3d(0, 0, 1, 180deg);
             transform: rotate3d(0, 0, 1, 180deg);
   }
   to {
     -webkit-transform: rotate3d(0, 0, 1, -180deg);
+       -moz-transform: rotate3d(0, 0, 1, -180deg);
+            transform: rotate3d(0, 0, 1, -180deg);
+  }
+}
+
+@-moz-keyframes year {
+  from {
+    -webkit-transform: rotate3d(0, 0, 1, 180deg);
+       -moz-transform: rotate3d(0, 0, 1, 180deg);
+            transform: rotate3d(0, 0, 1, 180deg);
+  }
+  to {
+    -webkit-transform: rotate3d(0, 0, 1, -180deg);
+       -moz-transform: rotate3d(0, 0, 1, -180deg);
+            transform: rotate3d(0, 0, 1, -180deg);
+  }
+}
+
+@keyframes year {
+  from {
+    -webkit-transform: rotate3d(0, 0, 1, 180deg);
+       -moz-transform: rotate3d(0, 0, 1, 180deg);
+            transform: rotate3d(0, 0, 1, 180deg);
+  }
+  to {
+    -webkit-transform: rotate3d(0, 0, 1, -180deg);
+       -moz-transform: rotate3d(0, 0, 1, -180deg);
             transform: rotate3d(0, 0, 1, -180deg);
   }
 }
@@ -217,10 +245,38 @@ $eris-size:     0.182em;
 @-webkit-keyframes neg-year {
   from {
     -webkit-transform: rotate3d(0, 0, 1, 180deg);
+       -moz-transform: rotate3d(0, 0, 1, 180deg);
             transform: rotate3d(0, 0, 1, 180deg);
   }
   to {
     -webkit-transform: rotate3d(0, 0, 1, 180deg);
+       -moz-transform: rotate3d(0, 0, 1, 180deg);
+            transform: rotate3d(0, 0, 1, 180deg);
+  }
+}
+
+@-moz-keyframes neg-year {
+  from {
+    -webkit-transform: rotate3d(0, 0, 1, 180deg);
+       -moz-transform: rotate3d(0, 0, 1, 180deg);
+            transform: rotate3d(0, 0, 1, 180deg);
+  }
+  to {
+    -webkit-transform: rotate3d(0, 0, 1, 180deg);
+       -moz-transform: rotate3d(0, 0, 1, 180deg);
+            transform: rotate3d(0, 0, 1, 180deg);
+  }
+}
+
+@keyframes neg-year {
+  from {
+    -webkit-transform: rotate3d(0, 0, 1, 180deg);
+       -moz-transform: rotate3d(0, 0, 1, 180deg);
+            transform: rotate3d(0, 0, 1, 180deg);
+  }
+  to {
+    -webkit-transform: rotate3d(0, 0, 1, 180deg);
+       -moz-transform: rotate3d(0, 0, 1, 180deg);
             transform: rotate3d(0, 0, 1, 180deg);
   }
 }
