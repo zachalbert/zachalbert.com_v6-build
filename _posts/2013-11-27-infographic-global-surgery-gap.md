@@ -1,6 +1,5 @@
 ---
 title: 'Infographic: Global Surgery Gap'
-subtitle: Yay
 author: zac
 layout: post
 permalink: /infographic-global-surgery-gap/
@@ -14,3 +13,6 @@ categories:
 </figure>
 
 Originally posted on <a href="http://www.samahope.org/global-surgery-infographic-3-5-percent-surgeries/">Samahope's blog</a>.
+
+<!-- more -->
+<div class="anchor-offset" id="more"></div>

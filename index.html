@@ -43,7 +43,7 @@ title: Zac Halbert, Product Designer
                 {% if paginator.previous_page == 1 %}
                     <a href="/" class="button meta-text text-button"><span class="icon-arrow-left"></span>Previous</a>
                   {% else %}
-                    <a href="/p{{ paginator.previous_page }}" class="button meta-text text-button"><span class="icon-arrow-left"></span>Previous</a>
+                    <a href="/p{{ paginator.previous_page }}/" class="button meta-text text-button"><span class="icon-arrow-left"></span>Previous</a>
                   {% endif %}
               {% else %}
                 <span class="button meta-text text-button disabled"><span class="icon-arrow-left"></span>Previous</span>
@@ -56,7 +56,7 @@ title: Zac Halbert, Product Designer
 
             <div class="col-xs-5 col-sm-4 col-md-3 outside-right">
               {% if paginator.next_page %}
-                <a href="/p{{ paginator.next_page }}" class="button meta-text text-button">Next<span class="icon-arrow-right"></span></a>
+                <a href="/p{{ paginator.next_page }}/" class="button meta-text text-button">Next<span class="icon-arrow-right"></span></a>
               {% else %}
                 <span class="button meta-text text-button disabled">Next<span class="icon-arrow-right"></span></span>
               {% endif %}

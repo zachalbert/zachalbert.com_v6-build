@@ -9,6 +9,7 @@ $(function() {
   var num_stars = 500;
   var min_size = 1;
   var max_size = 3;
+  var star;
 
   for( var i=0; i<num_stars; i++ ) {
     var xPos = Math.random()*104-2;
@@ -16,8 +17,10 @@ $(function() {
     var size = Math.round(min_size + ((Math.random()*max_size)-min_size));
     var opacity = Math.random()*0.4+0.4;
 
-    $('#star-field').append('<span class="star" style="left: '+xPos+'%; top: '+yPos+'%; width: '+size+'px; height: '+size+'px; opacity: '+opacity+';"></span>');
+    star += '<span class="star" style="left: '+xPos+'%; top: '+yPos+'%; width: '+size+'px; height: '+size+'px; opacity: '+opacity+';"></span>';
   }
+
+  $('#star-field').append(star);
 
   // Scroll to show just the edge of the project
   window.scrollTo(0, topOfPage);
