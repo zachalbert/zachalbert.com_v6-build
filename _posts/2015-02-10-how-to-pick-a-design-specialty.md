@@ -20,12 +20,12 @@ When I speak of Design with a capital D, I'm referring to the process of design 
 
 The way designers describe what they do is impossible to understand outside the context of the product they're producing and the audience they're producing it for. A product designer who designs medical devices for the elderly will have an entirely different skillset than a product designer for a consumer ride-sharing startup.
 
-## Understanding job titles
-
-One of the easiest ways to make some sense of the field of job titles is to draw a line between the *specialized* disciplines and the *generalist* disciplines, and then understand what these disciplines mean <a href="#who-do-you-want-to-serve">in the context of the customer you're serving</a> and <a href="#what-kind-of-company-do-you-want-to-work-for">the company environment you're working in</a>.
+## Specialists versus Generalists
 
 <!-- more -->
 <div class="anchor-offset" id="more"></div>
+
+One of the easiest ways to make some sense of the field of job titles is to draw a line between the *specialized* disciplines and the *generalist* disciplines, and then understand what these disciplines mean <a href="#who-do-you-want-to-serve">in the context of the customer you're serving</a> and <a href="#what-kind-of-company-do-you-want-to-work-for">the company environment you're working in</a>.
 
 1. *Specialized Designers* — Those who focus on a particular point in time or a specific aspect of the design (such as a visual designer, who might only work on UI polish, or an interaction designer who will zoom in on the nitty gritty of how users interact with controls). They may work across a product lifecycle, but will generally be focused on a single aspect of it. Specialists thrive on larger teams who can oversee the disciplines the specialist doesn't cover.
 2. *Generalist Designers* — Those who generalize and see a product through a wider chunk of its lifecycle (such as a product designer or entrepreneur who will design a product from initial idea all the way through implementation). They tend to be more wholistic in their thinking, often pulling in techniques and findings from unrelated fields to enhance their design, yet not diving as deep as the specialist. They tend to thrive in younger companies where specialization is a liability rather than an asset.

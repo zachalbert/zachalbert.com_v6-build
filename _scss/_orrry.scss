@@ -362,56 +362,58 @@ $er1:           #{$er1-deg}s;
                      background-color: lighten($color-6, 5%); } }
 }
 
-.saturn {
-  .s_1             { -webkit-animation: year #{$j1} linear infinite;
-          &:before { left: -5px; 
-                     background-color: lighten($color-7, 5%); } }
-  .s_2             { -webkit-animation: year #{$j2} linear infinite;
-          &:before { left: -30px; 
-                     background-color: lighten($color-7, 5%); } }
-  .s_3             { -webkit-animation: year #{$j3} linear infinite;
-          &:before { left: -55px; 
-                     background-color: lighten($color-7, 5%); } }
-}
+// Commented out for performance reasons. Left in because it's cool to see all the moons at once.
+// 
+// .saturn {
+//   .s_1             { -webkit-animation: year #{$j1} linear infinite;
+//           &:before { left: -5px; 
+//                      background-color: lighten($color-7, 5%); } }
+//   .s_2             { -webkit-animation: year #{$j2} linear infinite;
+//           &:before { left: -30px; 
+//                      background-color: lighten($color-7, 5%); } }
+//   .s_3             { -webkit-animation: year #{$j3} linear infinite;
+//           &:before { left: -55px; 
+//                      background-color: lighten($color-7, 5%); } }
+// }
 
-.uranus {
-  .s_1             { -webkit-animation: year #{$j1} linear infinite;
-          &:before { left: -5px; 
-                     background-color: lighten($color-8, 5%); } }
-  .s_2             { -webkit-animation: year #{$j2} linear infinite;
-          &:before { left: -30px; 
-                     background-color: lighten($color-8, 5%); } }
-  .s_3             { -webkit-animation: year #{$j3} linear infinite;
-          &:before { left: -55px; 
-                     background-color: lighten($color-8, 5%); } }
-}
+// .uranus {
+//   .s_1             { -webkit-animation: year #{$j1} linear infinite;
+//           &:before { left: -5px; 
+//                      background-color: lighten($color-8, 5%); } }
+//   .s_2             { -webkit-animation: year #{$j2} linear infinite;
+//           &:before { left: -30px; 
+//                      background-color: lighten($color-8, 5%); } }
+//   .s_3             { -webkit-animation: year #{$j3} linear infinite;
+//           &:before { left: -55px; 
+//                      background-color: lighten($color-8, 5%); } }
+// }
 
-.neptune {
-  .s_1             { -webkit-animation: year #{$j1} linear infinite;
-          &:before { left: -5px; 
-                     background-color: lighten($color-9, 5%); } }
-  .s_2             { -webkit-animation: year #{$j2} linear infinite;
-          &:before { left: -30px; 
-                     background-color: lighten($color-9, 5%); } }
-  .s_3             { -webkit-animation: year #{$j3} linear infinite;
-          &:before { left: -55px; 
-                     background-color: lighten($color-9, 5%); } }
-}
+// .neptune {
+//   .s_1             { -webkit-animation: year #{$j1} linear infinite;
+//           &:before { left: -5px; 
+//                      background-color: lighten($color-9, 5%); } }
+//   .s_2             { -webkit-animation: year #{$j2} linear infinite;
+//           &:before { left: -30px; 
+//                      background-color: lighten($color-9, 5%); } }
+//   .s_3             { -webkit-animation: year #{$j3} linear infinite;
+//           &:before { left: -55px; 
+//                      background-color: lighten($color-9, 5%); } }
+// }
 
-.pluto {
-  .s_1             { -webkit-animation: year #{$j1} linear infinite;
-          &:before { left: -5px; 
-                     background-color: lighten($color-1, 5%)0; } }
-  .s_2             { -webkit-animation: year #{$j2} linear infinite;
-          &:before { left: -30px; 
-                     background-color: lighten($color-1, 5%)0; } }
-  .s_3             { -webkit-animation: year #{$j3} linear infinite;
-          &:before { left: -55px; 
-                     background-color: lighten($color-1, 5%)0; } }
-}
+// .pluto {
+//   .s_1             { -webkit-animation: year #{$j1} linear infinite;
+//           &:before { left: -5px; 
+//                      background-color: lighten($color-1, 5%)0; } }
+//   .s_2             { -webkit-animation: year #{$j2} linear infinite;
+//           &:before { left: -30px; 
+//                      background-color: lighten($color-1, 5%)0; } }
+//   .s_3             { -webkit-animation: year #{$j3} linear infinite;
+//           &:before { left: -55px; 
+//                      background-color: lighten($color-1, 5%)0; } }
+// }
 
-.eris {
-  .s_1             { -webkit-animation: year #{$j1} linear infinite;
-          &:before { left: -5px; 
-                     background-color: lighten($color-1, 5%)1; } }
-}
+// .eris {
+//   .s_1             { -webkit-animation: year #{$j1} linear infinite;
+//           &:before { left: -5px; 
+//                      background-color: lighten($color-1, 5%)1; } }
+// }
