@@ -1053,13 +1053,13 @@ ol {
   background-size: 100%;
   background-position: 0 -5px;
   border-radius: 50%;
-  width: 50%;
-  height: 0;
-  padding: 50% 0 0;
   position: relative;
   margin: 0 auto $lead-double;
   box-sizing: border-box;
   border: 5px solid $color-footer-text;
+  width: 50vw;
+  height: 50vw;
+  padding: 0;
 }
 
 .excerpt-action {

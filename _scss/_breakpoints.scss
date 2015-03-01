@@ -56,8 +56,8 @@ body,
   }
 
   .bio-pic {
-    width: 35%;
-    padding-top: 35%;
+    width: 35vw;
+    height: 35vw;
   }
 }
 
@@ -145,8 +145,8 @@ body,
   .bio-pic {
     right: -40%;
     margin: 0;
-    width: 50%;
-    padding-top: 50%;
+    width: 20vw;
+    height: 20vw;
   }
 
   figure iframe {
@@ -158,6 +158,11 @@ body,
   
   .row {
     width: 90%;
+  }
+
+  .bio-pic {
+    width: 15vw;
+    height: 15vw;
   }
 
   .nascar {
@@ -214,6 +219,12 @@ body,
 
   .galaxy {
     height: 100%;
+  }
+
+
+  .bio-pic {
+    width: 12vw;
+    height: 12vw;
   }
 
   .nascar {
