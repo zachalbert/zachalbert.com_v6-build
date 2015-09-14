@@ -9,7 +9,7 @@ $(function() {
   var num_stars = 500;
   var min_size = 1;
   var max_size = 3;
-  var star;
+  var star = "";
 
   for( var i=0; i<num_stars; i++ ) {
     var xPos = Math.random()*104-2;
